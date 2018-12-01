@@ -1,0 +1,65 @@
+[
+  {
+    "username": "ADMIN",
+    "fullname": "Administrator",
+    "email": "admin@admin.com",
+    "lang": "IT",
+    "enabled": 1
+  },
+  {
+    "username": "FOREIGN",
+    "fullname": "Foreign",
+    "email": "foreign@foreign.com",
+    "lang": "EN",
+    "enabled": 1
+  },
+  {
+    "username": "INLAND",
+    "fullname": "Inland",
+    "email": "inland@inland.com",
+    "lang": "EN",
+    "enabled": 1
+  },
+  {
+    "username": "TEST",
+    "fullname": "Test",
+    "email": "test@test.com",
+    "lang": "EN",
+    "enabled": 0
+  },
+  {
+    "username": "USER",
+    "fullname": "User",
+    "email": "user@user.com",
+    "lang": "IT",
+    "enabled": 1
+  },
+  {
+    "username": "USER2",
+    "fullname": "User 2",
+    "email": "user2@user.com",
+    "lang": "EN",
+    "enabled": 1
+  },
+  {
+    "username": "USER3",
+    "fullname": "User 3",
+    "email": "user3@user.com",
+    "lang": "EN",
+    "enabled": 1
+  },
+  {
+    "username": "USER4",
+    "fullname": "User 4",
+    "email": "user4@user.com",
+    "lang": "EN",
+    "enabled": 1
+  },
+  {
+    "username": "USER5",
+    "fullname": "User 5",
+    "email": "user5@user.com",
+    "lang": "EN",
+    "enabled": 1
+  }
+]
