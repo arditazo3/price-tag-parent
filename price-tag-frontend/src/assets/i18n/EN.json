@@ -1,0 +1,9 @@
+{
+  "GENERAL": {
+    "DESCRIPTION_HEADER": "If you want, specify a message to be inserted at the beginning and / or at the end of each page. N.B. it is not possible to wrap it otherwise it would risk to overwrite the price table \nSelect the brand to insert in the PDF below each column \nEnter the item, currency and price in each box. \nUse the 'Add line' button to insert a new one. ATTENTION: a maximum of 6 lines can be inserted in a sheet! \nExample: if the total of the rows is 7, the system will produce a 2-page PDF",
+    "CC": "Comm. Category",
+    "CURRENCY": "Currency",
+    "AMOUNT": "Amount",
+    "SELECT_BRAND": "Select the brand"
+  }
+}

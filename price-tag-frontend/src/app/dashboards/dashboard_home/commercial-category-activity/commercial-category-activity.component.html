@@ -1,0 +1,108 @@
+<div class="input-group">
+  <div class="col-sm-3 pr-4 pl-0">
+    <div class="input-group">
+      <div class="col-sm-6 pr-1 pl-0">
+        <label class="control-label col-form-label">
+          {{ 'GENERAL.CC' | translate }}
+        </label>
+        <input type="text" class="form-control"
+               [(ngModel)]="commercialActivity.commercialCategoryCol1"
+               [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="col-sm-3 pr-1 pl-0">
+        <label class="control-label col-form-label">
+          {{ 'GENERAL.CURRENCY' | translate }}
+        </label>
+        <input type="text" class="form-control"
+               [(ngModel)]="commercialActivity.currencyCol1"
+               [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="col-sm-3 pr-1 pl-0">
+        <label class="control-label col-form-label">
+          {{ 'GENERAL.AMOUNT' | translate }}
+        </label>
+        <input type="number" class="form-control"
+               [(ngModel)]="commercialActivity.amountCol1"
+               [ngModelOptions]="{standalone: true}">
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 pr-4 pl-0">
+    <div class="input-group">
+      <div class="col-sm-5 pr-1 pl-0">
+        <label class="control-label col-form-label">
+          {{ 'GENERAL.CC' | translate }}
+        </label>
+        <input type="text" class="form-control"
+               [(ngModel)]="commercialActivity.commercialCategoryCol2"
+               [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="col-sm-2 pr-1 pl-0">
+        <label class="control-label col-form-label">
+          {{ 'GENERAL.CURRENCY' | translate }}
+        </label>
+        <input type="text" class="form-control"
+               [(ngModel)]="commercialActivity.currencyCol2"
+               [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="col-sm-3 pr-1 pl-0">
+        <label class="control-label col-form-label">
+          {{ 'GENERAL.AMOUNT' | translate }}
+        </label>
+        <input type="number" class="form-control"
+               [(ngModel)]="commercialActivity.amountCol2"
+               [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="col-sm-2 pr-0 pl-0 mt-2_2">
+        <button type="button" (click)="copyFirstColumnValuesToSecond()"
+                class="btn btn-small btn-primary">
+          Copia <br> colonna 1
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-5 pr-0 pl-0">
+    <div class="input-group">
+      <div class="col-sm-4 pr-1 pl-0">
+        <label class="control-label col-form-label">
+          {{ 'GENERAL.CC' | translate }}
+        </label>
+        <input type="text" class="form-control"
+               [(ngModel)]="commercialActivity.commercialCategoryCol3"
+               [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="col-sm-2 pr-1 pl-0">
+        <label class="control-label col-form-label">
+          {{ 'GENERAL.CURRENCY' | translate }}
+        </label>
+        <input type="text" class="form-control"
+               [(ngModel)]="commercialActivity.currencyCol3"
+               [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="col-sm-3 pr-1 pl-0">
+        <label class="control-label col-form-label">
+          {{ 'GENERAL.AMOUNT' | translate }}
+        </label>
+        <input type="text" class="form-control"
+               [(ngModel)]="commercialActivity.amountCol3"
+               [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="col-sm-2 pr-0 pl-0">
+        <div class="btn-inline p-0 mt-2_2">
+          <button type="button"
+                  (click)="copySecondColumnValuesToThird()"
+                  class="btn btn-small btn-primary mr-1 ">
+            Copia <br> colonna 2
+          </button>
+          <button type="button"
+                  (click)="deleteRow()"
+                  class="btn btn-small btn-danger mr-0 ">
+            Delete <br> row
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

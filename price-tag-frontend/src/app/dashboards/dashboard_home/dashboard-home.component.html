@@ -1,0 +1,108 @@
+<!-- Row -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="{{ isMobile ? 'card-body-mobile' : 'card-body' }}">
+
+                <div class="col-sm-12 alert alert-info">
+                    {{ 'GENERAL.DESCRIPTION_HEADER' | translate }}
+                </div>
+
+                <div class="input-group">
+                    <div class="col-sm-6">
+                        <label class="col-md-12">Message</label>
+                        <div class="col-md-12">
+                            <textarea rows="5" class="form-control form-control-line"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label class="col-md-12">Message</label>
+                        <div class="col-md-12">
+                            <textarea rows="5" class="form-control form-control-line"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="col-sm-6">
+                        <label class="col-md-12">
+                            {{ 'GENERAL.SELECT_BRAND' | translate }}
+                        </label>
+                        <div class="col-sm-6">
+                            <ng-select [items]="brandsObservable | async"
+                                       bindLabel="description"
+                                       [(ngModel)]="selectedBrand"
+                                       [ngModelOptions]="{standalone: true}"
+                                       placeholder="{{ 'BACK_OFFICE.OFFICE.SELECT_COMPANY' | translate }}">
+                            </ng-select>
+                            <div *ngIf="submitted && !selectedBrand" class="invalid-feedback-show">
+                                {{ 'BACK_OFFICE.OFFICE.COMPANY_REQUIRED' | translate }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="text-right mt-1_9">
+                            <button type="button"
+                                    (click)="addNewRow()"
+                                    class="btn btn-primary">
+                                {{ 'GENERAL.ADD_ROW' | translate }}
+                            </button>
+                            <button type="button"
+                                    class="btn btn-success waves-effect waves-light">
+                                {{ 'BACK_OFFICE.OFFICE.SAVE_OFFICE' | translate }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="input-group">
+                        <div class="col-sm-3 pr-1 pl-0">
+                            <div class="input-group">
+                                <button type="button" (click)="cleanFirstColumnValues()"
+                                        class="btn btn-primary btn-small">
+                                    Clean  colonna 1
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 pr-4 pl-0">
+                            <div class="input-group">
+                                <button type="button" (click)="cleanSecondColumnValues()"
+                                        class="btn btn-small btn-primary">
+                                    Clean colonna 2
+                                </button>
+                                <button type="button" (click)="copyFirstColumnValuesToSecond()"
+                                        class="btn btn-small btn-primary">
+                                    Copia <br> colonna 1
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-5 pr-0 pl-0">
+                            <div class="input-group">
+                                <button type="button" (click)="cleanThirdColumnValues()"
+                                        class="btn btn-small btn-primary">
+                                    Clean colonna 3
+                                </button>
+                                <button type="button" (click)="copySecondColumnValuesToThird()"
+                                        class="btn btn-small btn-primary">
+                                    Copia <br> colonna 2
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngFor="let commercialActivity of commercialActivies">
+                    <app-commercial-category-activity [commercialActivity]="commercialActivity"
+                                                      (removeRowEvent)="removeRowListener($event)"></app-commercial-category-activity>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

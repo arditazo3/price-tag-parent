@@ -1,0 +1,9 @@
+{
+  "GENERAL": {
+    "DESCRIPTION_HEADER": "Se vuoi, specifica un messaggio da inserire all'inizio e/o alla fine di ogni pagina. N.b. non e possibile andare a capo altrimenti si rischierebbe di sovrascrivere la tabella del prezzi \nSeleziona il brand da inserire nel PDF sotto ogni colonna \nInserisci in ogni casella il capo, la valuta ed il prezzo. \nUtilizza il bottone 'Aggiungi riga' per inserirne una nuova ATTENZIONE: in un foglio si possono inserire massimo 6 righe! \nEsempio: se il totale delle righe e 7, il sistema produrra un PDF di 2 pagine",
+    "CC": "C. Commerciale",
+    "CURRENCY": "Valuta",
+    "AMOUNT": "Importo",
+    "SELECT_BRAND": "Seleziona il brand"
+  }
+}
