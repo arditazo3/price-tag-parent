@@ -45,7 +45,6 @@ public class FileService implements IFileService {
 		return users;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public List<Brand> readBrandsFromJsonFile() {
 		
@@ -57,7 +56,7 @@ public class FileService implements IFileService {
 			
 			is = new FileInputStream(pathJsonBrands);
 			
-			brands = (List<Brand>) mapper.readValue(is, Brand.class);
+			brands = Arrays.asList((Brand[]) mapper.readValue(is, Brand[].class));
 		} catch (Exception e) {
 			logger.error(e);
 		}

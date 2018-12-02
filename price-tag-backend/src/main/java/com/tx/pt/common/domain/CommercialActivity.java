@@ -17,6 +17,8 @@ public class CommercialActivity implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	private Integer idOrder;
+	
 	private String commercialCategoryCol1;
 	private String currencyCol1;
 	private Double amountCol1;
@@ -29,6 +31,12 @@ public class CommercialActivity implements Serializable{
 	private String currencyCol3;
 	private Double amountCol3;
 	
+	public Integer getIdOrder() {
+		return idOrder;
+	}
+	public void setIdOrder(Integer idOrder) {
+		this.idOrder = idOrder;
+	}
 	public String getCommercialCategoryCol1() {
 		return commercialCategoryCol1;
 	}

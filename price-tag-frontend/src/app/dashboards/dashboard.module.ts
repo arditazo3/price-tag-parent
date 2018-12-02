@@ -14,6 +14,7 @@ import {DashboardHomeComponent} from './dashboard_home/dashboard-home.component'
 import {TranslateModule} from '@ngx-translate/core';
 import {NgSelectModule} from '@ng-select/ng-select';
 import { CommercialCategoryActivityComponent } from './dashboard_home/commercial-category-activity/commercial-category-activity.component';
+import {CommCategoryService} from './service/comm-category.service';
 
 @NgModule({
     imports: [
@@ -29,6 +30,9 @@ import { CommercialCategoryActivityComponent } from './dashboard_home/commercial
     declarations: [
         DashboardHomeComponent,
         CommercialCategoryActivityComponent,
+    ],
+    providers: [
+        CommCategoryService
     ]
 })
 export class DashboardModule {

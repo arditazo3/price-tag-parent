@@ -26,6 +26,12 @@ export class AppConfig {
     public userListExceptRole = this.userPath + '/user-except';
     public userLanguangeOnChange = this.userPath + '/user-language-change';
 
+    // Commercial Category
+    public reportPath = 'report'
+    public getBrands = this.reportPath + '/brands';
+    public getTemplates = this.reportPath + '/templates';
+    public elaborateReport = this.reportPath + '/elaborate';
+
     constructor() {
         console.log('AppConfig - constructor');
 

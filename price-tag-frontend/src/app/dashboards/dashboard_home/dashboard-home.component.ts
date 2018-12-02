@@ -1,9 +1,9 @@
 import {Component, AfterViewInit, OnInit} from '@angular/core';
-import {UserInfoService} from '../../user/service/user-info.service';
-import {Router} from '@angular/router';
 import {CommercialActivity} from '../../shared/common/api/model/commercial-activity';
 import {Observable} from 'rxjs';
 import {Brand} from '../../shared/common/api/model/brand';
+import {CommCategoryService} from '../service/comm-category.service';
+import {ReportData} from '../../shared/common/api/model/report-data';
 
 @Component({
     templateUrl: './dashboard-home.component.html',
@@ -18,7 +18,12 @@ export class DashboardHomeComponent implements OnInit {
     brandsObservable: Observable<any[]>;
     selectedBrand: Brand;
 
-    constructor() {
+    headerMsg = '';
+    footerMsg = '';
+
+    constructor(
+        private commCategoryService: CommCategoryService
+    ) {
     }
 
     ngOnInit(): void {
@@ -27,6 +32,19 @@ export class DashboardHomeComponent implements OnInit {
             this.commercialActivies.push(new CommercialActivity(this.indexOrder));
             this.indexOrder++;
         }
+
+        this.brandsObservable = this.commCategoryService.getBrands();
+    }
+
+    elaborateReport() {
+
+        const reportData: ReportData = new ReportData();
+        reportData.brand = this.selectedBrand;
+        reportData.headerMsg = this.headerMsg;
+        reportData.footerMsg = this.footerMsg;
+        reportData.commercialActivies = this.commercialActivies;
+
+        this.commCategoryService.elaborateReport(reportData);
     }
 
     addNewRow() {

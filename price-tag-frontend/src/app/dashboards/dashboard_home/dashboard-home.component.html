@@ -12,14 +12,18 @@
                     <div class="col-sm-6">
                         <label class="col-md-12">Message</label>
                         <div class="col-md-12">
-                            <textarea rows="5" class="form-control form-control-line"></textarea>
+                            <textarea rows="5"
+                                      (ngModel)="headerMsg" [ngModelOptions]="{standalone: true}"
+                                      class="form-control form-control-line"></textarea>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <label class="col-md-12">Message</label>
                         <div class="col-md-12">
-                            <textarea rows="5" class="form-control form-control-line"></textarea>
+                            <textarea rows="5"
+                                      (ngModel)="footerMsg" [ngModelOptions]="{standalone: true}"
+                                      class="form-control form-control-line"></textarea>
                         </div>
                     </div>
                 </div>
@@ -50,14 +54,15 @@
                                 {{ 'GENERAL.ADD_ROW' | translate }}
                             </button>
                             <button type="button"
-                                    class="btn btn-success waves-effect waves-light">
+                                    (click)="elaborateReport()"
+                                    class="btn btn-success">
                                 {{ 'BACK_OFFICE.OFFICE.SAVE_OFFICE' | translate }}
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div>
+                <div class="mt-4">
                     <div class="input-group">
                         <div class="col-sm-3 pr-1 pl-0">
                             <div class="input-group">
