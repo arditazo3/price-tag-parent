@@ -4,12 +4,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.tx</groupId>
-  <artifactId>corp-obl-frontend</artifactId>
+  <artifactId>price-tag-frontend</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>corp-obl-frontend</name>
-  <description>Progetto per gestire gli adempimenti societari</description>
+  <name>price-tag-frontend</name>
+  <description>Progetto Porta prezzi</description>
 
   <build>
     <plugins>

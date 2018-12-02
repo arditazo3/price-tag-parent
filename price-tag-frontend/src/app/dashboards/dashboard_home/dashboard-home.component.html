@@ -40,9 +40,6 @@
                                        [ngModelOptions]="{standalone: true}"
                                        placeholder="{{ 'BACK_OFFICE.OFFICE.SELECT_COMPANY' | translate }}">
                             </ng-select>
-                            <div *ngIf="submitted && !selectedBrand" class="invalid-feedback-show">
-                                {{ 'BACK_OFFICE.OFFICE.COMPANY_REQUIRED' | translate }}
-                            </div>
                         </div>
                     </div>
 
