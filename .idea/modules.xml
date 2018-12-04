@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/price-tag-backend/src/main/main.iml" filepath="$PROJECT_DIR$/price-tag-backend/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/price-tag-backend/price-tag-backend.iml" filepath="$PROJECT_DIR$/price-tag-backend/price-tag-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/price-tag-frontend/price-tag-frontend.iml" filepath="$PROJECT_DIR$/price-tag-frontend/price-tag-frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/price-tag-parent.iml" filepath="$PROJECT_DIR$/price-tag-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/price-tag-backend/src/test/test.iml" filepath="$PROJECT_DIR$/price-tag-backend/src/test/test.iml" />
+    </modules>
+  </component>
+</project>
