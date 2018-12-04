@@ -20,4 +20,7 @@ public final class ApiConstants {
 	public static final String BRANDS = "brands";
 	public static final String TEMPLATES = "templates";
 	public static final String ELABORATE_REPORT = "elaborate";
+	
+	/* Report location */
+	public static final String REPORT_PATH = "report/report.jrxml";
 }

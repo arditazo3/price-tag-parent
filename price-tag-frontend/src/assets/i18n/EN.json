@@ -4,6 +4,8 @@
     "CC": "Comm. Category",
     "CURRENCY": "Currency",
     "AMOUNT": "Amount",
-    "SELECT_BRAND": "Select the brand"
+    "SELECT_BRAND": "Select the brand",
+    "ADD_ROW": "Add row",
+    "ELABORATE_REPORT": "Elaborate report"
   }
 }

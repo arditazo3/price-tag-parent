@@ -17,7 +17,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.tx.pt.common.domain.Brand;
+import com.tx.pt.common.domain.ReportData;
 import com.tx.pt.file.IFileService;
+import com.tx.pt.report.service.IReportService;
 
 @Component
 @Path(REPORT)
@@ -26,10 +28,16 @@ public class ReportResource {
 	private static final Logger logger = LogManager.getLogger(ReportResource.class);
 
 	private IFileService fileService;
+	private IReportService reportService;
 
 	@Autowired
 	public void setFileService(IFileService fileService) {
 		this.fileService = fileService;
+	}
+
+	@Autowired
+	public void setReportService(IReportService reportService) {
+		this.reportService = reportService;
 	}
 
 	@GET
@@ -59,10 +67,12 @@ public class ReportResource {
 	@POST
 	@Path(ELABORATE_REPORT)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response elaborateReport() { 
+	public Response elaborateReport(ReportData reportData) { 
 
 		logger.info("elaborateReport - Path: " + ELABORATE_REPORT);
 
+		reportService.elaborateReport(reportData);
+		
 		return Response.noContent().build();
 	}
 

@@ -13,7 +13,7 @@
                         <label class="col-md-12">Message</label>
                         <div class="col-md-12">
                             <textarea rows="5"
-                                      (ngModel)="headerMsg" [ngModelOptions]="{standalone: true}"
+                                      [(ngModel)]="headerMsg" [ngModelOptions]="{standalone: true}"
                                       class="form-control form-control-line"></textarea>
                         </div>
                     </div>
@@ -22,7 +22,7 @@
                         <label class="col-md-12">Message</label>
                         <div class="col-md-12">
                             <textarea rows="5"
-                                      (ngModel)="footerMsg" [ngModelOptions]="{standalone: true}"
+                                      [(ngModel)]="footerMsg" [ngModelOptions]="{standalone: true}"
                                       class="form-control form-control-line"></textarea>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                                        bindLabel="description"
                                        [(ngModel)]="selectedBrand"
                                        [ngModelOptions]="{standalone: true}"
-                                       placeholder="{{ 'BACK_OFFICE.OFFICE.SELECT_COMPANY' | translate }}">
+                                       placeholder="{{ 'GENERAL.SELECT_BRAND' | translate }}">
                             </ng-select>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                             <button type="button"
                                     (click)="elaborateReport()"
                                     class="btn btn-success">
-                                {{ 'BACK_OFFICE.OFFICE.SAVE_OFFICE' | translate }}
+                                {{ 'GENERAL.ELABORATE_REPORT' | translate }}
                             </button>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                     </div>
                 </div>
 
-                <div *ngFor="let commercialActivity of commercialActivies">
+                <div *ngFor="let commercialActivity of commercialActivities">
                     <app-commercial-category-activity [commercialActivity]="commercialActivity"
                                                       (removeRowEvent)="removeRowListener($event)"></app-commercial-category-activity>
                 </div>

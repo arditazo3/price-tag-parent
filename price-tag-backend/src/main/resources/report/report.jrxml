@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="59e2be7d-c4bf-4f96-af78-b9778890c359">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="headerTxt" class="java.lang.String"/>
+	<parameter name="footerTxt" class="java.lang.String"/>
+	<field name="commercialCategoryCol1" class="java.lang.String"/>
+	<field name="currencyCol1" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement x="-20" y="0" width="595" height="49" uuid="59f565a0-b3dd-495c-8678-608c135131e5"/>
+				<box padding="16"/>
+				<textFieldExpression><![CDATA[$P{headerTxt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="10" width="100" height="30" uuid="f1661ed4-0b98-4592-a667-ac25c8bfaf20">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cfc050d2-a577-4089-9f52-bc72dd46b5a3"/>
+				</reportElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="20" width="100" height="30" uuid="4ddc33a6-25da-4a5b-9d4c-c3725848f130">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fb3e778a-9a27-452e-ba85-67ebd32de5e8"/>
+				</reportElement>
+				<text><![CDATA[Currency]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="-20" y="0" width="200" height="30" uuid="972dedb3-7b8c-43b3-a2ff-2f945e170e2b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cfc050d2-a577-4089-9f52-bc72dd46b5a3"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{commercialCategoryCol1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="160" height="30" uuid="1b1e637b-8a70-4e40-b1e3-9ab0ac010026">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fb3e778a-9a27-452e-ba85-67ebd32de5e8"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{currencyCol1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="0" width="292" height="53" uuid="75710eda-69e7-4b9c-b07e-7b2aed99673f"/>
+				<box padding="11"/>
+				<textFieldExpression><![CDATA[$P{footerTxt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

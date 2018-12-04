@@ -4,6 +4,8 @@
     "CC": "C. Commerciale",
     "CURRENCY": "Valuta",
     "AMOUNT": "Importo",
-    "SELECT_BRAND": "Seleziona il brand"
+    "SELECT_BRAND": "Seleziona il brand",
+    "ADD_ROW": "Aggiungi riga",
+    "ELABORATE_REPORT": "Elabora rapporto"
   }
 }

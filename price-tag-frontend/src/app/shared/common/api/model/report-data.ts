@@ -6,5 +6,5 @@ export class ReportData {
     headerMsg: string;
     footerMsg: string;
     brand: Brand;
-    commercialActivies: CommercialActivity[];
+    commercialActivities: CommercialActivity[];
 }
