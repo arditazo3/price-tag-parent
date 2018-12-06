@@ -10,7 +10,9 @@
 
                 <div class="input-group">
                     <div class="col-sm-6">
-                        <label class="col-md-12">Message</label>
+                        <label class="col-md-12">
+                            {{ 'GENERAL.HEADER_TXT' | translate }}
+                        </label>
                         <div class="col-md-12">
                             <textarea rows="5"
                                       [(ngModel)]="headerMsg" [ngModelOptions]="{standalone: true}"
@@ -19,7 +21,9 @@
                     </div>
 
                     <div class="col-sm-6">
-                        <label class="col-md-12">Message</label>
+                        <label class="col-md-12">
+                            {{ 'GENERAL.FOOTER_TXT' | translate }}
+                        </label>
                         <div class="col-md-12">
                             <textarea rows="5"
                                       [(ngModel)]="footerMsg" [ngModelOptions]="{standalone: true}"
@@ -65,7 +69,7 @@
                             <div class="input-group">
                                 <button type="button" (click)="cleanFirstColumnValues()"
                                         class="btn btn-primary btn-small">
-                                    Clean  colonna 1
+                                    <div style="white-space: pre-wrap">{{ 'GENERAL.CLEAN_CLN_1' | translate }}</div>
                                 </button>
                             </div>
                         </div>
@@ -74,11 +78,11 @@
                             <div class="input-group">
                                 <button type="button" (click)="cleanSecondColumnValues()"
                                         class="btn btn-small btn-primary">
-                                    Clean colonna 2
+                                    <div style="white-space: pre-wrap">{{ 'GENERAL.CLEAN_CLN_2' | translate }}</div>
                                 </button>
                                 <button type="button" (click)="copyFirstColumnValuesToSecond()"
                                         class="btn btn-small btn-primary">
-                                    Copia <br> colonna 1
+                                    <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_1' | translate }}</div>
                                 </button>
                             </div>
                         </div>
@@ -87,11 +91,11 @@
                             <div class="input-group">
                                 <button type="button" (click)="cleanThirdColumnValues()"
                                         class="btn btn-small btn-primary">
-                                    Clean colonna 3
+                                    <div style="white-space: pre-wrap">{{ 'GENERAL.CLEAN_CLN_3' | translate }}</div>
                                 </button>
                                 <button type="button" (click)="copySecondColumnValuesToThird()"
                                         class="btn btn-small btn-primary">
-                                    Copia <br> colonna 2
+                                    <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_2' | translate }}</div>
                                 </button>
                             </div>
                         </div>

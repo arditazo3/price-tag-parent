@@ -57,7 +57,7 @@
       <div class="col-sm-2 pr-0 pl-0 mt-2_2">
         <button type="button" (click)="copyFirstColumnValuesToSecond()"
                 class="btn btn-small btn-primary">
-          Copia <br> colonna 1
+          <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_1' | translate }}</div>
         </button>
       </div>
     </div>
@@ -94,12 +94,12 @@
           <button type="button"
                   (click)="copySecondColumnValuesToThird()"
                   class="btn btn-small btn-primary mr-1 ">
-            Copia <br> colonna 2
+            <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_2' | translate }}</div>
           </button>
           <button type="button"
                   (click)="deleteRow()"
                   class="btn btn-small btn-danger mr-0 ">
-            Delete <br> row
+            <div style="white-space: pre-wrap">{{ 'GENERAL.DELETE_ROW' | translate }}</div>
           </button>
         </div>
       </div>

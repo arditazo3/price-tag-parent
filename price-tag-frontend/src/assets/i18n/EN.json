@@ -6,6 +6,15 @@
     "AMOUNT": "Amount",
     "SELECT_BRAND": "Select the brand",
     "ADD_ROW": "Add row",
-    "ELABORATE_REPORT": "Elaborate report"
+    "DELETE_ROW": "Delete \n row",
+    "ELABORATE_REPORT": "Elaborate report",
+    "HEADER_TXT": "Message displayed as the header of each page",
+    "FOOTER_TXT": "Message displayed at the bottom of each page",
+    "CLEAN_FIELDS": "Clean \n fields",
+    "COPY_CLN_1": "Copy \n colomn 1",
+    "COPY_CLN_2": "Copy \n colomn 2",
+    "CLEAN_CLN_1": "Clean \n colonna 1",
+    "CLEAN_CLN_2": "Clean \n colonna 2",
+    "CLEAN_CLN_3": "Clean \n colonna 3"
   }
 }
