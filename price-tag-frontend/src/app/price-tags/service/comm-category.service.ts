@@ -26,6 +26,6 @@ export class CommCategoryService {
     elaborateReport(reportData): Observable<any> {
         console.log('CommCategoryService - elaborateReport');
 
-        return this.apiRequest.post(this.appConfig.elaborateReport, reportData);
+        return this.apiRequest.getDownloadFile(this.appConfig.elaborateReport, reportData);
     }
 }

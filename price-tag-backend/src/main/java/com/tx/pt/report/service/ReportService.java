@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tx.pt.common.domain.ReportData;
+import com.tx.pt.common.file.domain.HttpFile;
+import com.tx.pt.file.IFileService;
 import com.tx.pt.report.config.ReportExporter;
 import com.tx.pt.report.config.ReportFiller;
 
@@ -19,6 +21,7 @@ public class ReportService implements IReportService {
 
 	private ReportFiller reportFiller;
 	private ReportExporter reportExporter;
+	private IFileService fileService;
 	
 	@Autowired
 	public void setReportFiller(ReportFiller reportFiller) {
@@ -30,9 +33,13 @@ public class ReportService implements IReportService {
 		this.reportExporter = reportExporter;
 	}
 
+	@Autowired
+	public void setFileService(IFileService fileService) {
+		this.fileService = fileService;
+	}
 
 	@Override
-	public void elaborateReport(ReportData reportData) {
+	public HttpFile elaborateReport(ReportData reportData) {
 
 		reportFiller.setReportFileName(REPORT_PATH);
 		
@@ -42,7 +49,11 @@ public class ReportService implements IReportService {
 		
 		reportExporter.setJasperPrint(reportFiller.getJasperPrint());
 		
-		reportExporter.exportToPdf("C:\\PriceTag\\test.pdf", "Ardit");
+		HttpFile httpFile = new HttpFile();
+		
+		fileService.internalWriteFile(httpFile, reportExporter);
+		
+		return httpFile;
 	}
 
 }

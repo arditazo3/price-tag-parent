@@ -13,7 +13,7 @@ export interface LoginRequestParam {
 @Injectable()
 export class LoginService {
 
-    public dashboardPage = '/dashboard';
+    public dashboardPage = '/price-tag';
 
     constructor(
         private router: Router,
@@ -49,7 +49,7 @@ export class LoginService {
                     if (jsonResp !== undefined && jsonResp !== null) {
                         loginInfoReturn = {
                             'message': jsonResp.operationMessage,
-                            'landingPage': '/dashboard',
+                            'landingPage': '/price-tag',
                             'userAndToken': {
                                 'user': {
                                     'username': jsonResp.username,

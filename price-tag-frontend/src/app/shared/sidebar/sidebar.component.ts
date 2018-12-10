@@ -100,7 +100,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
     // End open close
     ngOnInit() {
         this.sidebarnavItems = ROUTES.filter(sidebarnavItem => sidebarnavItem);
-        this.fullname = this.userInfoService.getUsername();
 
         this.cdr.detectChanges();
     }

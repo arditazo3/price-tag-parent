@@ -17,6 +17,7 @@ export class UserInfoService {
 
     public currentUserKey = 'currentUser';
     public storage: Storage = sessionStorage;
+    public userInStorage: UserInStorage = null;
 
     constructor() {
     }
@@ -40,7 +41,11 @@ export class UserInfoService {
         try {
             const userInfoString: string = this.storage.getItem(this.currentUserKey);
             if (userInfoString) {
-                return JSON.parse(this.storage.getItem(this.currentUserKey));
+                this.userInStorage = JSON.parse(this.storage.getItem(this.currentUserKey));
+                this.removeUserTokenInfo();
+                return this.userInStorage;
+            } else if (this.userInStorage) {
+                return this.userInStorage;
             } else {
                 return null;
             }

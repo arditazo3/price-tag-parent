@@ -1,5 +1,6 @@
 package com.tx.pt.report.config;
 
+import static org.springframework.util.ObjectUtils.isEmpty;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -79,10 +80,24 @@ public class ReportFiller {
     
     public void createParameters(ReportData reportData) {
     	
+    	String headerTxt = "";
+    	String footerTxt = "";
+    	String brandTxt = "";
+    	
+    	if (!isEmpty(reportData.getHeaderMsg())) {
+    		headerTxt = reportData.getHeaderMsg();
+    	}
+    	if (!isEmpty(reportData.getFooterMsg())) {
+    		footerTxt = reportData.getFooterMsg();
+    	}
+    	if (!isEmpty(reportData.getBrand()) && !isEmpty(reportData.getBrand().getDescription())) {
+    		brandTxt = reportData.getBrand().getDescription();
+    	}
+    	
     	Map<String, Object> parametersInserted = new HashMap<>();
-    	parametersInserted.put("headerTxt", reportData.getHeaderMsg());
-    	parametersInserted.put("footerTxt", reportData.getFooterMsg());
-    	parametersInserted.put("brandTxt", reportData.getBrand().getDescription());
+    	parametersInserted.put("headerTxt", headerTxt);
+    	parametersInserted.put("footerTxt", footerTxt);
+    	parametersInserted.put("brandTxt", brandTxt);
     	
         this.parameters = parametersInserted;
     }
@@ -107,7 +122,9 @@ public class ReportFiller {
 
 		Collection<CommercialActivity> activitiesCollection = new ArrayList<>();
 
-		activitiesCollection.addAll(reportData.getCommercialActivities());
+		if (!isEmpty(reportData.getCommercialActivities())) {
+			activitiesCollection.addAll(reportData.getCommercialActivities());	
+		}
 		
 		this.dataSource = new JRBeanCollectionDataSource(activitiesCollection);
 	}

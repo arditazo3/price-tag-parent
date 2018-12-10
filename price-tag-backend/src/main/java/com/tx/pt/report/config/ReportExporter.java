@@ -39,11 +39,13 @@ public class ReportExporter {
         this.jasperPrint = jasperPrint;
     }
 
-    public void exportToPdf(String fileName, String author) {
+    public String exportToPdf(String fileName) {
 
+    	fileName += ".pdf";
+    	
         // print report to file
         JRPdfExporter exporter = new JRPdfExporter();
-
+        
         exporter.setExporterInput(new SimpleExporterInput(jasperPrint));
         exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(fileName));
 
@@ -52,7 +54,6 @@ public class ReportExporter {
         reportConfig.setForceLineBreakPolicy(false);
 
         SimplePdfExporterConfiguration exportConfig = new SimplePdfExporterConfiguration();
-        exportConfig.setMetadataAuthor(author);
         exportConfig.setEncrypted(true);
         exportConfig.setAllowedPermissionsHint("PRINTING");
 
@@ -63,6 +64,8 @@ public class ReportExporter {
         } catch (JRException ex) {
             Logger.getLogger(ReportFiller.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        return fileName;
     }
 
     public void exportToXlsx(String fileName, String sheetName) {

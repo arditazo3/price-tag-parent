@@ -8,12 +8,12 @@ import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 
-import {DashboardRoutes} from './dashboard.routing';
+import {PriceTagRoutes} from './price-tag.routing';
 
-import {DashboardHomeComponent} from './dashboard_home/dashboard-home.component';
+import {PriceTagComponent} from './price-tag/price-tag.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {NgSelectModule} from '@ng-select/ng-select';
-import { CommercialCategoryActivityComponent } from './dashboard_home/commercial-category-activity/commercial-category-activity.component';
+import { CommercialCategoryActivityComponent } from './price-tag/commercial-category-activity/commercial-category-activity.component';
 import {CommCategoryService} from './service/comm-category.service';
 
 @NgModule({
@@ -22,18 +22,18 @@ import {CommCategoryService} from './service/comm-category.service';
         CommonModule,
         NgSelectModule,
         NgbModule,
-        RouterModule.forChild(DashboardRoutes),
+        RouterModule.forChild(PriceTagRoutes),
         PerfectScrollbarModule,
         NgxDatatableModule,
         TranslateModule
     ],
     declarations: [
-        DashboardHomeComponent,
+        PriceTagComponent,
         CommercialCategoryActivityComponent,
     ],
     providers: [
         CommCategoryService
     ]
 })
-export class DashboardModule {
+export class PriceTagModule {
 }

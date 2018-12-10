@@ -76,46 +76,6 @@
 
         <li class="sidebar-item w-100">
         </li>
-
-        <!-- ============================================================== -->
-        <!-- Right side menu -->
-        <!-- ============================================================== -->
-        <li class="sidebar-item" ngbDropdown placement="bottom-right">
-            <!-- ============================================================== -->
-            <!-- Language -->
-            <!-- ============================================================== -->
-            <a ngbDropdownToggle class="sidebar-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown"
-               role="button"
-               data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
-                <i class="flag-icon {{ flagLanguage }}"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right bounceInDown {{ isMobile ? 'margin-m-l-lang': '' }}" aria-labelledby="navbarDropdown"
-                 ngbDropdownMenu>
-                <a class="dropdown-item">
-                    <i class="flag-icon flag-icon-us divider"></i> {{ 'GENERAL.ENGLISH' | translate }}</a>
-                <li class="divider dropdown-divider"></li>
-                <a class="dropdown-item">
-                    <i class="flag-icon flag-icon-it"></i> {{ 'GENERAL.ITALIAN' | translate }}</a>
-                <!--<a class="dropdown-item" href="#">-->
-                    <!--<i class="flag-icon flag-icon-fr"></i> French</a>-->
-            </div>
-        </li>
-        <li class="sidebar-item" placement="bottom-right">
-            <div style="display: flex; margin-right: 10px;">
-                <!-- ============================================================== -->
-                <!-- User profile -->
-                <!-- ============================================================== -->
-                <a class="sidebar-link">
-                    <b>{{ fullname }}</b>
-                </a>
-                <!-- ============================================================== -->
-                <!-- Logout -->
-                <!-- ============================================================== -->
-                <a class="sidebar-link" [routerLink]="logoutVariable"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
-
-            </div>
-        </li>
     </ul>
 
     <swal

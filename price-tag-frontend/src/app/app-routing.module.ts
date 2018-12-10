@@ -10,10 +10,10 @@ export const Approutes: Routes = [
     component: FullComponent,
     canActivate: [AuthGuard],
     children: [
-      { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+      { path: '', redirectTo: '/price-tag', pathMatch: 'full' },
       {
-        path: 'dashboard',
-        loadChildren: './dashboards/dashboard.module#DashboardModule'
+        path: 'price-tag',
+        loadChildren: './price-tags/price-tag.module#PriceTagModule'
       }
     ]
   },

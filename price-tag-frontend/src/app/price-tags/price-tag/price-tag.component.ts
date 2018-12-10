@@ -5,18 +5,22 @@ import {Brand} from '../../shared/common/api/model/brand';
 import {CommCategoryService} from '../service/comm-category.service';
 import {ReportData} from '../../shared/common/api/model/report-data';
 import {DeviceDetectorService} from 'ngx-device-detector';
+import {saveAs as importedSaveAs} from 'file-saver';
+import {ApiErrorDetails} from '../../shared/common/api/model/api-error-details';
 
 @Component({
-    templateUrl: './dashboard-home.component.html',
-    styleUrls: ['./dashboard-home.component.css']
+    templateUrl: './price-tag.component.html',
+    styleUrls: ['./price-tag.component.css']
 })
-export class DashboardHomeComponent implements OnInit {
+export class PriceTagComponent implements OnInit {
 
     isMobile = false;
 
     indexOrder = 0;
     noOfRowsDefault = 6;
     commercialActivities: CommercialActivity[] = [];
+
+    errorDetails: ApiErrorDetails = new ApiErrorDetails();
 
     brandsObservable: Observable<any[]>;
     selectedBrand: Brand;
@@ -31,7 +35,7 @@ export class DashboardHomeComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        console.log('DashboardHomeComponent - ngOnInit');
+        console.log('PriceTagComponent - ngOnInit');
 
         for (let i = 0; i < this.noOfRowsDefault; i++) {
             this.commercialActivities.push(new CommercialActivity(this.indexOrder));
@@ -42,7 +46,9 @@ export class DashboardHomeComponent implements OnInit {
     }
 
     elaborateReport() {
-        console.log('DashboardHomeComponent - elaborateReport');
+        console.log('PriceTagComponent - elaborateReport');
+
+        const me = this;
 
         const reportData: ReportData = new ReportData();
         reportData.brand = this.selectedBrand;
@@ -50,7 +56,15 @@ export class DashboardHomeComponent implements OnInit {
         reportData.footerMsg = this.footerMsg;
         reportData.commercialActivities = this.commercialActivities;
 
-        this.commCategoryService.elaborateReport(reportData).subscribe();
+        this.commCategoryService.elaborateReport(reportData).subscribe(
+            (data) => {
+                importedSaveAs(data, 'Test.pdf');
+                console.log('ExpirationActivityControlledComponent - downloadFileExp - next');
+            },
+            error => {
+                me.errorDetails = error.error;
+                console.error('ExpirationActivityControlledComponent - downloadFileExp - error \n', error);
+            });
     }
 
     addNewRow() {

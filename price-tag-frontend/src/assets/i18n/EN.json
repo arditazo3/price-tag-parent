@@ -1,5 +1,6 @@
 {
   "GENERAL": {
+    "PRICE_TAG": "Price Tag",
     "DESCRIPTION_HEADER": "If you want, specify a message to be inserted at the beginning and / or at the end of each page. N.B. it is not possible to wrap it otherwise it would risk to overwrite the price table \nSelect the brand to insert in the PDF below each column \nEnter the item, currency and price in each box. \nUse the 'Add line' button to insert a new one. ATTENTION: a maximum of 6 lines can be inserted in a sheet! \nExample: if the total of the rows is 7, the system will produce a 2-page PDF",
     "CC": "Comm. Category",
     "CURRENCY": "Currency",
@@ -11,10 +12,10 @@
     "HEADER_TXT": "Message displayed as the header of each page",
     "FOOTER_TXT": "Message displayed at the bottom of each page",
     "CLEAN_FIELDS": "Clean \n fields",
-    "COPY_CLN_1": "Copy \n colomn 1",
-    "COPY_CLN_2": "Copy \n colomn 2",
-    "CLEAN_CLN_1": "Clean \n colonna 1",
-    "CLEAN_CLN_2": "Clean \n colonna 2",
-    "CLEAN_CLN_3": "Clean \n colonna 3"
+    "COPY_CLN_1": "Copy \ncolomn 1",
+    "COPY_CLN_2": "Copy \ncolomn 2",
+    "CLEAN_CLN_1": "Clean \ncolonna 1",
+    "CLEAN_CLN_2": "Clean \ncolonna 2",
+    "CLEAN_CLN_3": "Clean \ncolonna 3"
   }
 }
