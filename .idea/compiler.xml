@@ -10,10 +10,5 @@
         <module name="price-tag-frontend" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="price-tag-backend" target="1.8" />
-      <module name="price-tag-frontend" target="1.5" />
-      <module name="price-tag-parent" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>

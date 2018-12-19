@@ -7,175 +7,190 @@ import {ReportData} from '../../shared/common/api/model/report-data';
 import {DeviceDetectorService} from 'ngx-device-detector';
 import {saveAs as importedSaveAs} from 'file-saver';
 import {ApiErrorDetails} from '../../shared/common/api/model/api-error-details';
+import {ItemValue} from "../../shared/common/api/model/item-value";
+import {SettingsReportData} from "../../shared/common/api/const-array/settings-report-data";
 
 @Component({
-    templateUrl: './price-tag.component.html',
-    styleUrls: ['./price-tag.component.css']
+  templateUrl: './price-tag.component.html',
+  styleUrls: ['./price-tag.component.css']
 })
 export class PriceTagComponent implements OnInit {
 
-    isMobile = false;
+  isMobile = false;
 
-    indexOrder = 0;
-    noOfRowsDefault = 6;
-    commercialActivities: CommercialActivity[] = [];
+  indexOrder = 0;
+  noOfRowsDefault = 6;
+  commercialActivities: CommercialActivity[] = [];
 
-    errorDetails: ApiErrorDetails = new ApiErrorDetails();
+  errorDetails: ApiErrorDetails = new ApiErrorDetails();
 
-    brandsObservable: Observable<any[]>;
-    selectedBrand: Brand;
+  brandsObservable: Observable<any[]>;
+  selectedBrand: Brand;
 
-    headerMsg = '';
-    footerMsg = '';
+  headerMsg = '';
+  footerMsg = '';
 
-    constructor(private commCategoryService: CommCategoryService,
-                private deviceService: DeviceDetectorService) {
+  selectedFormatPaper = '';
+  selectedNumberCols = '';
+  selectedTipologyPrice = '';
 
-        this.isMobile = this.deviceService.isMobile();
+  formatPaperAvailable: ItemValue[] = SettingsReportData.FORMAT_PAPER;
+  numberColsAvailable: ItemValue[] = SettingsReportData.NUMBER_COLS;
+  tipologyPriceAvailable: ItemValue[] = SettingsReportData.TIPOLOGY_PRICE;
+
+  constructor(private commCategoryService: CommCategoryService,
+              private deviceService: DeviceDetectorService) {
+
+    this.isMobile = this.deviceService.isMobile();
+  }
+
+  ngOnInit(): void {
+    console.log('PriceTagComponent - ngOnInit');
+
+    for (let i = 0; i < this.noOfRowsDefault; i++) {
+      this.commercialActivities.push(new CommercialActivity(this.indexOrder));
+      this.indexOrder++;
     }
 
-    ngOnInit(): void {
-        console.log('PriceTagComponent - ngOnInit');
+    this.brandsObservable = this.commCategoryService.getBrands();
+  }
 
-        for (let i = 0; i < this.noOfRowsDefault; i++) {
-            this.commercialActivities.push(new CommercialActivity(this.indexOrder));
-            this.indexOrder++;
+  elaborateReport() {
+    console.log('PriceTagComponent - elaborateReport');
+
+    const me = this;
+
+    const reportData: ReportData = new ReportData();
+    reportData.brand = this.selectedBrand;
+    reportData.headerMsg = this.headerMsg;
+    reportData.footerMsg = this.footerMsg;
+    reportData.commercialActivities = this.commercialActivities;
+
+    this.commCategoryService.elaborateReport(reportData).subscribe(
+      (data) => {
+        importedSaveAs(data, 'Test.pdf');
+        console.log('ExpirationActivityControlledComponent - downloadFileExp - next');
+      },
+      error => {
+        me.errorDetails = error.error;
+        console.error('ExpirationActivityControlledComponent - downloadFileExp - error \n', error);
+      });
+  }
+
+  addNewRow() {
+
+    this.commercialActivities.push(new CommercialActivity(this.indexOrder));
+    this.indexOrder++;
+  }
+
+  removeRowListener(idOrderToRemove) {
+
+    const index = this.commercialActivities.findIndex(commercialActy => commercialActy.idOrder === idOrderToRemove);
+    if (index > -1) {
+      this.commercialActivities.splice(index, 1);
+    }
+  }
+
+  cleanFirstColumnValues() {
+
+    if (this.commercialActivities && this.commercialActivities.length > 0) {
+      this.commercialActivities.forEach(
+        commercialActivity => {
+
+          commercialActivity.commercialCategoryCol1 = '';
+          commercialActivity.currencyCol1 = '';
+          commercialActivity.amountCol1 = NaN;
         }
-
-        this.brandsObservable = this.commCategoryService.getBrands();
+      );
     }
+  }
 
-    elaborateReport() {
-        console.log('PriceTagComponent - elaborateReport');
+  cleanSecondColumnValues() {
 
-        const me = this;
+    if (this.commercialActivities && this.commercialActivities.length > 0) {
+      this.commercialActivities.forEach(
+        commercialActivity => {
 
-        const reportData: ReportData = new ReportData();
-        reportData.brand = this.selectedBrand;
-        reportData.headerMsg = this.headerMsg;
-        reportData.footerMsg = this.footerMsg;
-        reportData.commercialActivities = this.commercialActivities;
-
-        this.commCategoryService.elaborateReport(reportData).subscribe(
-            (data) => {
-                importedSaveAs(data, 'Test.pdf');
-                console.log('ExpirationActivityControlledComponent - downloadFileExp - next');
-            },
-            error => {
-                me.errorDetails = error.error;
-                console.error('ExpirationActivityControlledComponent - downloadFileExp - error \n', error);
-            });
-    }
-
-    addNewRow() {
-
-        this.commercialActivities.push(new CommercialActivity(this.indexOrder));
-        this.indexOrder++;
-    }
-
-    removeRowListener(idOrderToRemove) {
-
-        const index = this.commercialActivities.findIndex(commercialActy => commercialActy.idOrder === idOrderToRemove);
-        if (index > -1) {
-            this.commercialActivities.splice(index, 1);
+          commercialActivity.commercialCategoryCol2 = '';
+          commercialActivity.currencyCol2 = '';
+          commercialActivity.amountCol2 = NaN;
         }
+      );
     }
+  }
 
-    cleanFirstColumnValues() {
+  cleanThirdColumnValues() {
 
-        if (this.commercialActivities && this.commercialActivities.length > 0) {
-            this.commercialActivities.forEach(
-                commercialActivity => {
+    if (this.commercialActivities && this.commercialActivities.length > 0) {
+      this.commercialActivities.forEach(
+        commercialActivity => {
 
-                    commercialActivity.commercialCategoryCol1 = '';
-                    commercialActivity.currencyCol1 = '';
-                    commercialActivity.amountCol1 = NaN;
-                }
-            );
+          commercialActivity.commercialCategoryCol3 = '';
+          commercialActivity.currencyCol3 = '';
+          commercialActivity.amountCol3 = NaN;
         }
+      );
     }
+  }
 
-    cleanSecondColumnValues() {
+  copyFirstColumnValuesToSecond() {
 
-        if (this.commercialActivities && this.commercialActivities.length > 0) {
-            this.commercialActivities.forEach(
-                commercialActivity => {
+    if (this.commercialActivities && this.commercialActivities.length > 0) {
+      this.commercialActivities.forEach(
+        commercialActivity => {
 
-                    commercialActivity.commercialCategoryCol2 = '';
-                    commercialActivity.currencyCol2 = '';
-                    commercialActivity.amountCol2 = NaN;
-                }
-            );
+          if (commercialActivity.commercialCategoryCol1) {
+            commercialActivity.commercialCategoryCol2 = commercialActivity.commercialCategoryCol1;
+          } else {
+            commercialActivity.commercialCategoryCol2 = '';
+          }
+
+          if (commercialActivity.currencyCol1) {
+            commercialActivity.currencyCol2 = commercialActivity.currencyCol1;
+          } else {
+            commercialActivity.currencyCol2 = '';
+          }
+
+          if (commercialActivity.amountCol1) {
+            commercialActivity.amountCol2 = commercialActivity.amountCol1;
+          } else {
+            commercialActivity.amountCol2 = NaN;
+          }
         }
+      );
     }
+  }
 
-    cleanThirdColumnValues() {
+  copySecondColumnValuesToThird() {
 
-        if (this.commercialActivities && this.commercialActivities.length > 0) {
-            this.commercialActivities.forEach(
-                commercialActivity => {
+    if (this.commercialActivities && this.commercialActivities.length > 0) {
+      this.commercialActivities.forEach(
+        commercialActivity => {
 
-                    commercialActivity.commercialCategoryCol3 = '';
-                    commercialActivity.currencyCol3 = '';
-                    commercialActivity.amountCol3 = NaN;
-                }
-            );
+          if (commercialActivity.commercialCategoryCol2) {
+            commercialActivity.commercialCategoryCol3 = commercialActivity.commercialCategoryCol2;
+          } else {
+            commercialActivity.commercialCategoryCol3 = '';
+          }
+
+          if (commercialActivity.currencyCol2) {
+            commercialActivity.currencyCol3 = commercialActivity.currencyCol2;
+          } else {
+            commercialActivity.currencyCol3 = '';
+          }
+
+          if (commercialActivity.amountCol2) {
+            commercialActivity.amountCol3 = commercialActivity.amountCol2;
+          } else {
+            commercialActivity.amountCol3 = NaN;
+          }
         }
+      );
     }
+  }
 
-    copyFirstColumnValuesToSecond() {
+  confirmSettings() {
 
-        if (this.commercialActivities && this.commercialActivities.length > 0) {
-            this.commercialActivities.forEach(
-                commercialActivity => {
 
-                    if (commercialActivity.commercialCategoryCol1) {
-                        commercialActivity.commercialCategoryCol2 = commercialActivity.commercialCategoryCol1;
-                    } else {
-                        commercialActivity.commercialCategoryCol2 = '';
-                    }
-
-                    if (commercialActivity.currencyCol1) {
-                        commercialActivity.currencyCol2 = commercialActivity.currencyCol1;
-                    } else {
-                        commercialActivity.currencyCol2 = '';
-                    }
-
-                    if (commercialActivity.amountCol1) {
-                        commercialActivity.amountCol2 = commercialActivity.amountCol1;
-                    } else {
-                        commercialActivity.amountCol2 = NaN;
-                    }
-                }
-            );
-        }
-    }
-
-    copySecondColumnValuesToThird() {
-
-        if (this.commercialActivities && this.commercialActivities.length > 0) {
-            this.commercialActivities.forEach(
-                commercialActivity => {
-
-                    if (commercialActivity.commercialCategoryCol2) {
-                        commercialActivity.commercialCategoryCol3 = commercialActivity.commercialCategoryCol2;
-                    } else {
-                        commercialActivity.commercialCategoryCol3 = '';
-                    }
-
-                    if (commercialActivity.currencyCol2) {
-                        commercialActivity.currencyCol3 = commercialActivity.currencyCol2;
-                    } else {
-                        commercialActivity.currencyCol3 = '';
-                    }
-
-                    if (commercialActivity.amountCol2) {
-                        commercialActivity.amountCol3 = commercialActivity.amountCol2;
-                    } else {
-                        commercialActivity.amountCol3 = NaN;
-                    }
-                }
-            );
-        }
-    }
+  }
 }

@@ -16,6 +16,12 @@
     "COPY_CLN_2": "Copia \n colonna 2",
     "CLEAN_CLN_1": "Svuota \n colonna 1",
     "CLEAN_CLN_2": "Svuota \n colonna 2",
-    "CLEAN_CLN_3": "Svuota \n colonna 3"
+    "CLEAN_CLN_3": "Svuota \n colonna 3",
+    "SETTINGS": "Impostazioni",
+    "CONFIRM_SETTINGS": "Conferma impostazioni",
+    "CARD_FORMAT": "Formato carta",
+    "SELECT_CARD_FORMAT": "Seleziona formato carta",
+    "SELECT_NUMBER_COLS": "Seleziona numero delle colonne",
+    "SELECT_TIPOLOGY_PRICE": "Seleziona tipologia di prezzo"
   }
 }

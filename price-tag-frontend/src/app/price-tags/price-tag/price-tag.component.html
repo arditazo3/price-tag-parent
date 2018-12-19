@@ -1,114 +1,189 @@
 <!-- Row -->
 <div class="row">
-    <div class="col-12">
-        <div class="card">
-            <div class="{{ isMobile ? 'card-body-mobile' : 'card-body' }}">
+  <div class="col-12">
+    <div class="card">
+      <div class="{{ isMobile ? 'card-body-mobile' : 'card-body' }}">
 
-                <div class="col-sm-12 alert alert-info">
-                    {{ 'GENERAL.DESCRIPTION_HEADER' | translate }}
+        <div class="col-sm-12 alert alert-info">
+          {{ 'GENERAL.DESCRIPTION_HEADER' | translate }}
+        </div>
+
+        <div>
+          <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion nav-accordion">
+            <ngb-panel>
+              <ng-template ngbPanelTitle>
+                <div id="{{ isMobile ? 'container-fluid-mobile' : 'container-fluid' }}">
+                  <div class="row">
+                    <div class="col-2 float-left">
+                      <span class="float-left">{{ 'GENERAL.SETTINGS' | translate }}</span>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+              <ng-template ngbPanelContent>
+
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label for="formatPaper"
+                             class="control-label col-form-label">{{ 'GENERAL.CARD_FORMAT' | translate }}</label>
+                      <ng-select [items]="formatPaperAvailable"
+                                 bindLabel="description"
+                                 id="formatPaper"
+                                 [searchable]="true"
+                                 [clearable]="false"
+                                 [(ngModel)]="selectedFormatPaper"
+                                 [ngModelOptions]="{standalone: true}"
+                                 placeholder="{{ 'GENERAL.SELECT_CARD_FORMAT' | translate }}">
+                      </ng-select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label for="numberCols"
+                             class="control-label col-form-label">{{ 'GENERAL.CARD_FORMAT' | translate }}</label>
+                      <ng-select [items]="numberColsAvailable"
+                                 bindLabel="description"
+                                 id="numberCols"
+                                 [searchable]="true"
+                                 [clearable]="false"
+                                 [(ngModel)]="selectedNumberCols"
+                                 [ngModelOptions]="{standalone: true}"
+                                 placeholder="{{ 'GENERAL.SELECT_NUMBER_COLS' | translate }}">
+                      </ng-select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label for="tipologyPrice"
+                             class="control-label col-form-label">{{ 'GENERAL.CARD_FORMAT' | translate }}</label>
+                      <ng-select [items]="tipologyPriceAvailable"
+                                 bindLabel="description"
+                                 id="tipologyPrice"
+                                 [searchable]="true"
+                                 [clearable]="false"
+                                 [(ngModel)]="selectedTipologyPrice"
+                                 [ngModelOptions]="{standalone: true}"
+                                 placeholder="{{ 'GENERAL.SELECT_TIPOLOGY_PRICE' | translate }}">
+                      </ng-select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <button class="btn btn-info btn-block" type="button" (click)="confirmSettings()">{{ 'GENERAL.CONFIRM_SETTINGS' | translate }}
+                    </button>
+                  </div>
                 </div>
 
-                <div class="input-group">
-                    <div class="col-sm-6">
-                        <label class="col-md-12">
-                            {{ 'GENERAL.HEADER_TXT' | translate }}
-                        </label>
-                        <div class="col-md-12">
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+        </div>
+
+
+        <div class="input-group">
+          <div class="col-sm-6">
+            <label class="col-md-12">
+              {{ 'GENERAL.HEADER_TXT' | translate }}
+            </label>
+            <div class="col-md-12">
                             <textarea rows="5"
                                       [(ngModel)]="headerMsg" [ngModelOptions]="{standalone: true}"
                                       class="form-control form-control-line"></textarea>
-                        </div>
-                    </div>
+            </div>
+          </div>
 
-                    <div class="col-sm-6">
-                        <label class="col-md-12">
-                            {{ 'GENERAL.FOOTER_TXT' | translate }}
-                        </label>
-                        <div class="col-md-12">
+          <div class="col-sm-6">
+            <label class="col-md-12">
+              {{ 'GENERAL.FOOTER_TXT' | translate }}
+            </label>
+            <div class="col-md-12">
                             <textarea rows="5"
                                       [(ngModel)]="footerMsg" [ngModelOptions]="{standalone: true}"
                                       class="form-control form-control-line"></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <div class="col-sm-6">
-                        <label class="col-md-12">
-                            {{ 'GENERAL.SELECT_BRAND' | translate }}
-                        </label>
-                        <div class="col-sm-6">
-                            <ng-select [items]="brandsObservable | async"
-                                       bindLabel="description"
-                                       [(ngModel)]="selectedBrand"
-                                       [ngModelOptions]="{standalone: true}"
-                                       placeholder="{{ 'GENERAL.SELECT_BRAND' | translate }}">
-                            </ng-select>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <div class="text-right mt-1_9">
-                            <button type="button"
-                                    (click)="addNewRow()"
-                                    class="btn btn-primary">
-                                {{ 'GENERAL.ADD_ROW' | translate }}
-                            </button>
-                            <button type="button"
-                                    (click)="elaborateReport()"
-                                    class="btn btn-success">
-                                {{ 'GENERAL.ELABORATE_REPORT' | translate }}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-4">
-                    <div class="input-group">
-                        <div class="col-sm-3 pr-1 pl-0">
-                            <div class="input-group">
-                                <button type="button" (click)="cleanFirstColumnValues()"
-                                        class="btn btn-primary btn-small">
-                                    <div style="white-space: pre-wrap">{{ 'GENERAL.CLEAN_CLN_1' | translate }}</div>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 pr-4 pl-0">
-                            <div class="input-group">
-                                <button type="button" (click)="cleanSecondColumnValues()"
-                                        class="btn btn-small btn-primary">
-                                    <div style="white-space: pre-wrap">{{ 'GENERAL.CLEAN_CLN_2' | translate }}</div>
-                                </button>
-                                <button type="button" (click)="copyFirstColumnValuesToSecond()"
-                                        class="btn btn-small btn-primary">
-                                    <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_1' | translate }}</div>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-5 pr-0 pl-0">
-                            <div class="input-group">
-                                <button type="button" (click)="cleanThirdColumnValues()"
-                                        class="btn btn-small btn-primary">
-                                    <div style="white-space: pre-wrap">{{ 'GENERAL.CLEAN_CLN_3' | translate }}</div>
-                                </button>
-                                <button type="button" (click)="copySecondColumnValuesToThird()"
-                                        class="btn btn-small btn-primary">
-                                    <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_2' | translate }}</div>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div *ngFor="let commercialActivity of commercialActivities">
-                    <app-commercial-category-activity [commercialActivity]="commercialActivity"
-                                                      (removeRowEvent)="removeRowListener($event)"></app-commercial-category-activity>
-                </div>
-
             </div>
+          </div>
         </div>
+
+        <div class="input-group">
+          <div class="col-sm-6">
+            <label class="col-md-12">
+              {{ 'GENERAL.SELECT_BRAND' | translate }}
+            </label>
+            <div class="col-sm-6">
+              <ng-select [items]="brandsObservable | async"
+                         bindLabel="description"
+                         [(ngModel)]="selectedBrand"
+                         [ngModelOptions]="{standalone: true}"
+                         placeholder="{{ 'GENERAL.SELECT_BRAND' | translate }}">
+              </ng-select>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="text-right mt-1_9">
+              <button type="button"
+                      (click)="addNewRow()"
+                      class="btn btn-primary">
+                {{ 'GENERAL.ADD_ROW' | translate }}
+              </button>
+              <button type="button"
+                      (click)="elaborateReport()"
+                      class="btn btn-success">
+                {{ 'GENERAL.ELABORATE_REPORT' | translate }}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <div class="input-group">
+            <div class="col-sm-3 pr-1 pl-0">
+              <div class="input-group">
+                <button type="button" (click)="cleanFirstColumnValues()"
+                        class="btn btn-primary btn-small">
+                  <div style="white-space: pre-wrap">{{ 'GENERAL.CLEAN_CLN_1' | translate }}</div>
+                </button>
+              </div>
+            </div>
+
+            <div class="col-sm-4 pr-4 pl-0">
+              <div class="input-group">
+                <button type="button" (click)="cleanSecondColumnValues()"
+                        class="btn btn-small btn-primary">
+                  <div style="white-space: pre-wrap">{{ 'GENERAL.CLEAN_CLN_2' | translate }}</div>
+                </button>
+                <button type="button" (click)="copyFirstColumnValuesToSecond()"
+                        class="btn btn-small btn-primary">
+                  <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_1' | translate }}</div>
+                </button>
+              </div>
+            </div>
+
+            <div class="col-sm-5 pr-0 pl-0">
+              <div class="input-group">
+                <button type="button" (click)="cleanThirdColumnValues()"
+                        class="btn btn-small btn-primary">
+                  <div style="white-space: pre-wrap">{{ 'GENERAL.CLEAN_CLN_3' | translate }}</div>
+                </button>
+                <button type="button" (click)="copySecondColumnValuesToThird()"
+                        class="btn btn-small btn-primary">
+                  <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_2' | translate }}</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngFor="let commercialActivity of commercialActivities">
+          <app-commercial-category-activity [commercialActivity]="commercialActivity"
+                                            (removeRowEvent)="removeRowListener($event)"></app-commercial-category-activity>
+        </div>
+
+      </div>
     </div>
+  </div>
 </div>
 <!-- End Row -->
