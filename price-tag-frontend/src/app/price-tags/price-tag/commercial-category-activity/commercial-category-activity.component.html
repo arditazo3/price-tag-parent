@@ -1,108 +1,126 @@
-<div class="input-group">
-  <div class="col-sm-3 pr-4 pl-0">
-    <div class="input-group">
-      <div class="col-sm-6 pr-1 pl-0">
-        <label class="control-label col-form-label">
-          {{ 'GENERAL.CC' | translate }}
-        </label>
-        <input type="text" class="form-control"
-               [(ngModel)]="commercialActivity.commercialCategoryCol1"
-               [ngModelOptions]="{standalone: true}">
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion nav-accordion">
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <div id="{{ isMobile ? 'container-fluid-mobile' : 'container-fluid' }}">
+        <div class="row" style="width: 100% !important;">
+          <div class="col-2">
+            <span class="float-left">{{ 'GENERAL.SETTINGS' | translate }}</span>
+          </div>
+          <div class="col-8 text-center">
+          </div>
+          <div class="col-2 float-right">
+            <button class="{{ isMobile ? 'btn btn-small btn-primary' : 'btn btn-primary btn-block' }}" type="button"
+                    (click)="removeOfficeBtn(taskOffice.office)">
+              <span *ngIf="!isMobile">{{ 'GENERAL.REMOVE' | translate }}</span>
+              <i *ngIf="isMobile" class="far fa-trash-alt fa-xs"></i>
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-3 pr-1 pl-0">
-        <label class="control-label col-form-label">
-          {{ 'GENERAL.CURRENCY' | translate }}
-        </label>
-        <input type="text" class="form-control"
-               [(ngModel)]="commercialActivity.currencyCol1"
-               [ngModelOptions]="{standalone: true}">
-      </div>
-      <div class="col-sm-3 pr-1 pl-0">
-        <label class="control-label col-form-label">
-          {{ 'GENERAL.AMOUNT' | translate }}
-        </label>
-        <input type="number" class="form-control"
-               [(ngModel)]="commercialActivity.amountCol1"
-               [ngModelOptions]="{standalone: true}">
-      </div>
-    </div>
-  </div>
+    </ng-template>
+    <ng-template ngbPanelContent>
 
-  <div class="col-sm-4 pr-4 pl-0">
-    <div class="input-group">
-      <div class="col-sm-5 pr-1 pl-0">
-        <label class="control-label col-form-label">
-          {{ 'GENERAL.CC' | translate }}
-        </label>
-        <input type="text" class="form-control"
-               [(ngModel)]="commercialActivity.commercialCategoryCol2"
-               [ngModelOptions]="{standalone: true}">
+      <div class="input-group">
+        <div class="col-sm-6 pr-1 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.CC' | translate }}
+          </label>
+          <input type="text" class="form-control"
+                 [(ngModel)]="commercialActivity.commercialCategoryCol1"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-3 pr-1 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.CURRENCY' | translate }}
+          </label>
+          <input type="text" class="form-control"
+                 [(ngModel)]="commercialActivity.currencyCol1"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-3 pr-1 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.AMOUNT' | translate }}
+          </label>
+          <input type="number" class="form-control"
+                 [(ngModel)]="commercialActivity.amountCol1"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
       </div>
-      <div class="col-sm-2 pr-1 pl-0">
-        <label class="control-label col-form-label">
-          {{ 'GENERAL.CURRENCY' | translate }}
-        </label>
-        <input type="text" class="form-control"
-               [(ngModel)]="commercialActivity.currencyCol2"
-               [ngModelOptions]="{standalone: true}">
-      </div>
-      <div class="col-sm-3 pr-1 pl-0">
-        <label class="control-label col-form-label">
-          {{ 'GENERAL.AMOUNT' | translate }}
-        </label>
-        <input type="number" class="form-control"
-               [(ngModel)]="commercialActivity.amountCol2"
-               [ngModelOptions]="{standalone: true}">
-      </div>
-      <div class="col-sm-2 pr-0 pl-0 mt-2_2">
-        <button type="button" (click)="copyFirstColumnValuesToSecond()"
-                class="btn btn-small btn-primary">
-          <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_1' | translate }}</div>
-        </button>
-      </div>
-    </div>
-  </div>
 
-  <div class="col-sm-5 pr-0 pl-0">
-    <div class="input-group">
-      <div class="col-sm-4 pr-1 pl-0">
-        <label class="control-label col-form-label">
-          {{ 'GENERAL.CC' | translate }}
-        </label>
-        <input type="text" class="form-control"
-               [(ngModel)]="commercialActivity.commercialCategoryCol3"
-               [ngModelOptions]="{standalone: true}">
-      </div>
-      <div class="col-sm-2 pr-1 pl-0">
-        <label class="control-label col-form-label">
-          {{ 'GENERAL.CURRENCY' | translate }}
-        </label>
-        <input type="text" class="form-control"
-               [(ngModel)]="commercialActivity.currencyCol3"
-               [ngModelOptions]="{standalone: true}">
-      </div>
-      <div class="col-sm-3 pr-1 pl-0">
-        <label class="control-label col-form-label">
-          {{ 'GENERAL.AMOUNT' | translate }}
-        </label>
-        <input type="text" class="form-control"
-               [(ngModel)]="commercialActivity.amountCol3"
-               [ngModelOptions]="{standalone: true}">
-      </div>
-      <div class="col-sm-2 pr-0 pl-0">
-        <div class="btn-inline p-0 mt-2_2">
-          <button type="button"
-                  (click)="copySecondColumnValuesToThird()"
-                  class="btn btn-small btn-primary mr-1 ">
-            <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_2' | translate }}</div>
-          </button>
-          <button type="button"
-                  (click)="deleteRow()"
-                  class="btn btn-small btn-danger mr-0 ">
-            <div style="white-space: pre-wrap">{{ 'GENERAL.DELETE_ROW' | translate }}</div>
+      <div class="input-group">
+        <div class="col-sm-5 pr-1 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.CC' | translate }}
+          </label>
+          <input type="text" class="form-control"
+                 [(ngModel)]="commercialActivity.commercialCategoryCol2"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-2 pr-1 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.CURRENCY' | translate }}
+          </label>
+          <input type="text" class="form-control"
+                 [(ngModel)]="commercialActivity.currencyCol2"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-3 pr-1 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.AMOUNT' | translate }}
+          </label>
+          <input type="number" class="form-control"
+                 [(ngModel)]="commercialActivity.amountCol2"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-2 pr-0 pl-0 mt-2_2">
+          <button type="button" (click)="copyFirstColumnValuesToSecond()"
+                  class="btn btn-small btn-primary">
+            <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_1' | translate }}</div>
           </button>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+
+      <div class="input-group">
+        <div class="col-sm-4 pr-1 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.CC' | translate }}
+          </label>
+          <input type="text" class="form-control"
+                 [(ngModel)]="commercialActivity.commercialCategoryCol3"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-2 pr-1 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.CURRENCY' | translate }}
+          </label>
+          <input type="text" class="form-control"
+                 [(ngModel)]="commercialActivity.currencyCol3"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-3 pr-1 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.AMOUNT' | translate }}
+          </label>
+          <input type="text" class="form-control"
+                 [(ngModel)]="commercialActivity.amountCol3"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-2 pr-0 pl-0">
+          <div class="btn-inline p-0 mt-2_2">
+            <button type="button"
+                    (click)="copySecondColumnValuesToThird()"
+                    class="btn btn-small btn-primary mr-1 ">
+              <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_2' | translate }}</div>
+            </button>
+            <button type="button"
+                    (click)="deleteRow()"
+                    class="btn btn-small btn-danger mr-0 ">
+              <div style="white-space: pre-wrap">{{ 'GENERAL.DELETE_ROW' | translate }}</div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
