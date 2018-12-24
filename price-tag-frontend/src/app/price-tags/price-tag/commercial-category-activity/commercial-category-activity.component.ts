@@ -15,6 +15,7 @@ export class CommercialCategoryActivityComponent implements OnInit {
     }
 
     ngOnInit() {
+        console.log('CommercialCategoryActivityComponent - ngOnInit');
     }
 
     copyFirstColumnValuesToSecond() {
@@ -59,8 +60,27 @@ export class CommercialCategoryActivityComponent implements OnInit {
         }
     }
 
-    deleteRow() {
+    cleanFieldsBtn(acc) {
+        console.log('CommercialCategoryActivityComponent - cleanFieldsBtn');
+
+        this.commercialActivity = new CommercialActivity(this.commercialActivity.idOrder);
+
+        if (acc.isExpanded('toggle-' + this.commercialActivity.idOrder)) {
+            acc.collapse('toggle-' + this.commercialActivity.idOrder);
+        } else {
+            acc.expand('toggle-' + this.commercialActivity.idOrder);
+        }
+    }
+
+    removeOfficeBtn() {
+        console.log('CommercialCategoryActivityComponent - removeOfficeBtn');
 
         this.removeRowEvent.emit(this.commercialActivity.idOrder);
+    }
+
+    collapseBtn(acc) {
+        console.log('CommercialCategoryActivityComponent - collapseBtn');
+
+        acc.collapse('toggle-' + this.commercialActivity.idOrder);
     }
 }
