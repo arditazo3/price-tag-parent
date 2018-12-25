@@ -34,6 +34,10 @@ export class PriceTagComponent implements OnInit {
   selectedNumberCols = '';
   selectedTipologyPrice = '';
 
+  hasFormatPaper = false;
+  hasNumberCols = false;
+  hasTipologyPrice = false;
+
   formatPaperAvailable: ItemValue[] = SettingsReportData.FORMAT_PAPER;
   numberColsAvailable: ItemValue[] = SettingsReportData.NUMBER_COLS;
   tipologyPriceAvailable: ItemValue[] = SettingsReportData.TIPOLOGY_PRICE;
@@ -47,12 +51,38 @@ export class PriceTagComponent implements OnInit {
   ngOnInit(): void {
     console.log('PriceTagComponent - ngOnInit');
 
+    this.brandsObservable = this.commCategoryService.getBrands();
+  }
+
+  constructActivities() {
+
+    this.commercialActivities = [];
+
     for (let i = 0; i < this.noOfRowsDefault; i++) {
       this.commercialActivities.push(new CommercialActivity(this.indexOrder));
       this.indexOrder++;
     }
+  }
 
-    this.brandsObservable = this.commCategoryService.getBrands();
+  confirmSettings() {
+
+    this.hasFormatPaper = false;
+    this.hasNumberCols = false;
+    this.hasTipologyPrice = false;
+
+    if (!this.selectedFormatPaper) {
+      this.hasFormatPaper = true;
+    }
+    if (!this.selectedNumberCols) {
+      this.hasNumberCols = true;
+    }
+    if (!this.selectedTipologyPrice) {
+      this.hasTipologyPrice = true;
+    }
+
+    if (!this.hasFormatPaper && !this.hasNumberCols && !this.hasTipologyPrice) {
+      this.constructActivities();
+    }
   }
 
   elaborateReport() {
@@ -103,94 +133,5 @@ export class PriceTagComponent implements OnInit {
         }
       );
     }
-  }
-
-  cleanSecondColumnValues() {
-
-    if (this.commercialActivities && this.commercialActivities.length > 0) {
-      this.commercialActivities.forEach(
-        commercialActivity => {
-
-          commercialActivity.commercialCategoryCol2 = '';
-          commercialActivity.currencyCol2 = '';
-          commercialActivity.amountCol2 = NaN;
-        }
-      );
-    }
-  }
-
-  cleanThirdColumnValues() {
-
-    if (this.commercialActivities && this.commercialActivities.length > 0) {
-      this.commercialActivities.forEach(
-        commercialActivity => {
-
-          commercialActivity.commercialCategoryCol3 = '';
-          commercialActivity.currencyCol3 = '';
-          commercialActivity.amountCol3 = NaN;
-        }
-      );
-    }
-  }
-
-  copyFirstColumnValuesToSecond() {
-
-    if (this.commercialActivities && this.commercialActivities.length > 0) {
-      this.commercialActivities.forEach(
-        commercialActivity => {
-
-          if (commercialActivity.commercialCategoryCol1) {
-            commercialActivity.commercialCategoryCol2 = commercialActivity.commercialCategoryCol1;
-          } else {
-            commercialActivity.commercialCategoryCol2 = '';
-          }
-
-          if (commercialActivity.currencyCol1) {
-            commercialActivity.currencyCol2 = commercialActivity.currencyCol1;
-          } else {
-            commercialActivity.currencyCol2 = '';
-          }
-
-          if (commercialActivity.amountCol1) {
-            commercialActivity.amountCol2 = commercialActivity.amountCol1;
-          } else {
-            commercialActivity.amountCol2 = NaN;
-          }
-        }
-      );
-    }
-  }
-
-  copySecondColumnValuesToThird() {
-
-    if (this.commercialActivities && this.commercialActivities.length > 0) {
-      this.commercialActivities.forEach(
-        commercialActivity => {
-
-          if (commercialActivity.commercialCategoryCol2) {
-            commercialActivity.commercialCategoryCol3 = commercialActivity.commercialCategoryCol2;
-          } else {
-            commercialActivity.commercialCategoryCol3 = '';
-          }
-
-          if (commercialActivity.currencyCol2) {
-            commercialActivity.currencyCol3 = commercialActivity.currencyCol2;
-          } else {
-            commercialActivity.currencyCol3 = '';
-          }
-
-          if (commercialActivity.amountCol2) {
-            commercialActivity.amountCol3 = commercialActivity.amountCol2;
-          } else {
-            commercialActivity.amountCol3 = NaN;
-          }
-        }
-      );
-    }
-  }
-
-  confirmSettings() {
-
-
   }
 }

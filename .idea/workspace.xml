@@ -8,7 +8,16 @@
   <component name="ChangeListManager">
     <list default="true" id="fdc05167-5fd7-44f7-aaef-479ee08c5701" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/EN.json" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/EN.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/IT.json" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/IT.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/scss/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/scss/custom.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-frontend/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-frontend/target/price-tag-frontend-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/target/price-tag-frontend-0.0.1-SNAPSHOT.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/price-tag-backend/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,43 +29,47 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.54560083">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="219">
-                  <caret line="167" column="56" selection-start-line="167" selection-start-column="45" selection-end-line="167" selection-end-column="56" />
+                <state relative-caret-position="883">
+                  <caret line="76" column="50" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="50" />
                 </state>
               </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="84">
-                  <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.html">
-              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.html">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/EN.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2562">
-                  <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+                <state relative-caret-position="609">
+                  <caret line="29" column="19" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/IT.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="609">
+                  <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="649">
+                  <caret line="80" selection-start-line="80" selection-end-line="80" />
                   <folding>
-                    <element signature="n#style#0;n#div#0;n#div#0;n#ng-template#0;n#ngb-panel#0;n#ngb-accordion#0;n#!!top" expanded="true" />
+                    <element signature="e#0#63#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -82,11 +95,13 @@
         <option value="$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/api/const-array/format-paper-data.ts" />
         <option value="$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/api/model/item-value.ts" />
         <option value="$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/api/const-array/settings-report-data.ts" />
-        <option value="$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/IT.json" />
+        <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.html" />
+        <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag.module.ts" />
+        <option value="$PROJECT_DIR$/price-tag-frontend/src/assets/scss/custom.scss" />
         <option value="$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/EN.json" />
         <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.html" />
+        <option value="$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/IT.json" />
         <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts" />
-        <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.html" />
       </list>
     </option>
   </component>
@@ -165,14 +180,14 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="price-tag-parent" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545322566189" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545728662257" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="ts.external.directory.path" value="C:\Users\U185502\git\price-tag-parent\price-tag-frontend\node_modules\typescript\lib" />
   </component>
   <component name="RunDashboard">
@@ -360,7 +375,8 @@
       <workItem from="1545209659924" duration="1011000" />
       <workItem from="1545225591015" duration="117000" />
       <workItem from="1545225745820" duration="219000" />
-      <workItem from="1545225996887" duration="10394000" />
+      <workItem from="1545225996887" duration="10655000" />
+      <workItem from="1545668446455" duration="3863000" />
     </task>
     <task id="LOCAL-00001" summary="Settings report">
       <created>1545236176363</created>
@@ -369,17 +385,23 @@
       <option name="project" value="LOCAL" />
       <updated>1545236176363</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Settings report">
+      <created>1545323229578</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1545323229578</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12835000" />
+    <option name="totallyTimeSpent" value="16959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18472697" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18454936" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -387,11 +409,10 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49957338" visible="true" weight="0.1802721" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2578125" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49892703" weight="0.26530612" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2573696" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -399,15 +420,16 @@
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50042665" side_tool="true" weight="0.13802083" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50107294" side_tool="true" weight="0.1802721" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="TypeScript" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.18456376" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.18454936" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -481,30 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/IT.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/EN.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
-          <folding>
-            <element signature="e#0#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -512,19 +510,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.html">
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="167" column="56" selection-start-line="167" selection-start-column="45" selection-end-line="167" selection-end-column="56" />
+        <state relative-caret-position="415">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.html">
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/scss/custom.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2562">
-          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+        <state relative-caret-position="667">
+          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/EN.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/IT.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="883">
+          <caret line="76" column="50" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#ng-template#0;n#ngb-panel#0;n#ngb-accordion#0;n#!!top" expanded="true" />
+            <element signature="e#0#63#0" expanded="true" />
           </folding>
         </state>
       </provider>

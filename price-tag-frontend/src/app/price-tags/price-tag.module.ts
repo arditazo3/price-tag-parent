@@ -15,7 +15,7 @@ import {TranslateModule} from '@ngx-translate/core';
 import {NgSelectModule} from '@ng-select/ng-select';
 import { CommercialCategoryActivityComponent } from './price-tag/commercial-category-activity/commercial-category-activity.component';
 import {CommCategoryService} from './service/comm-category.service';
-import { CommercialCategoryPromotionalActivityComponent } from './price-tag/commercial-category-promotional-activity/commercial-category-promotional-activity.component';
+import {CommercialCategoryPromotionalActivityComponent} from "./price-tag/commercial-category-promotional-activity/commercial-category-promotional-activity.component";
 
 @NgModule({
     imports: [
