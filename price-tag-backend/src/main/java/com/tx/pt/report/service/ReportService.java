@@ -41,7 +41,7 @@ public class ReportService implements IReportService {
 	@Override
 	public HttpFile elaborateReport(ReportData reportData) {
 
-		reportFiller.setReportFileName(REPORT_PATH);
+		reportFiller.setReportFileName(TERRANOVA_A4_3_PROMOTION_CHRISTMAS);
 		
 		reportFiller.createParametersAndDatasource(reportData);
 		

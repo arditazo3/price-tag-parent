@@ -2,12 +2,7 @@ import {IMyDpOptions} from 'mydatepicker';
 
 export class AppGlobals {
 
-    public static emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$';
     public static dateFormat = 'dd/mm/yyyy';
-
-    /* User Relations Type */
-    public static CONTROLLER = 1;
-    public static CONTROLLED = 2;
 
     /* Color of Loading */
     public static PrimaryWhite = '#ffffff';

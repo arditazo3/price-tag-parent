@@ -82,22 +82,17 @@ public class ReportFiller {
     	
     	String headerTxt = "";
     	String footerTxt = "";
-    	String brandTxt = "";
-    	
-    	if (!isEmpty(reportData.getHeaderMsg())) {
-    		headerTxt = reportData.getHeaderMsg();
+    
+    	if (!isEmpty(reportData.getFormatSettings().getBrand()) && !isEmpty(reportData.getFormatSettings().getBrand().getHeader())) {
+    		headerTxt = reportData.getFormatSettings().getBrand().getHeader();
     	}
-    	if (!isEmpty(reportData.getFooterMsg())) {
-    		footerTxt = reportData.getFooterMsg();
-    	}
-    	if (!isEmpty(reportData.getBrand()) && !isEmpty(reportData.getBrand().getDescription())) {
-    		brandTxt = reportData.getBrand().getDescription();
+    	if (!isEmpty(reportData.getFormatSettings().getBrand()) && !isEmpty(reportData.getFormatSettings().getBrand().getFooter())) {
+    		footerTxt = reportData.getFormatSettings().getBrand().getFooter();
     	}
     	
     	Map<String, Object> parametersInserted = new HashMap<>();
     	parametersInserted.put("headerTxt", headerTxt);
     	parametersInserted.put("footerTxt", footerTxt);
-    	parametersInserted.put("brandTxt", brandTxt);
     	
         this.parameters = parametersInserted;
     }
@@ -123,12 +118,60 @@ public class ReportFiller {
 		Collection<CommercialActivity> activitiesCollection = new ArrayList<>();
 
 		if (!isEmpty(reportData.getCommercialActivities())) {
+			
+			for (CommercialActivity commercialActivity : reportData.getCommercialActivities()) {
+				if (!isEmpty(commercialActivity.getAmountCol1())) {
+					String amount1 = String.valueOf(commercialActivity.getAmountCol1());
+					
+					String[] valueSplitted = amount1.split("\\.");
+					if (!isEmpty(valueSplitted) && valueSplitted.length == 2) {
+						
+						commercialActivity.setDecimalPart1(Integer.valueOf(valueSplitted[0]));
+						
+						String fractioal = valueSplitted[1];
+						if (fractioal.length() == 1) {
+							fractioal = fractioal + "0";
+						}
+						
+						commercialActivity.setFractionalCurrencyPart1("," + fractioal + commercialActivity.getCurrencyCol1());
+					}
+				}
+				if (!isEmpty(commercialActivity.getAmountCol2())) {
+					String amount2 = String.valueOf(commercialActivity.getAmountCol2());
+					
+					String[] valueSplitted = amount2.split("\\.");
+					if (!isEmpty(valueSplitted) && valueSplitted.length == 2) {
+						
+						commercialActivity.setDecimalPart2(Integer.valueOf(valueSplitted[0]));
+						
+						String fractioal = valueSplitted[1];
+						if (fractioal.length() == 1) {
+							fractioal = fractioal + "0";
+						}
+						
+						commercialActivity.setFractionalCurrencyPart2("," + fractioal + " " + commercialActivity.getCurrencyCol2());
+					}
+				}
+				if (!isEmpty(commercialActivity.getAmountCol3())) {
+					String amount3 = String.valueOf(commercialActivity.getAmountCol3());
+					
+					String[] valueSplitted = amount3.split("\\.");
+					if (!isEmpty(valueSplitted) && valueSplitted.length == 2) {
+						
+						commercialActivity.setDecimalPart3(Integer.valueOf(valueSplitted[0]));
+						
+						String fractioal = valueSplitted[1];
+						if (fractioal.length() == 1) {
+							fractioal = fractioal + "0";
+						}
+						
+						commercialActivity.setFractionalCurrencyPart3("," + fractioal + " " + commercialActivity.getCurrencyCol3());
+					}
+				}
+			}
 			activitiesCollection.addAll(reportData.getCommercialActivities());	
 		}
 		
 		this.dataSource = new JRBeanCollectionDataSource(activitiesCollection);
 	}
-
-	
-
 }

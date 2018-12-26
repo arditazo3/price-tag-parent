@@ -21,6 +21,8 @@ public class Brand implements Serializable {
 	@JsonProperty("id")
 	private Long idBrand;
 	private String description;
+	private String header;
+	private String footer;
 	
 	public Long getIdBrand() {
 		return idBrand;
@@ -34,6 +36,16 @@ public class Brand implements Serializable {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
-	
+	public String getHeader() {
+		return header;
+	}
+	public void setHeader(String header) {
+		this.header = header;
+	}
+	public String getFooter() {
+		return footer;
+	}
+	public void setFooter(String footer) {
+		this.footer = footer;
+	}
 }

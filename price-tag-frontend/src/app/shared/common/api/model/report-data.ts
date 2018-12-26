@@ -1,10 +1,9 @@
 import {Brand} from './brand';
 import {CommercialActivity} from './commercial-activity';
+import {FormatSettings} from './format-settings';
 
 export class ReportData {
 
-    headerMsg: string;
-    footerMsg: string;
-    brand: Brand;
-    commercialActivities: CommercialActivity[];
+    commercialActivities: CommercialActivity[] = [];
+    formatSettings: FormatSettings = new FormatSettings();
 }

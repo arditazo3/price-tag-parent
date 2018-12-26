@@ -96,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="input-group">
+            <div class="input-group" *ngIf="selectedNumberCols && selectedNumberCols.value == 3">
                 <div class="col-sm-1 pr-1 pl-0 mt-5">
                     <b>{{ 'GENERAL.CLN_3' | translate }}</b>
                 </div>

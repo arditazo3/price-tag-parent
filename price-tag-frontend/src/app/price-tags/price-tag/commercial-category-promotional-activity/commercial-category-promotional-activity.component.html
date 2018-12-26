@@ -34,7 +34,7 @@
         <div class="col-sm-1 pr-1 pl-0 mt-5">
           <b>{{ 'GENERAL.CLN_1' | translate }}</b>
         </div>
-        <div class="col-sm-4 pr-3 pl-0">
+        <div class="col-sm-3 pr-2 pl-0">
           <label class="control-label col-form-label">
             {{ 'GENERAL.CC' | translate }}
           </label>
@@ -42,7 +42,7 @@
                  [(ngModel)]="commercialActivity.commercialCategoryCol1"
                  [ngModelOptions]="{standalone: true}">
         </div>
-        <div class="col-sm-2 pr-3 pl-0">
+        <div class="col-sm-1 pr-2 pl-0">
           <label class="control-label col-form-label">
             {{ 'GENERAL.CURRENCY' | translate }}
           </label>
@@ -50,11 +50,29 @@
                  [(ngModel)]="commercialActivity.currencyCol1"
                  [ngModelOptions]="{standalone: true}">
         </div>
-        <div class="col-sm-2 pr-1 pl-0">
+        <div class="col-sm-2 pr-2 pl-0">
           <label class="control-label col-form-label">
-            {{ 'GENERAL.AMOUNT' | translate }}
+            {{ 'GENERAL.INITIAL_PRICE' | translate }}
           </label>
           <input type="number" class="form-control"
+                 (keyup)="roundFinalPrice1()"
+                 [(ngModel)]="commercialActivity.initialPrice1"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-1 pr-2 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.DISCOUNT' | translate }}
+          </label>
+          <input type="number" class="form-control"
+                 (keyup)="roundFinalPrice1()"
+                 [(ngModel)]="commercialActivity.discount1"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-2 pr-2 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.FINAL_PRICE' | translate }}
+          </label>
+          <input type="number" class="form-control" disabled
                  [(ngModel)]="commercialActivity.amountCol1"
                  [ngModelOptions]="{standalone: true}">
         </div>
@@ -64,7 +82,7 @@
         <div class="col-sm-1 pr-1 pl-0 mt-5">
           <b>{{ 'GENERAL.CLN_2' | translate }}</b>
         </div>
-        <div class="col-sm-4 pr-3 pl-0">
+        <div class="col-sm-3 pr-2 pl-0">
           <label class="control-label col-form-label">
             {{ 'GENERAL.CC' | translate }}
           </label>
@@ -72,7 +90,7 @@
                  [(ngModel)]="commercialActivity.commercialCategoryCol2"
                  [ngModelOptions]="{standalone: true}">
         </div>
-        <div class="col-sm-2 pr-3 pl-0">
+        <div class="col-sm-1 pr-2 pl-0">
           <label class="control-label col-form-label">
             {{ 'GENERAL.CURRENCY' | translate }}
           </label>
@@ -80,11 +98,29 @@
                  [(ngModel)]="commercialActivity.currencyCol2"
                  [ngModelOptions]="{standalone: true}">
         </div>
-        <div class="col-sm-2 pr-1 pl-0">
+        <div class="col-sm-2 pr-2 pl-0">
           <label class="control-label col-form-label">
-            {{ 'GENERAL.AMOUNT' | translate }}
+            {{ 'GENERAL.INITIAL_PRICE' | translate }}
           </label>
           <input type="number" class="form-control"
+                 (keyup)="roundFinalPrice2()"
+                 [(ngModel)]="commercialActivity.initialPrice2"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-1 pr-2 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.DISCOUNT' | translate }}
+          </label>
+          <input type="number" class="form-control"
+                 (keyup)="roundFinalPrice2()"
+                 [(ngModel)]="commercialActivity.discount2"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-2 pr-2 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.FINAL_PRICE' | translate }}
+          </label>
+          <input type="number" class="form-control" disabled
                  [(ngModel)]="commercialActivity.amountCol2"
                  [ngModelOptions]="{standalone: true}">
         </div>
@@ -96,11 +132,11 @@
         </div>
       </div>
 
-      <div class="input-group">
+      <div class="input-group" *ngIf="selectedNumberCols && selectedNumberCols.value == 3">
         <div class="col-sm-1 pr-1 pl-0 mt-5">
           <b>{{ 'GENERAL.CLN_3' | translate }}</b>
         </div>
-        <div class="col-sm-4 pr-3 pl-0">
+        <div class="col-sm-3 pr-2 pl-0">
           <label class="control-label col-form-label">
             {{ 'GENERAL.CC' | translate }}
           </label>
@@ -108,7 +144,7 @@
                  [(ngModel)]="commercialActivity.commercialCategoryCol3"
                  [ngModelOptions]="{standalone: true}">
         </div>
-        <div class="col-sm-2 pr-3 pl-0">
+        <div class="col-sm-1 pr-2 pl-0">
           <label class="control-label col-form-label">
             {{ 'GENERAL.CURRENCY' | translate }}
           </label>
@@ -116,11 +152,29 @@
                  [(ngModel)]="commercialActivity.currencyCol3"
                  [ngModelOptions]="{standalone: true}">
         </div>
-        <div class="col-sm-2 pr-1 pl-0">
+        <div class="col-sm-2 pr-2 pl-0">
           <label class="control-label col-form-label">
-            {{ 'GENERAL.AMOUNT' | translate }}
+            {{ 'GENERAL.INITIAL_PRICE' | translate }}
           </label>
-          <input type="text" class="form-control"
+          <input type="number" class="form-control"
+                 (keyup)="roundFinalPrice3()"
+                 [(ngModel)]="commercialActivity.initialPrice3"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-1 pr-2 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.DISCOUNT' | translate }}
+          </label>
+          <input type="number" class="form-control"
+                 (keyup)="roundFinalPrice3()"
+                 [(ngModel)]="commercialActivity.discount3"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-sm-2 pr-2 pl-0">
+          <label class="control-label col-form-label">
+            {{ 'GENERAL.FINAL_PRICE' | translate }}
+          </label>
+          <input type="number" class="form-control" disabled
                  [(ngModel)]="commercialActivity.amountCol3"
                  [ngModelOptions]="{standalone: true}">
         </div>

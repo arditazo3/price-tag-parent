@@ -1,164 +1,176 @@
 <!-- Row -->
 <div class="row">
-  <div class="col-12">
-    <div class="card">
-      <div class="{{ isMobile ? 'card-body-mobile' : 'card-body' }}">
+    <div class="col-12">
+        <div class="card">
+            <div class="{{ isMobile ? 'card-body-mobile' : 'card-body' }}">
 
-        <div class="col-sm-12 alert alert-info">
-          {{ 'GENERAL.DESCRIPTION_HEADER' | translate }}
-        </div>
-
-        <div>
-          <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion nav-accordion">
-            <ngb-panel>
-              <ng-template ngbPanelTitle>
-                <div id="{{ isMobile ? 'container-fluid-mobile' : 'container-fluid' }}">
-                  <div class="row">
-                    <div class="col-2 float-left">
-                      <span class="float-left">{{ 'GENERAL.SETTINGS' | translate }}</span>
-                    </div>
-                  </div>
-                </div>
-              </ng-template>
-              <ng-template ngbPanelContent>
-
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label for="formatPaper"
-                             class="control-label col-form-label">{{ 'GENERAL.CARD_FORMAT' | translate }}</label>
-                      <ng-select [items]="formatPaperAvailable"
-                                 bindLabel="description"
-                                 id="formatPaper"
-                                 [searchable]="true"
-                                 [clearable]="false"
-                                 [(ngModel)]="selectedFormatPaper"
-                                 [ngModelOptions]="{standalone: true}"
-                                 placeholder="{{ 'GENERAL.SELECT_CARD_FORMAT' | translate }}">
-                      </ng-select>
-                      <div *ngIf="hasFormatPaper" class="invalid-feedback-show">
-                        {{ 'GENERAL.CARD_FORMAT_REQ' | translate }}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label for="numberCols"
-                             class="control-label col-form-label">{{ 'GENERAL.COLS_NO' | translate }}</label>
-                      <ng-select [items]="numberColsAvailable"
-                                 bindLabel="description"
-                                 id="numberCols"
-                                 [searchable]="true"
-                                 [clearable]="false"
-                                 [(ngModel)]="selectedNumberCols"
-                                 [ngModelOptions]="{standalone: true}"
-                                 placeholder="{{ 'GENERAL.SELECT_NUMBER_COLS' | translate }}">
-                      </ng-select>
-                      <div *ngIf="hasNumberCols" class="invalid-feedback-show">
-                        {{ 'GENERAL.COLS_NO_REQ' | translate }}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label for="tipologyPrice"
-                             class="control-label col-form-label">{{ 'GENERAL.TYPE_PRICE' | translate }}</label>
-                      <ng-select [items]="tipologyPriceAvailable"
-                                 bindLabel="description"
-                                 id="tipologyPrice"
-                                 [searchable]="true"
-                                 [clearable]="false"
-                                 [(ngModel)]="selectedTipologyPrice"
-                                 [ngModelOptions]="{standalone: true}"
-                                 placeholder="{{ 'GENERAL.SELECT_TIPOLOGY_PRICE' | translate }}">
-                      </ng-select>
-                      <div *ngIf="hasTipologyPrice" class="invalid-feedback-show">
-                        {{ 'GENERAL.TYPE_PRICE_REQ' | translate }}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-3">
-                    <button class="btn btn-info btn-block mt-4" type="button"
-                            (click)="confirmSettings()">{{ 'GENERAL.CONFIRM_SETTINGS' | translate }}
-                    </button>
-                  </div>
+                <div class="col-sm-12 alert alert-info">
+                    {{ 'GENERAL.DESCRIPTION_HEADER' | translate }}
                 </div>
 
-                <br><br>
+                <div>
+                    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion nav-accordion">
+                        <ngb-panel>
+                            <ng-template ngbPanelTitle>
+                                <div id="{{ isMobile ? 'container-fluid-mobile' : 'container-fluid' }}">
+                                    <div class="row">
+                                        <div class="col-2 float-left">
+                                            <span class="float-left">{{ 'GENERAL.SETTINGS' | translate }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                            <ng-template ngbPanelContent>
 
-              </ng-template>
-            </ngb-panel>
-          </ngb-accordion>
-        </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="formatPaper"
+                                                   class="control-label col-form-label">{{ 'GENERAL.CARD_FORMAT' |
+                                                translate }}</label>
+                                            <ng-select [items]="formatPaperAvailable"
+                                                       bindLabel="description"
+                                                       id="formatPaper"
+                                                       [searchable]="true"
+                                                       [clearable]="false"
+                                                       [(ngModel)]="selectedFormatPaper"
+                                                       [ngModelOptions]="{standalone: true}"
+                                                       placeholder="{{ 'GENERAL.SELECT_CARD_FORMAT' | translate }}">
+                                            </ng-select>
+                                            <div *ngIf="hasFormatPaper" class="invalid-feedback-show">
+                                                {{ 'GENERAL.CARD_FORMAT_REQ' | translate }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="numberCols"
+                                                   class="control-label col-form-label">{{ 'GENERAL.COLS_NO' | translate
+                                                }}</label>
+                                            <ng-select [items]="numberColsAvailable"
+                                                       bindLabel="description"
+                                                       id="numberCols"
+                                                       [searchable]="true"
+                                                       [clearable]="false"
+                                                       [(ngModel)]="selectedNumberCols"
+                                                       [ngModelOptions]="{standalone: true}"
+                                                       placeholder="{{ 'GENERAL.SELECT_NUMBER_COLS' | translate }}">
+                                            </ng-select>
+                                            <div *ngIf="hasNumberCols" class="invalid-feedback-show">
+                                                {{ 'GENERAL.COLS_NO_REQ' | translate }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="tipologyPrice"
+                                                   class="control-label col-form-label">{{ 'GENERAL.TYPE_PRICE' |
+                                                translate }}</label>
+                                            <ng-select [items]="tipologyPriceAvailable"
+                                                       bindLabel="description"
+                                                       id="tipologyPrice"
+                                                       [searchable]="true"
+                                                       [clearable]="false"
+                                                       [(ngModel)]="selectedTipologyPrice"
+                                                       [ngModelOptions]="{standalone: true}"
+                                                       placeholder="{{ 'GENERAL.SELECT_TIPOLOGY_PRICE' | translate }}">
+                                            </ng-select>
+                                            <div *ngIf="hasTipologyPrice" class="invalid-feedback-show">
+                                                {{ 'GENERAL.TYPE_PRICE_REQ' | translate }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <button class="btn btn-info btn-block mt-4" type="button"
+                                                (click)="confirmSettings()">{{ 'GENERAL.CONFIRM_SETTINGS' | translate }}
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <br><br>
+
+                            </ng-template>
+                        </ngb-panel>
+                    </ngb-accordion>
+                </div>
 
 
-        <div class="input-group">
-          <div class="col-sm-6">
-            <label class="col-md-12">
-              {{ 'GENERAL.HEADER_TXT' | translate }}
-            </label>
-            <div class="col-md-12">
-                            <textarea rows="5"
-                                      [(ngModel)]="headerMsg" [ngModelOptions]="{standalone: true}"
-                                      class="form-control form-control-line"></textarea>
+                <br>
+
+                <div *ngIf="selectedTipologyPrice && selectedTipologyPrice.value == 1">
+                    <div *ngFor="let commercialActivity of commercialActivities">
+                        <app-commercial-category-activity
+                                [commercialActivity]="commercialActivity" [selectedNumberCols]="selectedNumberCols"
+                                (removeRowEvent)="removeRowListener($event)"></app-commercial-category-activity>
+                    </div>
+                </div>
+
+                <div *ngIf="selectedTipologyPrice && selectedTipologyPrice.value == 2">
+                    <div *ngFor="let commercialActivity of commercialActivities">
+                        <app-commercial-category-promotional-activity
+                                [commercialActivity]="commercialActivity" [selectedNumberCols]="selectedNumberCols"
+                                (removeRowEvent)="removeRowListener($event)"></app-commercial-category-promotional-activity>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="input-group">
+                        <div class="col-sm-4">
+                            <label class="col-md-12">
+                                {{ 'GENERAL.SELECT_BRAND' | translate }}
+                            </label>
+                            <div class="col-sm-6">
+                                <ng-select [items]="brandsObservable | async"
+                                           bindLabel="description"
+                                           [(ngModel)]="selectedBrand"
+                                           [ngModelOptions]="{standalone: true}"
+                                           placeholder="{{ 'GENERAL.SELECT_BRAND' | translate }}">
+                                </ng-select>
+                                <div *ngIf="hasBrand" class="invalid-feedback-show">
+                                    {{ 'GENERAL.SELECT_BRAND_REQ' | translate }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label class="col-md-12">
+                                {{ 'GENERAL.SELECT_BRAND' | translate }}
+                            </label>
+                            <div class="col-sm-6">
+                                <ng-select [items]="templateTypeAvailable"
+                                           bindLabel="description"
+                                           [(ngModel)]="selectedTemplateType"
+                                           [ngModelOptions]="{standalone: true}"
+                                           placeholder="{{ 'GENERAL.TEMPLATE' | translate }}">
+                                </ng-select>
+                                <div *ngIf="hasTemplate" class="invalid-feedback-show">
+                                    {{ 'GENERAL.TEMPLATE_REQ' | translate }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="text-right mt-1_9">
+                                <button type="button"
+                                        (click)="addNewRow()"
+                                        class="btn btn-primary">
+                                    {{ 'GENERAL.ADD_ROW' | translate }}
+                                </button>
+                                <button type="button"
+                                        (click)="elaborateReport()"
+                                        class="btn btn-success">
+                                    {{ 'GENERAL.ELABORATE_REPORT' | translate }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
-
-          <div class="col-sm-6">
-            <label class="col-md-12">
-              {{ 'GENERAL.FOOTER_TXT' | translate }}
-            </label>
-            <div class="col-md-12">
-                            <textarea rows="5"
-                                      [(ngModel)]="footerMsg" [ngModelOptions]="{standalone: true}"
-                                      class="form-control form-control-line"></textarea>
-            </div>
-          </div>
         </div>
-
-        <div class="input-group">
-          <div class="col-sm-6">
-            <label class="col-md-12">
-              {{ 'GENERAL.SELECT_BRAND' | translate }}
-            </label>
-            <div class="col-sm-6">
-              <ng-select [items]="brandsObservable | async"
-                         bindLabel="description"
-                         [(ngModel)]="selectedBrand"
-                         [ngModelOptions]="{standalone: true}"
-                         placeholder="{{ 'GENERAL.SELECT_BRAND' | translate }}">
-              </ng-select>
-            </div>
-          </div>
-
-          <div class="col-sm-6">
-            <div class="text-right mt-1_9">
-              <button type="button"
-                      (click)="addNewRow()"
-                      class="btn btn-primary">
-                {{ 'GENERAL.ADD_ROW' | translate }}
-              </button>
-              <button type="button"
-                      (click)="elaborateReport()"
-                      class="btn btn-success">
-                {{ 'GENERAL.ELABORATE_REPORT' | translate }}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <br>
-
-        <div *ngFor="let commercialActivity of commercialActivities">
-          <app-commercial-category-activity [commercialActivity]="commercialActivity"
-                                            (removeRowEvent)="removeRowListener($event)"></app-commercial-category-activity>
-        </div>
-
-      </div>
     </div>
-  </div>
 </div>
 <!-- End Row -->

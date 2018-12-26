@@ -1,13 +1,15 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CommercialActivity} from '../../../shared/common/api/model/commercial-activity';
+import {ItemValue} from '../../../shared/common/api/model/item-value';
 
 @Component({
-  selector: 'app-commercial-category-promotional-activity',
-  templateUrl: './commercial-category-promotional-activity.component.html',
-  styleUrls: ['./commercial-category-promotional-activity.component.css']
+    selector: 'app-commercial-category-promotional-activity',
+    templateUrl: './commercial-category-promotional-activity.component.html',
+    styleUrls: ['./commercial-category-promotional-activity.component.css']
 })
 export class CommercialCategoryPromotionalActivityComponent implements OnInit {
 
+    @Input() selectedNumberCols: ItemValue;
     @Input() commercialActivity: CommercialActivity;
     @Output() removeRowEvent = new EventEmitter<number>();
 
@@ -35,7 +37,7 @@ export class CommercialCategoryPromotionalActivityComponent implements OnInit {
         if (this.commercialActivity.amountCol1) {
             this.commercialActivity.amountCol2 = this.commercialActivity.amountCol1;
         } else {
-            this.commercialActivity.amountCol2 = NaN;
+            this.commercialActivity.amountCol2 = +'';
         }
     }
 
@@ -56,7 +58,7 @@ export class CommercialCategoryPromotionalActivityComponent implements OnInit {
         if (this.commercialActivity.amountCol2) {
             this.commercialActivity.amountCol3 = this.commercialActivity.amountCol2;
         } else {
-            this.commercialActivity.amountCol3 = NaN;
+            this.commercialActivity.amountCol3 = +'';
         }
     }
 
@@ -82,5 +84,50 @@ export class CommercialCategoryPromotionalActivityComponent implements OnInit {
         console.log('CommercialCategoryPromotionalActivityComponent - collapseBtn');
 
         acc.collapse('toggle-' + this.commercialActivity.idOrder);
+    }
+
+    roundFinalPrice1() {
+
+        const initialPrice = this.commercialActivity.initialPrice1;
+        const discount = this.commercialActivity.discount1;
+
+        if (initialPrice && discount) {
+            if (discount >= 100) {
+                this.commercialActivity.amountCol1 = 0;
+            } else {
+                const finalPrice = (initialPrice * discount) / 100;
+                this.commercialActivity.amountCol1 = Math.round( finalPrice * 100) / 100;
+            }
+        }
+    }
+
+    roundFinalPrice2() {
+
+        const initialPrice = this.commercialActivity.initialPrice2;
+        const discount = this.commercialActivity.discount2;
+
+        if (initialPrice && discount) {
+            if (discount >= 100) {
+                this.commercialActivity.amountCol2 = 0;
+            } else {
+                const finalPrice = (initialPrice * discount) / 100;
+                this.commercialActivity.amountCol2 = Math.round( finalPrice * 100) / 100;
+            }
+        }
+    }
+
+    roundFinalPrice3() {
+
+        const initialPrice = this.commercialActivity.initialPrice3;
+        const discount = this.commercialActivity.discount3;
+
+        if (initialPrice && discount) {
+            if (discount >= 100) {
+                this.commercialActivity.amountCol3 = 0;
+            } else {
+                const finalPrice = (initialPrice * discount) / 100;
+                this.commercialActivity.amountCol3 = Math.round( finalPrice * 100) / 100;
+            }
+        }
     }
 }

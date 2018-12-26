@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CommercialActivity} from '../../../shared/common/api/model/commercial-activity';
+import {ItemValue} from '../../../shared/common/api/model/item-value';
 
 @Component({
     selector: 'app-commercial-category-activity',
@@ -8,6 +9,7 @@ import {CommercialActivity} from '../../../shared/common/api/model/commercial-ac
 })
 export class CommercialCategoryActivityComponent implements OnInit {
 
+    @Input() selectedNumberCols: ItemValue;
     @Input() commercialActivity: CommercialActivity;
     @Output() removeRowEvent = new EventEmitter<number>();
 
@@ -35,7 +37,7 @@ export class CommercialCategoryActivityComponent implements OnInit {
         if (this.commercialActivity.amountCol1) {
             this.commercialActivity.amountCol2 = this.commercialActivity.amountCol1;
         } else {
-            this.commercialActivity.amountCol2 = NaN;
+            this.commercialActivity.amountCol2 =  +'';
         }
     }
 
@@ -56,7 +58,7 @@ export class CommercialCategoryActivityComponent implements OnInit {
         if (this.commercialActivity.amountCol2) {
             this.commercialActivity.amountCol3 = this.commercialActivity.amountCol2;
         } else {
-            this.commercialActivity.amountCol3 = NaN;
+            this.commercialActivity.amountCol3 = +'';
         }
     }
 
