@@ -23,7 +23,10 @@ public class CommercialActivity implements Serializable{
 	private String currencyCol1;
 	private Double initialPrice1;
 	private Double discount1;
+	private String discountReport1;
 	private Double amountCol1;
+	private Integer decimalInitialPart1;
+	private String fractionalCurrencyInitialPart1;
 	private Integer decimalPart1;
 	private String fractionalCurrencyPart1;
 	
@@ -31,7 +34,10 @@ public class CommercialActivity implements Serializable{
 	private String currencyCol2;
 	private Double initialPrice2;
 	private Double discount2;
+	private String discountReport2;
 	private Double amountCol2;
+	private Integer decimalInitialPart2;
+	private String fractionalCurrencyInitialPart2;
 	private Integer decimalPart2;
 	private String fractionalCurrencyPart2;
 	
@@ -39,7 +45,10 @@ public class CommercialActivity implements Serializable{
 	private String currencyCol3;
 	private Double initialPrice3;
 	private Double discount3;
+	private String discountReport3;
 	private Double amountCol3;
+	private Integer decimalInitialPart3;
+	private String fractionalCurrencyInitialPart3;
 	private Integer decimalPart3;
 	private String fractionalCurrencyPart3;
 	
@@ -175,6 +184,76 @@ public class CommercialActivity implements Serializable{
 	public void setFractionalCurrencyPart3(String fractionalCurrencyPart3) {
 		this.fractionalCurrencyPart3 = fractionalCurrencyPart3;
 	}
-	
-	
+
+	public Integer getDecimalInitialPart1() {
+		return decimalInitialPart1;
+	}
+
+	public void setDecimalInitialPart1(Integer decimalInitialPart1) {
+		this.decimalInitialPart1 = decimalInitialPart1;
+	}
+
+	public String getFractionalCurrencyInitialPart1() {
+		return fractionalCurrencyInitialPart1;
+	}
+
+	public void setFractionalCurrencyInitialPart1(String fractionalCurrencyInitialPart1) {
+		this.fractionalCurrencyInitialPart1 = fractionalCurrencyInitialPart1;
+	}
+
+	public Integer getDecimalInitialPart2() {
+		return decimalInitialPart2;
+	}
+
+	public void setDecimalInitialPart2(Integer decimalInitialPart2) {
+		this.decimalInitialPart2 = decimalInitialPart2;
+	}
+
+	public String getFractionalCurrencyInitialPart2() {
+		return fractionalCurrencyInitialPart2;
+	}
+
+	public void setFractionalCurrencyInitialPart2(String fractionalCurrencyInitialPart2) {
+		this.fractionalCurrencyInitialPart2 = fractionalCurrencyInitialPart2;
+	}
+
+	public Integer getDecimalInitialPart3() {
+		return decimalInitialPart3;
+	}
+
+	public void setDecimalInitialPart3(Integer decimalInitialPart3) {
+		this.decimalInitialPart3 = decimalInitialPart3;
+	}
+
+	public String getFractionalCurrencyInitialPart3() {
+		return fractionalCurrencyInitialPart3;
+	}
+
+	public void setFractionalCurrencyInitialPart3(String fractionalCurrencyInitialPart3) {
+		this.fractionalCurrencyInitialPart3 = fractionalCurrencyInitialPart3;
+	}
+
+	public String getDiscountReport1() {
+		return discountReport1;
+	}
+
+	public void setDiscountReport1(String discountReport1) {
+		this.discountReport1 = discountReport1;
+	}
+
+	public String getDiscountReport2() {
+		return discountReport2;
+	}
+
+	public void setDiscountReport2(String discountReport2) {
+		this.discountReport2 = discountReport2;
+	}
+
+	public String getDiscountReport3() {
+		return discountReport3;
+	}
+
+	public void setDiscountReport3(String discountReport3) {
+		this.discountReport3 = discountReport3;
+	}
 }

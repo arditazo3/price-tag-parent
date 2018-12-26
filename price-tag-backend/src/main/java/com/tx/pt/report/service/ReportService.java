@@ -1,5 +1,6 @@
 package com.tx.pt.report.service;
 
+import static org.springframework.util.ObjectUtils.isEmpty;
 import static com.tx.pt.common.constants.ApiConstants.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +42,7 @@ public class ReportService implements IReportService {
 	@Override
 	public HttpFile elaborateReport(ReportData reportData) {
 
-		reportFiller.setReportFileName(TERRANOVA_A4_3_PROMOTION_CHRISTMAS);
+		reportFiller.setReportFileName(findTemplatePath(reportData));
 		
 		reportFiller.createParametersAndDatasource(reportData);
 		
@@ -54,6 +55,47 @@ public class ReportService implements IReportService {
 		fileService.internalWriteFile(httpFile, reportExporter);
 		
 		return httpFile;
+	}
+
+	private String findTemplatePath(ReportData reportData) {
+
+		String templatePath = "";
+
+		if (!isEmpty(reportData)) {
+
+			String brand = reportData.getFormatSettings().getBrand().getDescription();
+			String formatPaper = reportData.getFormatSettings().getFormatPaper();
+			String numbCols = String.valueOf(reportData.getFormatSettings().getNumberCols());
+			String typePrice = getTipologyPriceByValue(reportData.getFormatSettings().getTipologyPrice());
+			String templateType = getTemplateTypeByValue(reportData.getFormatSettings().getTemplateType());
+
+			templatePath = REPORT_DEFAULT_PATH.concat(brand).concat("_").concat(formatPaper).concat("_").concat(numbCols).concat("_").concat(typePrice).concat("_").concat(templateType).concat(".jrxml");
+		}
+		return templatePath;
+	}
+
+	private String getTipologyPriceByValue(Integer value) {
+
+		String tipPrice = "";
+
+		if (value == 1) {
+			tipPrice = "Institutional";
+		} else if (value == 2) {
+			tipPrice = "Promotion";
+		}
+		return tipPrice;
+	}
+
+	private String getTemplateTypeByValue(Integer value) {
+
+		String tempType = "";
+
+		if (value == 1) {
+			tempType = "Christmas";
+		} else if (value == 2) {
+			tempType = "Easter";
+		}
+		return tempType;
 	}
 
 }

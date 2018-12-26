@@ -22,5 +22,5 @@ public final class ApiConstants {
 	public static final String ELABORATE_REPORT = "elaborate";
 	
 	/* Report location */
-	public static final String TERRANOVA_A4_3_PROMOTION_CHRISTMAS = "report/Terranova_A4_3_Promotion_Christmas.jrxml";
+	public static final String REPORT_DEFAULT_PATH = "report/";
 }

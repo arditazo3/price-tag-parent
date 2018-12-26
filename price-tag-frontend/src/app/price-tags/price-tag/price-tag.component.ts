@@ -11,126 +11,132 @@ import {ItemValue} from '../../shared/common/api/model/item-value';
 import {SettingsReportData} from '../../shared/common/api/const-array/settings-report-data';
 
 @Component({
-    templateUrl: './price-tag.component.html',
-    styleUrls: ['./price-tag.component.css']
+  templateUrl: './price-tag.component.html',
+  styleUrls: ['./price-tag.component.css']
 })
 export class PriceTagComponent implements OnInit {
 
-    isMobile = false;
+  isMobile = false;
 
-    indexOrder = 0;
-    noOfRowsDefault = 6;
-    commercialActivities: CommercialActivity[] = [];
+  indexOrder = 0;
+  noOfRowsDefault = 6;
+  commercialActivities: CommercialActivity[] = [];
 
-    errorDetails: ApiErrorDetails = new ApiErrorDetails();
+  errorDetails: ApiErrorDetails = new ApiErrorDetails();
 
-    brandsObservable: Observable<any[]>;
-    selectedBrand: Brand;
+  brandsObservable: Observable<any[]>;
+  selectedBrand: Brand;
 
-    selectedFormatPaper: ItemValue;
-    selectedNumberCols: ItemValue;
-    selectedTipologyPrice: ItemValue;
-    selectedTemplateType: ItemValue;
+  selectedFormatPaper: ItemValue;
+  selectedNumberCols: ItemValue;
+  selectedTipologyPrice: ItemValue;
+  selectedTemplateType: ItemValue;
 
-    hasFormatPaper = false;
-    hasNumberCols = false;
-    hasTipologyPrice = false;
-    hasBrand = false;
-    hasTemplate = false;
+  hasFormatPaper = false;
+  hasNumberCols = false;
+  hasTipologyPrice = false;
+  hasBrand = false;
+  hasTemplate = false;
 
-    formatPaperAvailable: ItemValue[] = SettingsReportData.FORMAT_PAPER;
-    numberColsAvailable: ItemValue[] = SettingsReportData.NUMBER_COLS;
-    tipologyPriceAvailable: ItemValue[] = SettingsReportData.TIPOLOGY_PRICE;
-    templateTypeAvailable: ItemValue[] = SettingsReportData.TEMPLATE_TYPE;
+  formatPaperAvailable: ItemValue[] = SettingsReportData.FORMAT_PAPER;
+  numberColsAvailable: ItemValue[] = SettingsReportData.NUMBER_COLS;
+  tipologyPriceAvailable: ItemValue[] = SettingsReportData.TIPOLOGY_PRICE;
+  templateTypeAvailable: ItemValue[] = SettingsReportData.TEMPLATE_TYPE;
 
-    constructor(private commCategoryService: CommCategoryService,
-                private deviceService: DeviceDetectorService) {
+  constructor(private commCategoryService: CommCategoryService,
+              private deviceService: DeviceDetectorService) {
 
-        this.isMobile = this.deviceService.isMobile();
+    this.isMobile = this.deviceService.isMobile();
+  }
+
+  ngOnInit(): void {
+    console.log('PriceTagComponent - ngOnInit');
+
+    this.brandsObservable = this.commCategoryService.getBrands();
+  }
+
+  constructActivities() {
+
+    this.commercialActivities = [];
+
+    for (let i = 0; i < this.noOfRowsDefault; i++) {
+      this.commercialActivities.push(new CommercialActivity(this.indexOrder));
+      this.indexOrder++;
+    }
+  }
+
+  confirmSettings() {
+
+    this.hasFormatPaper = false;
+    this.hasNumberCols = false;
+    this.hasTipologyPrice = false;
+
+    if (!this.selectedFormatPaper) {
+      this.hasFormatPaper = true;
+    }
+    if (!this.selectedNumberCols) {
+      this.hasNumberCols = true;
+    }
+    if (!this.selectedTipologyPrice) {
+      this.hasTipologyPrice = true;
     }
 
-    ngOnInit(): void {
-        console.log('PriceTagComponent - ngOnInit');
-
-        this.brandsObservable = this.commCategoryService.getBrands();
+    if (!this.hasFormatPaper && !this.hasNumberCols && !this.hasTipologyPrice) {
+      this.constructActivities();
     }
+  }
 
-    constructActivities() {
+  elaborateReport() {
+    console.log('PriceTagComponent - elaborateReport');
 
-        this.commercialActivities = [];
+    const me = this;
 
-        for (let i = 0; i < this.noOfRowsDefault; i++) {
-            this.commercialActivities.push(new CommercialActivity(this.indexOrder));
-            this.indexOrder++;
+    const reportData: ReportData = new ReportData();
+    reportData.formatSettings.brand = this.selectedBrand;
+    reportData.formatSettings.formatPaper = this.selectedFormatPaper.value;
+    reportData.formatSettings.numberCols = + this.selectedNumberCols.value;
+    reportData.formatSettings.tipologyPrice = + this.selectedTipologyPrice.value;
+    reportData.formatSettings.templateType = + this.selectedTemplateType.value;
+
+    reportData.commercialActivities = this.commercialActivities;
+
+
+    this.commCategoryService.elaborateReport(reportData).subscribe(
+      (data) => {
+        importedSaveAs(data, 'Test.pdf');
+        console.log('ExpirationActivityControlledComponent - downloadFileExp - next');
+      },
+      error => {
+        me.errorDetails = error.error;
+        console.error('ExpirationActivityControlledComponent - downloadFileExp - error \n', error);
+      });
+  }
+
+  addNewRow() {
+
+    this.commercialActivities.push(new CommercialActivity(this.indexOrder));
+    this.indexOrder++;
+  }
+
+  removeRowListener(idOrderToRemove) {
+
+    const index = this.commercialActivities.findIndex(commercialActy => commercialActy.idOrder === idOrderToRemove);
+    if (index > -1) {
+      this.commercialActivities.splice(index, 1);
+    }
+  }
+
+  cleanFirstColumnValues() {
+
+    if (this.commercialActivities && this.commercialActivities.length > 0) {
+      this.commercialActivities.forEach(
+        commercialActivity => {
+
+          commercialActivity.commercialCategoryCol1 = '';
+          commercialActivity.currencyCol1 = '';
+          commercialActivity.amountCol1 = +'';
         }
+      );
     }
-
-    confirmSettings() {
-
-        this.hasFormatPaper = false;
-        this.hasNumberCols = false;
-        this.hasTipologyPrice = false;
-
-        if (!this.selectedFormatPaper) {
-            this.hasFormatPaper = true;
-        }
-        if (!this.selectedNumberCols) {
-            this.hasNumberCols = true;
-        }
-        if (!this.selectedTipologyPrice) {
-            this.hasTipologyPrice = true;
-        }
-
-        if (!this.hasFormatPaper && !this.hasNumberCols && !this.hasTipologyPrice) {
-            this.constructActivities();
-        }
-    }
-
-    elaborateReport() {
-        console.log('PriceTagComponent - elaborateReport');
-
-        const me = this;
-
-        const reportData: ReportData = new ReportData();
-        reportData.formatSettings.brand = this.selectedBrand;
-        reportData.commercialActivities = this.commercialActivities;
-
-        this.commCategoryService.elaborateReport(reportData).subscribe(
-            (data) => {
-                importedSaveAs(data, 'Test.pdf');
-                console.log('ExpirationActivityControlledComponent - downloadFileExp - next');
-            },
-            error => {
-                me.errorDetails = error.error;
-                console.error('ExpirationActivityControlledComponent - downloadFileExp - error \n', error);
-            });
-    }
-
-    addNewRow() {
-
-        this.commercialActivities.push(new CommercialActivity(this.indexOrder));
-        this.indexOrder++;
-    }
-
-    removeRowListener(idOrderToRemove) {
-
-        const index = this.commercialActivities.findIndex(commercialActy => commercialActy.idOrder === idOrderToRemove);
-        if (index > -1) {
-            this.commercialActivities.splice(index, 1);
-        }
-    }
-
-    cleanFirstColumnValues() {
-
-        if (this.commercialActivities && this.commercialActivities.length > 0) {
-            this.commercialActivities.forEach(
-                commercialActivity => {
-
-                    commercialActivity.commercialCategoryCol1 = '';
-                    commercialActivity.currencyCol1 = '';
-                    commercialActivity.amountCol1 = +'';
-                }
-            );
-        }
-    }
+  }
 }

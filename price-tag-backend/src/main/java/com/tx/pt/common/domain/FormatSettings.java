@@ -20,7 +20,8 @@ public class FormatSettings implements Serializable {
 	private String formatPaper;
 	private Integer numberCols;
 	private Integer tipologyPrice;
-	
+	private Integer templateType;
+
 	private Brand brand;
 	
 	public String getFormatPaper() {
@@ -46,6 +47,13 @@ public class FormatSettings implements Serializable {
 	}
 	public void setBrand(Brand brand) {
 		this.brand = brand;
+	}
+	public Integer getTemplateType() {
+		return templateType;
+	}
+
+	public void setTemplateType(Integer templateType) {
+		this.templateType = templateType;
 	}
 	
 	
