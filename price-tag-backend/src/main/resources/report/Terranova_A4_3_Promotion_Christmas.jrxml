@@ -169,7 +169,7 @@
 					</graphicElement>
 				</line>
 				<textField>
-					<reportElement positionType="Float" x="222" y="39" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
+					<reportElement positionType="Float" x="222" y="40" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
 					</reportElement>
 					<textElement>
@@ -178,7 +178,7 @@
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart1}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement positionType="Float" x="501" y="39" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
+					<reportElement positionType="Float" x="501" y="40" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
 					</reportElement>
 					<textElement>
@@ -187,7 +187,7 @@
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart2}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement positionType="Float" x="781" y="39" width="54" height="20" uuid="0779058a-fc2a-43d9-a90f-5defb7c37ac0">
+					<reportElement positionType="Float" x="781" y="40" width="54" height="20" uuid="0779058a-fc2a-43d9-a90f-5defb7c37ac0">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
 					</reportElement>
 					<textElement>
@@ -279,6 +279,15 @@
 					</reportElement>
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyInitialPart3}]]></textFieldExpression>
 				</textField>
+				<line>
+					<reportElement x="30" y="52" width="65" height="1" uuid="c2fcb315-4f6a-4882-8317-8763f4112083"/>
+				</line>
+				<line>
+					<reportElement x="310" y="52" width="65" height="1" uuid="ab4ea046-9a9f-4d9f-838c-f48e735119f3"/>
+				</line>
+				<line>
+					<reportElement x="590" y="52" width="65" height="1" uuid="c23a5c73-c8c6-4676-8686-8baf73505d6b"/>
+				</line>
 			</frame>
 		</band>
 	</detail>
