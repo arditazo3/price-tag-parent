@@ -35,6 +35,7 @@
                                                        [clearable]="false"
                                                        [(ngModel)]="selectedFormatPaper"
                                                        [ngModelOptions]="{standalone: true}"
+                                                       (change)="formatPaperChange($event)"
                                                        placeholder="{{ 'GENERAL.SELECT_CARD_FORMAT' | translate }}">
                                             </ng-select>
                                             <div *ngIf="hasFormatPaper" class="invalid-feedback-show">
@@ -84,13 +85,13 @@
                                     </div>
 
                                     <div class="col-md-3">
-                                        <button class="btn btn-info btn-block mt-4" type="button"
+                                        <button class="btn btn-info btn-block mt-2_2" type="button"
                                                 (click)="confirmSettings()">{{ 'GENERAL.CONFIRM_SETTINGS' | translate }}
                                         </button>
                                     </div>
                                 </div>
 
-                                <br><br>
+                                <br><br><br>
 
                             </ng-template>
                         </ngb-panel>
