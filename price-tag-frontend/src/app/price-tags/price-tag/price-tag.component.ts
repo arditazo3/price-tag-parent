@@ -135,7 +135,7 @@ export class PriceTagComponent implements OnInit {
 
             this.commCategoryService.elaborateReport(reportData).subscribe(
                 (data) => {
-                    importedSaveAs(data, 'Test.pdf');
+                    importedSaveAs(data, 'Elaborated Report.pdf');
                     console.log('ExpirationActivityControlledComponent - downloadFileExp - next');
                 },
                 error => {
