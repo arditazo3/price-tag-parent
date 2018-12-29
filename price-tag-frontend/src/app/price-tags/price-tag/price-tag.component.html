@@ -100,7 +100,7 @@
 
                 <br>
 
-                <div *ngIf="selectedTipologyPrice && selectedTipologyPrice.value == 1">
+                <div *ngIf="selectedTipologyPrice && selectedTipologyPrice.value == '1'">
                     <div *ngFor="let commercialActivity of commercialActivities">
                         <app-commercial-category-activity
                                 [commercialActivity]="commercialActivity" [selectedNumberCols]="selectedNumberCols"
@@ -108,7 +108,7 @@
                     </div>
                 </div>
 
-                <div *ngIf="selectedTipologyPrice && selectedTipologyPrice.value == 2">
+                <div *ngIf="selectedTipologyPrice && selectedTipologyPrice.value == '2'">
                     <div *ngFor="let commercialActivity of commercialActivities">
                         <app-commercial-category-promotional-activity
                                 [commercialActivity]="commercialActivity" [selectedNumberCols]="selectedNumberCols"

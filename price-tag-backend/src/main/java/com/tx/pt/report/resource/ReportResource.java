@@ -98,6 +98,8 @@ public class ReportResource {
 			}
 		};
 
+		logger.info("The template is elaborated" );
+
 		return Response
 				.ok(fileStream, MediaType.APPLICATION_OCTET_STREAM)
 				.header("content-disposition","attachment; filename = " + reportFile.getName())
