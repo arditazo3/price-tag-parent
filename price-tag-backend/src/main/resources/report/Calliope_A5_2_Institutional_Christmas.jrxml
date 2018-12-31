@@ -56,7 +56,7 @@
 						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<font fontName="Sofia Pro Medium" size="15" isStrikeThrough="false"/>
+						<font fontName="Lato" size="15" isStrikeThrough="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{commercialCategoryCol1}]]></textFieldExpression>
 				</textField>
@@ -68,7 +68,7 @@
 						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
-						<font fontName="Sofia Pro Semi Bold" size="23"/>
+						<font fontName="Lato" size="23"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{decimalPart1}]]></textFieldExpression>
 				</textField>
@@ -81,7 +81,7 @@
 						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<font fontName="Sofia Pro Medium" size="15"/>
+						<font fontName="Lato" size="15"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{commercialCategoryCol2}]]></textFieldExpression>
 				</textField>
@@ -94,7 +94,7 @@
 						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
-						<font fontName="Sofia Pro Semi Bold" size="23"/>
+						<font fontName="Lato" size="23"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{decimalPart2}]]></textFieldExpression>
 				</textField>
@@ -105,20 +105,20 @@
 					</graphicElement>
 				</line>
 				<textField>
-					<reportElement positionType="Float" x="241" y="14" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
+					<reportElement positionType="Float" x="241" y="15" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
 					</reportElement>
 					<textElement>
-						<font fontName="Sofia Pro Semi Bold" size="12"/>
+						<font fontName="Lato" size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart1}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement positionType="Float" x="538" y="14" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
+					<reportElement positionType="Float" x="538" y="15" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
 					</reportElement>
 					<textElement>
-						<font fontName="Sofia Pro Semi Bold" size="12"/>
+						<font fontName="Lato" size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart2}]]></textFieldExpression>
 				</textField>

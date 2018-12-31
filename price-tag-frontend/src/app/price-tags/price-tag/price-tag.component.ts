@@ -178,6 +178,10 @@ export class PriceTagComponent implements OnInit {
         if ($event && $event.value === 'A5') {
             this.numberColsAvailable = this.numberColsAvailable.filter(item => item.value === '2');
             this.numberColsAvailable = [...this.numberColsAvailable];
+
+            if (this.selectedNumberCols) {
+              this.selectedNumberCols = SettingsReportData.NUMBER_COLS[0];
+            }
         } else {
             this.numberColsAvailable = SettingsReportData.NUMBER_COLS;
         }
