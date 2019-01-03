@@ -237,7 +237,7 @@
 					</reportElement>
 					<box leftPadding="35"/>
 					<textElement verticalAlignment="Middle">
-						<font fontName="Sofia Pro" size="18"/>
+						<font fontName="Sofia Pro Condensed Regular" size="18"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{decimalInitialPart1}]]></textFieldExpression>
 				</textField>
@@ -247,7 +247,7 @@
 					</reportElement>
 					<box leftPadding="35"/>
 					<textElement verticalAlignment="Middle">
-						<font fontName="Sofia Pro" size="18"/>
+						<font fontName="Sofia Pro Condensed Regular" size="18"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{decimalInitialPart2}]]></textFieldExpression>
 				</textField>
@@ -257,7 +257,7 @@
 					</reportElement>
 					<box leftPadding="35"/>
 					<textElement verticalAlignment="Middle">
-						<font fontName="Sofia Pro" size="18"/>
+						<font fontName="Sofia Pro Condensed Regular" size="18"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{decimalInitialPart3}]]></textFieldExpression>
 				</textField>

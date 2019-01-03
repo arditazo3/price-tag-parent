@@ -65,7 +65,7 @@
 						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font fontName="Sofia Pro Medium" size="14" isStrikeThrough="false"/>
+						<font fontName="SofiaPro Condensed REGULAR" size="14" isStrikeThrough="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{commercialCategoryCol1}]]></textFieldExpression>
 				</textField>
@@ -90,7 +90,7 @@
 						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font fontName="Sofia Pro Medium" size="14"/>
+						<font fontName="SofiaPro Condensed REGULAR" size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{commercialCategoryCol2}]]></textFieldExpression>
 				</textField>
@@ -136,7 +136,7 @@
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="be14d0fb-c495-488c-8670-d4407abb6d17"/>
 					</reportElement>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Sofia Pro Regular" size="18"/>
+						<font fontName="Sofia Pro Medium" size="18"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{discountReport1}]]></textFieldExpression>
 				</textField>
@@ -145,7 +145,7 @@
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="09232182-9e7b-43c2-9cad-f261f3a6b43b"/>
 					</reportElement>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Sofia Pro Regular" size="18"/>
+						<font fontName="Sofia Pro Medium" size="18"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{discountReport2}]]></textFieldExpression>
 				</textField>
