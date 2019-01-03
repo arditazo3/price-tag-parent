@@ -19,4 +19,17 @@
         <pdfEmbedded>true</pdfEmbedded>
     </fontFamily>
 
+    <fontFamily name="Sofia Pro SemiBold">
+        <normal>fonts/sofiapro/sofiapro-semibold.otf</normal>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+
+    <fontFamily name="Arlon Medium">
+        <normal>fonts/arlon/Arlon Medium.ttf</normal>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+
+
 </fontFamilies>

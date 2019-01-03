@@ -10,6 +10,9 @@
 	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="logo" class="java.net.URL">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<parameter name="headerTxt" class="java.lang.String"/>
 	<parameter name="footerTxt" class="java.lang.String"/>
 	<field name="commercialCategoryCol1" class="java.lang.String"/>
@@ -59,6 +62,18 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{headerTxt}]]></textFieldExpression>
 			</textField>
+			<image>
+				<reportElement x="118" y="48" width="50" height="5" uuid="5eb5fc51-58e1-4310-8b29-0cfc6029b7e0"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="398" y="48" width="50" height="5" uuid="b2c43438-e1a1-47c0-af9a-e1f3dcb37ea4"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="679" y="48" width="50" height="5" uuid="9e81776e-d6d4-4067-96a0-12d0d3306f3d"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
 		</band>
 	</columnHeader>
 	<detail>
@@ -160,7 +175,7 @@
 					</graphicElement>
 				</line>
 				<textField>
-					<reportElement positionType="Float" x="222" y="23" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
+					<reportElement positionType="Float" x="222" y="24" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
 					</reportElement>
 					<textElement>
@@ -169,7 +184,7 @@
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart1}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement positionType="Float" x="502" y="23" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
+					<reportElement positionType="Float" x="502" y="24" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
 					</reportElement>
 					<textElement>
@@ -178,7 +193,7 @@
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart2}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement positionType="Float" x="782" y="23" width="54" height="20" uuid="0779058a-fc2a-43d9-a90f-5defb7c37ac0">
+					<reportElement positionType="Float" x="782" y="24" width="54" height="20" uuid="0779058a-fc2a-43d9-a90f-5defb7c37ac0">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
 					</reportElement>
 					<textElement>

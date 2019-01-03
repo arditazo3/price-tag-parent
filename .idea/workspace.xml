@@ -6,50 +6,35 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdc05167-5fd7-44f7-aaef-479ee08c5701" name="Default Changelist" comment="Never surrender, 2K19">
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/fonts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-BlackItalic_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-Black_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-BoldItalic_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-Bold_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-HairlineItalic_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-Hairline_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-HeavyItalic_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-Heavy_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-Italic_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-LightItalic_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-Light_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-MediumItalic_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-Regular_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-SemiboldItalic_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-Semibold_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-ThinItalic_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-Thin_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/Sofia Pro Bold Condensed Italic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/Sofia Pro Bold Condensed.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/Sofia Pro Light Condensed.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/Sofia Pro Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/Sofia Pro Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-black.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-blackit.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-bold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-boldit.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-extralight.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-extralightit.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-light.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-lightit.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-medium.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-mediumit.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-regular.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-regularit.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-semibold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-semiboldit.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-ultralight.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/sofiapro-ultralightit.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/jasperreports_extension.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report_font_libs/SofiaProMedium.jar" afterDir="false" />
+    <list default="true" id="fdc05167-5fd7-44f7-aaef-479ee08c5701" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-Black.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-Bold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-Light.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-Medium.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-Regular.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-SemiBold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-Thin.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-UltraBold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-UltraBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-UltraLight.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/arlon/Arlon-UltraLight.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/logo-images/logo_calliope.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/logo-images/logo_terranova.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/config/ReportFiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/config/ReportFiller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/fonts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/fonts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_2_Institutional_Christmas.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_2_Institutional_Christmas.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_2_Promotion_Christmas.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_2_Promotion_Christmas.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_3_Institutional_Christmas.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_3_Institutional_Christmas.jrxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_3_Promotion_Christmas.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_3_Promotion_Christmas.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A5_2_Institutional_Christmas.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A5_2_Institutional_Christmas.jrxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A5_2_Promotion_Christmas.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A5_2_Promotion_Christmas.jrxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/price-tag-backend/target/" />
@@ -76,7 +61,43 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/fonts.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/service/ReportService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/config/ReportFiller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="252" column="58" lean-forward="true" selection-start-line="252" selection-start-column="58" selection-end-line="252" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3263#3264#0" expanded="true" />
+                <element signature="e#3300#3301#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -91,6 +112,11 @@
       <find>selectedTemplateType</find>
       <find>decimalInitialPart1</find>
       <find>commercialActivities</find>
+      <find>fillReport</find>
+      <find>getClass().getResourceAsStream</find>
+      <find>InputStream</find>
+      <find>getResourceAsStream</find>
+      <find>reportFileName</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -114,12 +140,12 @@
         <option value="$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/api/model/commercial-activity.ts" />
         <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-promotional-activity/commercial-category-promotional-activity.component.ts" />
         <option value="$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/common/domain/CommercialActivity.java" />
-        <option value="$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/config/ReportFiller.java" />
         <option value="$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/resource/ReportResource.java" />
         <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.html" />
         <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts" />
         <option value="$APPLICATION_CONFIG_DIR$/idea64.exe.vmoptions" />
         <option value="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/fonts.xml" />
+        <option value="$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/config/ReportFiller.java" />
       </list>
     </option>
   </component>
@@ -137,9 +163,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="976" />
-    <option name="height" value="1038" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -161,7 +188,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="price-tag-parent" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546475061254" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546555412513" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -172,14 +199,16 @@
     <property name="ts.external.directory.path" value="C:\Users\U185502\git\price-tag-parent\price-tag-frontend\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\fonts\sofiapro" />
-      <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\fonts" />
-      <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\fonts\sofiapro" />
       <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\fonts\lato" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\report\logo_images" />
+      <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\fonts\arlon" />
+      <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\fonts\sofiapro" />
+      <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\fonts" />
+      <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -206,9 +235,10 @@
         </artifact>
       </deployment>
       <server-settings>
+        <option name="AJP_PORT" value="8209" />
         <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_13_price-tag-parent" />
         <option name="HTTP_PORT" value="8200" />
-        <option name="JNDI_PORT" value="1299" />
+        <option name="JNDI_PORT" value="1291" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -376,7 +406,8 @@
       <workItem from="1546257479202" duration="2618000" />
       <workItem from="1546465186761" duration="5134000" />
       <workItem from="1546472191780" duration="16000" />
-      <workItem from="1546472267794" duration="2863000" />
+      <workItem from="1546472267794" duration="3046000" />
+      <workItem from="1546503959960" duration="14435000" />
     </task>
     <task id="LOCAL-00001" summary="Settings report">
       <created>1545236176363</created>
@@ -427,16 +458,23 @@
       <option name="project" value="LOCAL" />
       <updated>1546290474153</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Adding fonts to JVM">
+      <created>1546475174456</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1546475174456</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73111000" />
+    <option name="totallyTimeSpent" value="87729000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30954936" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19849785" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -446,16 +484,16 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49785408" weight="0.26303855" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49785408" weight="0.26302084" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="Application Servers" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.49731758" visible="true" weight="0.36507937" />
+      <window_info active="true" anchor="bottom" id="Debug" order="8" sideWeight="0.49701366" visible="true" weight="0.33219954" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026824" side_tool="true" weight="0.36507937" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5029864" side_tool="true" weight="0.3671875" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3298611" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
@@ -481,7 +519,32 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Settings report" />
     <MESSAGE value="Never surrender, 2K19" />
-    <option name="LAST_COMMIT_MESSAGE" value="Never surrender, 2K19" />
+    <MESSAGE value="Adding fonts to JVM" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding fonts to JVM" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/config/ReportFiller.java</url>
+          <line>103</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/config/ReportFiller.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/lang/Class.java</url>
+          <line>2216</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/api/model/api-error-details.ts">
@@ -582,7 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.26/jersey-server-2.26.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.class" />
     <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/config/JasperReportConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -703,9 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/jasperreports_extension.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/idea64.exe.vmoptions">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -719,35 +778,98 @@
     <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/sofiapro/Sofia Pro Medium.ttf">
       <provider selected="true" editor-type-id="fontseditor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-Black_0.ttf">
+      <provider selected="true" editor-type-id="fontseditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-Light_0.ttf">
+      <provider selected="true" editor-type-id="fontseditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/jasperreports_extension.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/sf/jasperreports/jasperreports/6.7.0/jasperreports-6.7.0.jar!/net/sf/jasperreports/repo/RepositoryUtil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/service/ReportService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+        <state relative-caret-position="393">
+          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/config/ReportFiller.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.26/jersey-server-2.26.jar!/org/glassfish/jersey/server/ServerRuntime.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1473">
-          <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+        <state relative-caret-position="184">
+          <caret line="283" selection-start-line="283" selection-end-line="283" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.26/jersey-server-2.26.jar!/org/glassfish/jersey/server/model/ResourceMethodInvoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="281" selection-start-line="281" selection-end-line="281" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.26/jersey-server-2.26.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/report/logo-images/logo_calliope.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/report/logo-images/logo_terranova.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="2222" column="28" selection-start-line="2222" selection-start-column="28" selection-end-line="2222" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="1306" column="15" selection-start-line="1306" selection-start-column="15" selection-end-line="1306" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/fonts.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-Black_0.ttf">
-      <provider selected="true" editor-type-id="fontseditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/lato/Lato-Light_0.ttf">
-      <provider selected="true" editor-type-id="fontseditor" />
+    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/config/ReportFiller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="252" column="58" lean-forward="true" selection-start-line="252" selection-start-column="58" selection-end-line="252" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3263#3264#0" expanded="true" />
+            <element signature="e#3300#3301#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="mavenExecuteGoalHistory">

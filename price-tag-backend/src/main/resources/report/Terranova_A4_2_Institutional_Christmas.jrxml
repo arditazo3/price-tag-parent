@@ -10,6 +10,9 @@
 	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="logo" class="java.net.URL">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<parameter name="headerTxt" class="java.lang.String"/>
 	<parameter name="footerTxt" class="java.lang.String"/>
 	<field name="commercialCategoryCol1" class="java.lang.String"/>
@@ -46,6 +49,14 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{headerTxt}]]></textFieldExpression>
 			</textField>
+			<image>
+				<reportElement x="191" y="48" width="50" height="5" uuid="953fc7db-268e-475f-ab37-ef2bedcb02c6"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="612" y="48" width="50" height="5" uuid="b0cff29b-7f52-4717-b88e-c4fff18851db"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
 		</band>
 	</columnHeader>
 	<detail>
@@ -112,7 +123,7 @@
 					</graphicElement>
 				</line>
 				<textField>
-					<reportElement positionType="Float" x="361" y="24" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
+					<reportElement positionType="Float" x="361" y="25" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
 					</reportElement>
 					<textElement>
@@ -121,7 +132,7 @@
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart1}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement positionType="Float" x="781" y="24" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
+					<reportElement positionType="Float" x="781" y="25" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
 					</reportElement>
 					<textElement>
