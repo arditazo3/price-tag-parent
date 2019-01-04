@@ -12,6 +12,9 @@
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
 	<parameter name="headerTxt" class="java.lang.String"/>
 	<parameter name="footerTxt" class="java.lang.String"/>
+	<parameter name="logo" class="java.net.URL">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<field name="commercialCategoryCol1" class="java.lang.String"/>
 	<field name="commercialCategoryCol2" class="java.lang.String"/>
 	<field name="commercialCategoryCol3" class="java.lang.String"/>
@@ -55,6 +58,14 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{headerTxt}]]></textFieldExpression>
 			</textField>
+			<image>
+				<reportElement x="191" y="48" width="50" height="5" uuid="97a1efc2-f697-4b38-8e61-150810809700"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="612" y="48" width="50" height="5" uuid="cfc198d9-8cb5-423b-be0b-f765316b47e1"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
 		</band>
 	</columnHeader>
 	<detail>
@@ -117,6 +128,7 @@
 				<textField>
 					<reportElement x="280" y="0" width="140" height="68" uuid="2e08b483-3613-4696-9c59-10c646a31900">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="66ecc1c1-a77d-4aa0-97af-6da1e0aea156"/>
+						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>
 					<box topPadding="10" rightPadding="65">
 						<rightPen lineWidth="0.0"/>
@@ -142,6 +154,7 @@
 				<textField>
 					<reportElement x="700" y="0" width="140" height="68" uuid="2288b52a-bfab-44f9-a595-88482f3fc3f3">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d5b3ee69-5dda-4b01-8f07-db7808f3eb1b"/>
+						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>
 					<box topPadding="10" rightPadding="65">
 						<leftPen lineWidth="0.0" lineStyle="Dashed"/>
@@ -161,6 +174,7 @@
 				<textField>
 					<reportElement positionType="Float" x="356" y="29" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
+						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>
 					<textElement>
 						<font fontName="Lato" size="12"/>
@@ -170,6 +184,7 @@
 				<textField>
 					<reportElement positionType="Float" x="777" y="29" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
+						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>
 					<textElement>
 						<font fontName="Lato" size="12"/>
@@ -197,16 +212,24 @@
 					<textFieldExpression><![CDATA[$F{discountReport2}]]></textFieldExpression>
 				</textField>
 				<line>
-					<reportElement x="25" y="55" width="370" height="1" uuid="4f42666e-4fee-43b8-b9dc-7d410e2585e3"/>
+					<reportElement x="25" y="55" width="370" height="1" uuid="4f42666e-4fee-43b8-b9dc-7d410e2585e3">
+						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
+					</reportElement>
 				</line>
 				<line>
-					<reportElement x="445" y="55" width="370" height="1" uuid="0717403c-564d-46c4-832e-bc7133b29419"/>
+					<reportElement x="445" y="55" width="370" height="1" uuid="0717403c-564d-46c4-832e-bc7133b29419">
+						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
+					</reportElement>
 				</line>
 				<line>
-					<reportElement x="30" y="40" width="65" height="1" uuid="c2fcb315-4f6a-4882-8317-8763f4112083"/>
+					<reportElement x="30" y="40" width="65" height="1" uuid="c2fcb315-4f6a-4882-8317-8763f4112083">
+						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
+					</reportElement>
 				</line>
 				<line>
-					<reportElement x="450" y="40" width="65" height="1" uuid="ab4ea046-9a9f-4d9f-838c-f48e735119f3"/>
+					<reportElement x="450" y="40" width="65" height="1" uuid="ab4ea046-9a9f-4d9f-838c-f48e735119f3">
+						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
+					</reportElement>
 				</line>
 			</frame>
 		</band>

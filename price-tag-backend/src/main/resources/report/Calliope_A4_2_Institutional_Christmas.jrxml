@@ -12,6 +12,9 @@
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
 	<parameter name="headerTxt" class="java.lang.String"/>
 	<parameter name="footerTxt" class="java.lang.String"/>
+	<parameter name="logo" class="java.net.URL">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<field name="commercialCategoryCol1" class="java.lang.String"/>
 	<field name="commercialCategoryCol2" class="java.lang.String"/>
 	<field name="commercialCategoryCol3" class="java.lang.String"/>
@@ -46,6 +49,14 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{headerTxt}]]></textFieldExpression>
 			</textField>
+			<image>
+				<reportElement x="191" y="48" width="50" height="5" uuid="1715df6f-2a5a-490f-872a-246d53d8ac60"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="612" y="48" width="50" height="5" uuid="1e460e77-5e0e-4029-a5fc-c9be04083c1d"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
 		</band>
 	</columnHeader>
 	<detail>
@@ -70,6 +81,7 @@
 				<textField>
 					<reportElement x="210" y="0" width="210" height="68" uuid="2e08b483-3613-4696-9c59-10c646a31900">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="66ecc1c1-a77d-4aa0-97af-6da1e0aea156"/>
+						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>
 					<box rightPadding="60">
 						<rightPen lineWidth="0.0"/>
@@ -95,6 +107,7 @@
 				<textField>
 					<reportElement x="630" y="0" width="210" height="68" uuid="2288b52a-bfab-44f9-a595-88482f3fc3f3">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d5b3ee69-5dda-4b01-8f07-db7808f3eb1b"/>
+						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>
 					<box rightPadding="60">
 						<leftPen lineWidth="0.0" lineStyle="Dashed"/>
@@ -114,6 +127,7 @@
 				<textField>
 					<reportElement positionType="Float" x="363" y="24" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
+						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>
 					<textElement>
 						<font fontName="Lato" size="12"/>
@@ -123,6 +137,7 @@
 				<textField>
 					<reportElement positionType="Float" x="784" y="24" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
+						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>
 					<textElement>
 						<font fontName="Lato" size="12"/>
