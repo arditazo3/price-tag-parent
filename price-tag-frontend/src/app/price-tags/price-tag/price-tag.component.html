@@ -101,18 +101,18 @@
 
                 <br>
 
-                <div *ngIf="selectedTipologyPrice && selectedTipologyPrice.value == '1'">
+                <div *ngIf="settingsData && settingsData.selectedTipologyPrice && settingsData.selectedTipologyPrice.value == '1'">
                     <div *ngFor="let commercialActivity of commercialActivities">
                         <app-commercial-category-activity
-                                [commercialActivity]="commercialActivity" [selectedNumberCols]="selectedNumberCols"
+                                [commercialActivity]="commercialActivity" [settingsData]="settingsData"
                                 (removeRowEvent)="removeRowListener($event)"></app-commercial-category-activity>
                     </div>
                 </div>
 
-                <div *ngIf="selectedTipologyPrice && selectedTipologyPrice.value == '2'">
+                <div *ngIf="settingsData && settingsData.selectedTipologyPrice && settingsData.value == '2'">
                     <div *ngFor="let commercialActivity of commercialActivities">
                         <app-commercial-category-promotional-activity
-                                [commercialActivity]="commercialActivity" [selectedNumberCols]="selectedNumberCols"
+                                [commercialActivity]="commercialActivity" [settingsData]="settingsData"
                                 (removeRowEvent)="removeRowListener($event)"></app-commercial-category-promotional-activity>
                     </div>
                 </div>
@@ -171,6 +171,18 @@
                 </div>
 
             </div>
+
+
+          <swal
+            #resetSettingsSwal
+            title="{{ 'GENERAL.CLEAN_TITLE' | translate }}"
+            text=""
+            [showCancelButton]="true"
+            confirmButtonText="{{ 'GENERAL.YES_CLEAN_IT' | translate }}"
+            cancelButtonText="{{ 'GENERAL.NO_CANCEL' | translate }}"
+            type="warning">
+          </swal>
+
         </div>
     </div>
 </div>

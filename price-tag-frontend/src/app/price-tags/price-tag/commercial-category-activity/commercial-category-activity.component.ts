@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CommercialActivity} from '../../../shared/common/api/model/commercial-activity';
 import {ItemValue} from '../../../shared/common/api/model/item-value';
+import {SettingsData} from "../../../shared/common/api/model/settings-data";
 
 @Component({
     selector: 'app-commercial-category-activity',
@@ -9,7 +10,7 @@ import {ItemValue} from '../../../shared/common/api/model/item-value';
 })
 export class CommercialCategoryActivityComponent implements OnInit {
 
-    @Input() selectedNumberCols: ItemValue;
+    @Input() settingsData: SettingsData;
     @Input() commercialActivity: CommercialActivity;
     @Output() removeRowEvent = new EventEmitter<number>();
 

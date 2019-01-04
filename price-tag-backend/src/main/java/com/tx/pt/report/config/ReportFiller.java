@@ -171,6 +171,10 @@ public class ReportFiller {
 		        commercialActivity.setFractionalCurrencyInitialPart3(", " + fractioal + " " + commercialActivity.getCurrencyCol3());
 		        commercialActivity.setDiscountReport3("-".concat(String.valueOf(commercialActivity.getDiscount3().intValue())).concat("%"));
 		    }
+
+		    if (!isEmpty(commercialActivity.getCommercialCategoryCol3())) {
+		        commercialActivity.setCommercialCategoryCol3(commercialActivity.getCommercialCategoryCol3().toUpperCase());
+            }
 		} else {
 		    commercialActivity.setFractionalCurrencyInitialPart3("");
 		    commercialActivity.setDiscountReport3("");
@@ -217,6 +221,10 @@ public class ReportFiller {
 		        commercialActivity.setFractionalCurrencyInitialPart2(", " + fractioal + " " + commercialActivity.getCurrencyCol2());
 		        commercialActivity.setDiscountReport2("-".concat(String.valueOf(commercialActivity.getDiscount2().intValue())).concat("%"));
 		    }
+
+            if (!isEmpty(commercialActivity.getCommercialCategoryCol2())) {
+                commercialActivity.setCommercialCategoryCol2(commercialActivity.getCommercialCategoryCol2().toUpperCase());
+            }
 		} else {
 		    commercialActivity.setFractionalCurrencyInitialPart2("");
 		    commercialActivity.setDiscountReport2("");
@@ -263,6 +271,10 @@ public class ReportFiller {
 		        commercialActivity.setFractionalCurrencyInitialPart1(", " + fractioal + " " + commercialActivity.getCurrencyCol1());
 		        commercialActivity.setDiscountReport1("-".concat(String.valueOf(commercialActivity.getDiscount1().intValue())).concat("%"));
 		    }
+
+            if (!isEmpty(commercialActivity.getCommercialCategoryCol1())) {
+                commercialActivity.setCommercialCategoryCol1(commercialActivity.getCommercialCategoryCol1().toUpperCase());
+            }
 		} else {
 		    commercialActivity.setFractionalCurrencyInitialPart1("");
 		    commercialActivity.setDiscountReport1("");

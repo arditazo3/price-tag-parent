@@ -37,6 +37,9 @@
     "SELECT_CARD_FORMAT": "Seleziona formato carta",
     "SELECT_NUMBER_COLS": "Seleziona numero delle colonne",
     "SELECT_TIPOLOGY_PRICE": "Seleziona tipologia di prezzo",
+    "CLEAN_TITLE": "Facendo clic su questo pulsante hai accettato di ripristinare i dati e pulire i campi!",
+    "YES_CLEAN_IT": "Si, pulisci!",
+    "NO_CANCEL": "No, cancella!",
     "COLLAPSE": "Collassa"
   }
 }

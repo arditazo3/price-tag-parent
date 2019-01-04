@@ -351,7 +351,7 @@
 				<reportElement x="0" y="0" width="280" height="86" uuid="75710eda-69e7-4b9c-b07e-7b2aed99673f"/>
 				<box bottomPadding="15"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Sofia Pro Medium" size="11"/>
+					<font fontName="Lato" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{footerTxt}]]></textFieldExpression>
 			</textField>
@@ -359,7 +359,7 @@
 				<reportElement x="280" y="0" width="280" height="86" uuid="978a365b-e569-4563-aa4a-d974d65dc116"/>
 				<box bottomPadding="15"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Sofia Pro Medium" size="11"/>
+					<font fontName="Lato" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{footerTxt}]]></textFieldExpression>
 			</textField>
@@ -367,7 +367,7 @@
 				<reportElement x="560" y="0" width="280" height="86" uuid="4dd752f5-8bc4-4b77-b72f-5128ee109681"/>
 				<box bottomPadding="15"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Sofia Pro Medium" size="11"/>
+					<font fontName="Lato" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{footerTxt}]]></textFieldExpression>
 			</textField>

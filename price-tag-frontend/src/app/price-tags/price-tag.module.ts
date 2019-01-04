@@ -13,29 +13,36 @@ import {PriceTagRoutes} from './price-tag.routing';
 import {PriceTagComponent} from './price-tag/price-tag.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {NgSelectModule} from '@ng-select/ng-select';
-import { CommercialCategoryActivityComponent } from './price-tag/commercial-category-activity/commercial-category-activity.component';
+import {CommercialCategoryActivityComponent} from './price-tag/commercial-category-activity/commercial-category-activity.component';
 import {CommCategoryService} from './service/comm-category.service';
 import {CommercialCategoryPromotionalActivityComponent} from "./price-tag/commercial-category-promotional-activity/commercial-category-promotional-activity.component";
+import {SweetAlert2Module} from "@toverux/ngx-sweetalert2";
 
 @NgModule({
-    imports: [
-        FormsModule,
-        CommonModule,
-        NgSelectModule,
-        NgbModule,
-        RouterModule.forChild(PriceTagRoutes),
-        PerfectScrollbarModule,
-        NgxDatatableModule,
-        TranslateModule
-    ],
-    declarations: [
-        PriceTagComponent,
-        CommercialCategoryActivityComponent,
-        CommercialCategoryPromotionalActivityComponent,
-    ],
-    providers: [
-        CommCategoryService
-    ]
+  imports: [
+    FormsModule,
+    CommonModule,
+    NgSelectModule,
+    NgbModule,
+    RouterModule.forChild(PriceTagRoutes),
+    PerfectScrollbarModule,
+    NgxDatatableModule,
+    TranslateModule,
+    SweetAlert2Module.forRoot({
+      buttonsStyling: false,
+      customClass: 'modal-content',
+      confirmButtonClass: 'btn btn-primary',
+      cancelButtonClass: 'btn'
+    })
+  ],
+  declarations: [
+    PriceTagComponent,
+    CommercialCategoryActivityComponent,
+    CommercialCategoryPromotionalActivityComponent,
+  ],
+  providers: [
+    CommCategoryService
+  ]
 })
 export class PriceTagModule {
 }

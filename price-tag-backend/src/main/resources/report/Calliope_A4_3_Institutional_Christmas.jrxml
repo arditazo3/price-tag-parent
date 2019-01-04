@@ -178,7 +178,7 @@
 					</graphicElement>
 				</line>
 				<textField>
-					<reportElement positionType="Float" x="222" y="23" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
+					<reportElement positionType="Float" x="222" y="24" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
 						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>
@@ -188,7 +188,7 @@
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart1}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement positionType="Float" x="502" y="23" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
+					<reportElement positionType="Float" x="502" y="24" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
 						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>
@@ -198,7 +198,7 @@
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart2}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement positionType="Float" x="782" y="23" width="54" height="20" uuid="0779058a-fc2a-43d9-a90f-5defb7c37ac0">
+					<reportElement positionType="Float" x="782" y="24" width="54" height="20" uuid="0779058a-fc2a-43d9-a90f-5defb7c37ac0">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
 						<printWhenExpression><![CDATA[$F{decimalPart3} != null && $F{decimalPart3}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>
@@ -228,7 +228,7 @@
 				<reportElement x="0" y="0" width="280" height="86" uuid="75710eda-69e7-4b9c-b07e-7b2aed99673f"/>
 				<box bottomPadding="15"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Sofia Pro Medium" size="11"/>
+					<font fontName="Lato" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{footerTxt}]]></textFieldExpression>
 			</textField>
@@ -236,7 +236,7 @@
 				<reportElement x="280" y="0" width="280" height="86" uuid="978a365b-e569-4563-aa4a-d974d65dc116"/>
 				<box bottomPadding="15"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Sofia Pro Medium" size="11"/>
+					<font fontName="Lato" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{footerTxt}]]></textFieldExpression>
 			</textField>
@@ -244,7 +244,7 @@
 				<reportElement x="560" y="0" width="280" height="86" uuid="4dd752f5-8bc4-4b77-b72f-5128ee109681"/>
 				<box bottomPadding="15"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Sofia Pro Medium" size="11"/>
+					<font fontName="Lato" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{footerTxt}]]></textFieldExpression>
 			</textField>
