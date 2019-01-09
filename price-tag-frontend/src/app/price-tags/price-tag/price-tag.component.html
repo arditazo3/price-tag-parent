@@ -1,189 +1,198 @@
 <!-- Row -->
 <div class="row">
-    <div class="col-12">
-        <div class="card">
-            <div class="{{ isMobile ? 'card-body-mobile' : 'card-body' }}">
+  <div class="col-12">
+    <div class="card">
+      <div class="{{ isMobile ? 'card-body-mobile' : 'card-body' }}">
 
-                <div class="col-sm-12 alert alert-info">
-                    {{ 'GENERAL.DESCRIPTION_HEADER' | translate }}
-                </div>
-
-                <div>
-                    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion nav-accordion">
-                        <ngb-panel>
-                            <ng-template ngbPanelTitle>
-                                <div id="{{ isMobile ? 'container-fluid-mobile' : 'container-fluid' }}">
-                                    <div class="row">
-                                        <div class="col-2 float-left">
-                                            <span class="float-left">{{ 'GENERAL.SETTINGS' | translate }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ng-template>
-                            <ng-template ngbPanelContent>
-
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="formatPaper"
-                                                   class="control-label col-form-label">{{ 'GENERAL.CARD_FORMAT' |
-                                                translate }}</label>
-                                            <ng-select [items]="formatPaperAvailable"
-                                                       bindLabel="description"
-                                                       id="formatPaper"
-                                                       [searchable]="true"
-                                                       [clearable]="false"
-                                                       [(ngModel)]="selectedFormatPaper"
-                                                       [ngModelOptions]="{standalone: true}"
-                                                       (change)="formatPaperChange($event)"
-                                                       placeholder="{{ 'GENERAL.SELECT_CARD_FORMAT' | translate }}">
-                                            </ng-select>
-                                            <div *ngIf="hasFormatPaper" class="invalid-feedback-show">
-                                                {{ 'GENERAL.CARD_FORMAT_REQ' | translate }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="numberCols"
-                                                   class="control-label col-form-label">{{ 'GENERAL.COLS_NO' | translate
-                                                }}</label>
-                                            <ng-select [items]="numberColsAvailable"
-                                                       bindLabel="description"
-                                                       id="numberCols"
-                                                       [searchable]="true"
-                                                       [clearable]="false"
-                                                       [(ngModel)]="selectedNumberCols"
-                                                       [ngModelOptions]="{standalone: true}"
-                                                       placeholder="{{ 'GENERAL.SELECT_NUMBER_COLS' | translate }}">
-                                            </ng-select>
-                                            <div *ngIf="hasNumberCols" class="invalid-feedback-show">
-                                                {{ 'GENERAL.COLS_NO_REQ' | translate }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="tipologyPrice"
-                                                   class="control-label col-form-label">{{ 'GENERAL.TYPE_PRICE' |
-                                                translate }}</label>
-                                            <ng-select [items]="tipologyPriceAvailable"
-                                                       bindLabel="description"
-                                                       id="tipologyPrice"
-                                                       [searchable]="true"
-                                                       [clearable]="false"
-                                                       [(ngModel)]="selectedTipologyPrice"
-                                                       [ngModelOptions]="{standalone: true}"
-                                                       placeholder="{{ 'GENERAL.SELECT_TIPOLOGY_PRICE' | translate }}">
-                                            </ng-select>
-                                            <div *ngIf="hasTipologyPrice" class="invalid-feedback-show">
-                                                {{ 'GENERAL.TYPE_PRICE_REQ' | translate }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-3">
-                                        <button class="btn btn-info btn-block mt-2_2" type="button"
-                                                (click)="confirmSettings()">{{ 'GENERAL.CONFIRM_SETTINGS' | translate }}
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <br><br><br>
-
-                            </ng-template>
-                        </ngb-panel>
-                    </ngb-accordion>
-                </div>
-
-
-                <br>
-
-                <div *ngIf="settingsData && settingsData.selectedTipologyPrice && settingsData.selectedTipologyPrice.value == '1'">
-                    <div *ngFor="let commercialActivity of commercialActivities">
-                        <app-commercial-category-activity
-                                [commercialActivity]="commercialActivity" [settingsData]="settingsData"
-                                (removeRowEvent)="removeRowListener($event)"></app-commercial-category-activity>
-                    </div>
-                </div>
-
-                <div *ngIf="settingsData && settingsData.selectedTipologyPrice && settingsData.value == '2'">
-                    <div *ngFor="let commercialActivity of commercialActivities">
-                        <app-commercial-category-promotional-activity
-                                [commercialActivity]="commercialActivity" [settingsData]="settingsData"
-                                (removeRowEvent)="removeRowListener($event)"></app-commercial-category-promotional-activity>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="input-group">
-                        <div class="col-sm-4">
-                            <label class="col-md-12">
-                                {{ 'GENERAL.SELECT_BRAND' | translate }}
-                            </label>
-                            <div class="col-sm-6">
-                                <ng-select [items]="brandsObservable | async"
-                                           bindLabel="description"
-                                           [(ngModel)]="selectedBrand"
-                                           [ngModelOptions]="{standalone: true}"
-                                           placeholder="{{ 'GENERAL.SELECT_BRAND' | translate }}">
-                                </ng-select>
-                                <div *ngIf="hasBrand" class="invalid-feedback-show">
-                                    {{ 'GENERAL.SELECT_BRAND_REQ' | translate }}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <label class="col-md-12">
-                                {{ 'GENERAL.TEMPLATE' | translate }}
-                            </label>
-                            <div class="col-sm-6">
-                                <ng-select [items]="templateTypeAvailable"
-                                           bindLabel="description"
-                                           [(ngModel)]="selectedTemplateType"
-                                           [ngModelOptions]="{standalone: true}"
-                                           placeholder="{{ 'GENERAL.TEMPLATE' | translate }}">
-                                </ng-select>
-                                <div *ngIf="hasTemplate" class="invalid-feedback-show">
-                                    {{ 'GENERAL.TEMPLATE_REQ' | translate }}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="text-right mt-1_9">
-                                <button type="button"
-                                        (click)="addNewRow()"
-                                        class="btn btn-primary">
-                                    {{ 'GENERAL.ADD_ROW' | translate }}
-                                </button>
-                                <button type="button"
-                                        (click)="elaborateReport()"
-                                        class="btn btn-success">
-                                    {{ 'GENERAL.ELABORATE_REPORT' | translate }}
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-          <swal
-            #resetSettingsSwal
-            title="{{ 'GENERAL.CLEAN_TITLE' | translate }}"
-            text=""
-            [showCancelButton]="true"
-            confirmButtonText="{{ 'GENERAL.YES_CLEAN_IT' | translate }}"
-            cancelButtonText="{{ 'GENERAL.NO_CANCEL' | translate }}"
-            type="warning">
-          </swal>
-
+        <div class="col-sm-12 alert alert-info">
+          {{ 'GENERAL.DESCRIPTION_HEADER' | translate }}
         </div>
+
+        <div>
+          <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion nav-accordion">
+            <ngb-panel>
+              <ng-template ngbPanelTitle>
+                <div id="{{ isMobile ? 'container-fluid-mobile' : 'container-fluid' }}">
+                  <div class="row">
+                    <div class="col-2 float-left">
+                      <span class="float-left">{{ 'GENERAL.SETTINGS' | translate }}</span>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+              <ng-template ngbPanelContent>
+
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label for="formatPaper"
+                             class="control-label col-form-label">{{ 'GENERAL.CARD_FORMAT' |
+                        translate }}</label>
+                      <ng-select [items]="formatPaperAvailable"
+                                 bindLabel="description"
+                                 id="formatPaper"
+                                 [searchable]="true"
+                                 [clearable]="false"
+                                 [(ngModel)]="selectedFormatPaper"
+                                 [ngModelOptions]="{standalone: true}"
+                                 (change)="formatPaperChange($event)"
+                                 placeholder="{{ 'GENERAL.SELECT_CARD_FORMAT' | translate }}">
+                      </ng-select>
+                      <div *ngIf="hasFormatPaper" class="invalid-feedback-show">
+                        {{ 'GENERAL.CARD_FORMAT_REQ' | translate }}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label for="numberCols"
+                             class="control-label col-form-label">{{ 'GENERAL.COLS_NO' | translate
+                        }}</label>
+                      <ng-select [items]="numberColsAvailable"
+                                 bindLabel="description"
+                                 id="numberCols"
+                                 [searchable]="true"
+                                 [clearable]="false"
+                                 [(ngModel)]="selectedNumberCols"
+                                 [ngModelOptions]="{standalone: true}"
+                                 placeholder="{{ 'GENERAL.SELECT_NUMBER_COLS' | translate }}">
+                      </ng-select>
+                      <div *ngIf="hasNumberCols" class="invalid-feedback-show">
+                        {{ 'GENERAL.COLS_NO_REQ' | translate }}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label for="tipologyPrice"
+                             class="control-label col-form-label">{{ 'GENERAL.TYPE_PRICE' |
+                        translate }}</label>
+                      <ng-select [items]="tipologyPriceAvailable"
+                                 bindLabel="description"
+                                 id="tipologyPrice"
+                                 [searchable]="true"
+                                 [clearable]="false"
+                                 [(ngModel)]="selectedTipologyPrice"
+                                 [ngModelOptions]="{standalone: true}"
+                                 placeholder="{{ 'GENERAL.SELECT_TIPOLOGY_PRICE' | translate }}">
+                      </ng-select>
+                      <div *ngIf="hasTipologyPrice" class="invalid-feedback-show">
+                        {{ 'GENERAL.TYPE_PRICE_REQ' | translate }}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <button class="btn btn-info btn-block mt-2_2" type="button"
+                            (click)="confirmSettings()">{{ 'GENERAL.CONFIRM_SETTINGS' | translate }}
+                    </button>
+                  </div>
+                </div>
+
+                <br><br><br>
+
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+        </div>
+
+
+        <br>
+
+        <div
+          *ngIf="settingsData && settingsData.selectedTipologyPrice && settingsData.selectedTipologyPrice.value == '1'">
+          <div *ngFor="let commercialActivity of commercialActivities; index as i">
+            <app-commercial-category-activity
+              [commercialActivity]="commercialActivity" [settingsData]="settingsData"
+              (removeRowEvent)="removeRowListener($event)" [index]="i + 1">
+            </app-commercial-category-activity>
+          </div>
+        </div>
+
+        <div
+          *ngIf="settingsData && settingsData.selectedTipologyPrice && settingsData.selectedTipologyPrice.value == '2'">
+          <div *ngFor="let commercialActivity of commercialActivities; index as i">
+            <app-commercial-category-promotional-activity
+              [commercialActivity]="commercialActivity" [settingsData]="settingsData"
+              (removeRowEvent)="removeRowListener($event)" [index]="i + 1">
+            </app-commercial-category-promotional-activity>
+          </div>
+        </div>
+
+        <div class="card border-primary">
+          <div class="card-body text-dark">
+            <div class="input-group">
+              <div class="col-sm-4">
+                <label class="col-md-12">
+                  {{ 'GENERAL.SELECT_BRAND' | translate }}
+                </label>
+                <div class="col-sm-6">
+                  <ng-select [items]="brandsObservable | async"
+                             bindLabel="description"
+                             [(ngModel)]="selectedBrand"
+                             [ngModelOptions]="{standalone: true}"
+                             placeholder="{{ 'GENERAL.SELECT_BRAND' | translate }}">
+                  </ng-select>
+                  <div *ngIf="hasBrand" class="invalid-feedback-show">
+                    {{ 'GENERAL.SELECT_BRAND_REQ' | translate }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <label class="col-md-12">
+                  {{ 'GENERAL.TEMPLATE' | translate }}
+                </label>
+                <div class="col-sm-6">
+                  <ng-select [items]="templateTypeAvailable"
+                             bindLabel="description"
+                             [(ngModel)]="selectedTemplateType"
+                             [ngModelOptions]="{standalone: true}"
+                             placeholder="{{ 'GENERAL.TEMPLATE' | translate }}">
+                  </ng-select>
+                  <div *ngIf="hasTemplate" class="invalid-feedback-show">
+                    {{ 'GENERAL.TEMPLATE_REQ' | translate }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="text-right mt-1_9">
+                  <button type="button"
+                          (click)="addNewRow()"
+                          class="btn btn-primary">
+                    {{ 'GENERAL.ADD_ROW' | translate }}
+                  </button>
+                  <button type="button"
+                          (click)="elaborateReport()"
+                          class="btn btn-success">
+                    {{ 'GENERAL.ELABORATE_REPORT' | translate }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <swal
+        #resetSettingsSwal
+        html="{{ 'GENERAL.CLEAN_TITLE' | translate }}"
+        text=""
+        [showCancelButton]="true"
+        confirmButtonText="{{ 'GENERAL.YES_CLEAN_IT' | translate }}"
+        cancelButtonText="{{ 'GENERAL.NO_CANCEL' | translate }}"
+        type="warning">
+      </swal>
+      <ngx-loading #ngxLoading
+                   [config]="{primaryColour: primaryColour, secondaryColour: secondaryColour, tertiaryColour: primaryColour, backdropBorderRadius: '3px'}">
+      </ngx-loading>
+
     </div>
+  </div>
 </div>
 <!-- End Row -->

@@ -17,6 +17,8 @@ import {CommercialCategoryActivityComponent} from './price-tag/commercial-catego
 import {CommCategoryService} from './service/comm-category.service';
 import {CommercialCategoryPromotionalActivityComponent} from "./price-tag/commercial-category-promotional-activity/commercial-category-promotional-activity.component";
 import {SweetAlert2Module} from "@toverux/ngx-sweetalert2";
+import {TextMaskModule} from "angular2-text-mask";
+import {NgxLoadingModule} from "ngx-loading";
 
 @NgModule({
   imports: [
@@ -33,7 +35,9 @@ import {SweetAlert2Module} from "@toverux/ngx-sweetalert2";
       customClass: 'modal-content',
       confirmButtonClass: 'btn btn-primary',
       cancelButtonClass: 'btn'
-    })
+    }),
+    TextMaskModule,
+    NgxLoadingModule
   ],
   declarations: [
     PriceTagComponent,

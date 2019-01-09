@@ -6,10 +6,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -60,7 +57,7 @@ public class ReportFiller {
 
             Resource resource = new ClassPathResource(reportFileName);
 
-            JRSaver.saveObject(jasperReport, resource.getFilename().replace(".jrxml", ".jasper"));
+            JRSaver.saveObject(jasperReport, resource.getFilename().replace(".jrxml",".jasper"));
         } catch (JRException ex) {
             Logger.getLogger(ReportFiller.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -97,7 +94,7 @@ public class ReportFiller {
         }
 
         Map<String, Object> parametersInserted = new HashMap<>();
-        parametersInserted.put("headerTxt", "");
+        parametersInserted.put("headerTxt","");
         parametersInserted.put("footerTxt", footerTxt);
 
         URL url = this.getClass().getClassLoader().getResource("report/logo-images/logo_".concat(headerTxt.toLowerCase()).concat(".png"));
@@ -134,6 +131,32 @@ public class ReportFiller {
                 elaborateColumn3(commercialActivity);
             }
             activitiesCollection.addAll(reportData.getCommercialActivities());
+
+            if (reportData.getFormatSettings().getTipologyPrice().compareTo(new Integer(1)) == 0 &&
+					activitiesCollection.size() % 6 != 0) {
+
+            	List<CommercialActivity> commercialActivityList = new ArrayList<>();
+				for (int index = 0; index < activitiesCollection.size() % 6; index++) {
+					CommercialActivity commercialActivity = new CommercialActivity();
+					elaborateColumn1(commercialActivity);
+					elaborateColumn2(commercialActivity);
+					elaborateColumn3(commercialActivity);
+					commercialActivityList.add(commercialActivity);
+				}
+				activitiesCollection.addAll(commercialActivityList);
+			} else if (reportData.getFormatSettings().getTipologyPrice().compareTo(new Integer(2)) == 0 &&
+					activitiesCollection.size() % 4 != 0) {
+
+				List<CommercialActivity> commercialActivityList = new ArrayList<>();
+            	for (int index = 0; index < activitiesCollection.size() % 4; index++) {
+					CommercialActivity commercialActivity = new CommercialActivity();
+					elaborateColumn1(commercialActivity);
+					elaborateColumn2(commercialActivity);
+					elaborateColumn3(commercialActivity);
+					commercialActivityList.add(commercialActivity);
+				}
+				activitiesCollection.addAll(commercialActivityList);
+			}
         }
 
         this.dataSource = new JRBeanCollectionDataSource(activitiesCollection);
@@ -156,7 +179,7 @@ public class ReportFiller {
 		            fractioal = fractioal + "0";
 		        }
 
-		        commercialActivity.setFractionalCurrencyPart3(", " + fractioal + " " + commercialActivity.getCurrencyCol3());
+		        commercialActivity.setFractionalCurrencyPart3("," + fractioal + " " + commercialActivity.getCurrencyCol3());
 		    }
 
 		    if (!isEmpty(initialPriceSplitted) && initialPriceSplitted.length == 2) {
@@ -168,7 +191,7 @@ public class ReportFiller {
 		            fractioal = fractioal + "0";
 		        }
 
-		        commercialActivity.setFractionalCurrencyInitialPart3(", " + fractioal + " " + commercialActivity.getCurrencyCol3());
+		        commercialActivity.setFractionalCurrencyInitialPart3("," + fractioal + " " + commercialActivity.getCurrencyCol3());
 		        commercialActivity.setDiscountReport3("-".concat(String.valueOf(commercialActivity.getDiscount3().intValue())).concat("%"));
 		    }
 
@@ -206,7 +229,7 @@ public class ReportFiller {
 		            fractioal = fractioal + "0";
 		        }
 
-		        commercialActivity.setFractionalCurrencyPart2(", " + fractioal + " " + commercialActivity.getCurrencyCol2());
+		        commercialActivity.setFractionalCurrencyPart2("," + fractioal + " " + commercialActivity.getCurrencyCol2());
 		    }
 
 		    if (!isEmpty(initialPriceSplitted) && initialPriceSplitted.length == 2) {
@@ -218,7 +241,7 @@ public class ReportFiller {
 		            fractioal = fractioal + "0";
 		        }
 
-		        commercialActivity.setFractionalCurrencyInitialPart2(", " + fractioal + " " + commercialActivity.getCurrencyCol2());
+		        commercialActivity.setFractionalCurrencyInitialPart2("," + fractioal + " " + commercialActivity.getCurrencyCol2());
 		        commercialActivity.setDiscountReport2("-".concat(String.valueOf(commercialActivity.getDiscount2().intValue())).concat("%"));
 		    }
 
@@ -256,7 +279,7 @@ public class ReportFiller {
 		            fractioal = fractioal + "0";
 		        }
 
-		        commercialActivity.setFractionalCurrencyPart1(", " + fractioal + " " + commercialActivity.getCurrencyCol1());
+		        commercialActivity.setFractionalCurrencyPart1("," + fractioal + " " + commercialActivity.getCurrencyCol1());
 		    }
 
 		    if (!isEmpty(initialPriceSplitted) && initialPriceSplitted.length == 2) {
@@ -268,7 +291,7 @@ public class ReportFiller {
 		            fractioal = fractioal + "0";
 		        }
 
-		        commercialActivity.setFractionalCurrencyInitialPart1(", " + fractioal + " " + commercialActivity.getCurrencyCol1());
+		        commercialActivity.setFractionalCurrencyInitialPart1("," + fractioal + " " + commercialActivity.getCurrencyCol1());
 		        commercialActivity.setDiscountReport1("-".concat(String.valueOf(commercialActivity.getDiscount1().intValue())).concat("%"));
 		    }
 

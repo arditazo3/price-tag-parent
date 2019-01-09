@@ -4,7 +4,7 @@
             <div id="{{ isMobile ? 'container-fluid-mobile' : 'container-fluid' }}">
                 <div class="row" style="width: 100% !important;">
                     <div class="col-2">
-                        <span class="float-left">{{ 'GENERAL.SETTINGS' | translate }}</span>
+                        <span class="float-left">{{ 'GENERAL.COL_NO' | translate }} {{ index }}</span>
                     </div>
                     <div class="col-6 text-center">
                     </div>
@@ -54,7 +54,7 @@
                     <label class="control-label col-form-label">
                         {{ 'GENERAL.AMOUNT' | translate }}
                     </label>
-                    <input type="number" class="form-control"
+                    <input type="text" class="form-control" [textMask]="{mask: currencyMask}"
                            [(ngModel)]="commercialActivity.amountCol1"
                            [ngModelOptions]="{standalone: true}">
                 </div>
@@ -84,7 +84,7 @@
                     <label class="control-label col-form-label">
                         {{ 'GENERAL.AMOUNT' | translate }}
                     </label>
-                    <input type="number" class="form-control"
+                    <input type="text" class="form-control" [textMask]="{mask: currencyMask}"
                            [(ngModel)]="commercialActivity.amountCol2"
                            [ngModelOptions]="{standalone: true}">
                 </div>
@@ -131,11 +131,11 @@
                                 class="btn btn-primary mr-1 ">
                             <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_2' | translate }}</div>
                         </button>
-                        <button type="button"
-                                (click)="removeOfficeBtn()"
-                                class="btn btn-danger mr-0 text-right">
-                            <div style="white-space: pre-wrap">{{ 'GENERAL.DELETE_ROW' | translate }}</div>
-                        </button>
+                        <!--<button type="button"-->
+                                <!--(click)="removeOfficeBtn()"-->
+                                <!--class="btn btn-danger mr-0 text-right">-->
+                            <!--<div style="white-space: pre-wrap">{{ 'GENERAL.DELETE_ROW' | translate }}</div>-->
+                        <!--</button>-->
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import {ItemValue} from '../model/item-value';
+import {CommercialActivity} from "../model/commercial-activity";
 
 export class SettingsReportData {
 
@@ -23,10 +24,12 @@ export class SettingsReportData {
 
     public static readonly TEMPLATE_TYPE: ItemValue[] = [
         // Italian version
-        new ItemValue('Natale', '1', 'IT'),
-        new ItemValue('Pasqua', '2', 'IT'),
+        // new ItemValue('Natale', '1', 'IT'),
+        // new ItemValue('Pasqua', '2', 'IT'),
+        new ItemValue('Standard', '3', 'IT'),
         // English version
-        new ItemValue('Christmas', '1', 'EN'),
-        new ItemValue('Easter', '2', 'EN')
+        // new ItemValue('Christmas', '1', 'EN'),
+        // new ItemValue('Easter', '2', 'EN'),
+        new ItemValue('Standard', '3', 'EN')
     ];
 }

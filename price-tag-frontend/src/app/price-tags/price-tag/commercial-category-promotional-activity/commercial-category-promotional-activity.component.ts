@@ -2,6 +2,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CommercialActivity} from '../../../shared/common/api/model/commercial-activity';
 import {ItemValue} from '../../../shared/common/api/model/item-value';
 import {SettingsData} from "../../../shared/common/api/model/settings-data";
+import {AppConfig} from "../../../shared/common/api/app-config";
+import {AppGlobals} from "../../../shared/common/api/app-globals";
 
 @Component({
   selector: 'app-commercial-category-promotional-activity',
@@ -10,9 +12,12 @@ import {SettingsData} from "../../../shared/common/api/model/settings-data";
 })
 export class CommercialCategoryPromotionalActivityComponent implements OnInit {
 
+  @Input() index: number;
   @Input() settingsData: SettingsData;
   @Input() commercialActivity: CommercialActivity;
   @Output() removeRowEvent = new EventEmitter<number>();
+  currencyMask = AppGlobals.currencyMaskWithDecimal;
+  currencyMaskWithoutDecimal = AppGlobals.currencyMaskWithoutDecimal;
 
   constructor() {
   }
@@ -91,6 +96,7 @@ export class CommercialCategoryPromotionalActivityComponent implements OnInit {
     console.log('CommercialCategoryPromotionalActivityComponent - cleanFieldsBtn');
 
     this.commercialActivity = new CommercialActivity(this.commercialActivity.idOrder);
+ //   this.commercialActivity = new CommercialActivity(this.commercialActivity.idOrder, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined));
 
     if (acc.isExpanded('toggle-' + this.commercialActivity.idOrder)) {
       acc.collapse('toggle-' + this.commercialActivity.idOrder);

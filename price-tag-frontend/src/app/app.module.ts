@@ -31,73 +31,75 @@ import {UserService} from './user/service/user.service';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {DeviceDetectorModule} from 'ngx-device-detector';
+import {NgxLoadingModule} from 'ngx-loading';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-    suppressScrollX: true,
-    wheelSpeed: 1,
-    wheelPropagation: true,
-    minScrollbarLength: 20
+  suppressScrollX: true,
+  wheelSpeed: 1,
+  wheelPropagation: true,
+  minScrollbarLength: 20
 };
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        SpinnerComponent,
-        FullComponent,
-        BlankComponent,
-        NavigationComponent,
-        BreadcrumbComponent,
-        SidebarComponent,
-        BlankComponent,
-    ],
-    imports: [
-        CommonModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        NgSelectModule,
-        FormsModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        NgbModule,
-        RouterModule.forRoot(Approutes),
-        PerfectScrollbarModule,
-        SweetAlert2Module.forRoot({
-            buttonsStyling: false,
-            customClass: 'modal-content',
-            confirmButtonClass: 'btn btn-primary',
-            cancelButtonClass: 'btn'
-        }),
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        }),
-        DeviceDetectorModule.forRoot(),
-    ],
-    providers: [
-        UserInfoService,
-        ApiRequestService,
-        LoginService,
-        AppConfig,
-        AuthGuard,
-        UserService,
-        {
-            provide: PERFECT_SCROLLBAR_CONFIG,
-            useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-        },
-        {
-            provide: LocationStrategy,
-            useClass: HashLocationStrategy
-        }
-    ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    SpinnerComponent,
+    FullComponent,
+    BlankComponent,
+    NavigationComponent,
+    BreadcrumbComponent,
+    SidebarComponent,
+    BlankComponent,
+  ],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    NgSelectModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgbModule,
+    RouterModule.forRoot(Approutes),
+    PerfectScrollbarModule,
+    SweetAlert2Module.forRoot({
+      buttonsStyling: false,
+      customClass: 'modal-content',
+      confirmButtonClass: 'btn btn-primary',
+      cancelButtonClass: 'btn'
+    }),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+    DeviceDetectorModule.forRoot(),
+    NgxLoadingModule.forRoot({})
+  ],
+  providers: [
+    UserInfoService,
+    ApiRequestService,
+    LoginService,
+    AppConfig,
+    AuthGuard,
+    UserService,
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    },
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
+    }
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http);
 }

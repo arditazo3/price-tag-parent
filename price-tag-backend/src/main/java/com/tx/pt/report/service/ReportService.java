@@ -69,7 +69,12 @@ public class ReportService implements IReportService {
 			String typePrice = getTipologyPriceByValue(reportData.getFormatSettings().getTipologyPrice());
 			String templateType = getTemplateTypeByValue(reportData.getFormatSettings().getTemplateType());
 
-			templatePath = REPORT_DEFAULT_PATH.concat(brand).concat("_").concat(formatPaper).concat("_").concat(numbCols).concat("_").concat(typePrice).concat("_").concat(templateType).concat(".jrxml");
+			templatePath = REPORT_DEFAULT_PATH.concat(brand).concat("_").concat(formatPaper).concat("_").concat(numbCols).concat("_").concat(typePrice);
+
+			if (!isEmpty(templateType)) {
+				templatePath = templatePath.concat("_").concat(templateType);
+			}
+			templatePath = templatePath.concat(".jrxml");
 		}
 		return templatePath;
 	}

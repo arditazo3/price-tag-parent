@@ -2,88 +2,91 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CommercialActivity} from '../../../shared/common/api/model/commercial-activity';
 import {ItemValue} from '../../../shared/common/api/model/item-value';
 import {SettingsData} from "../../../shared/common/api/model/settings-data";
+import {AppGlobals} from "../../../shared/common/api/app-globals";
 
 @Component({
-    selector: 'app-commercial-category-activity',
-    templateUrl: './commercial-category-activity.component.html',
-    styleUrls: ['./commercial-category-activity.component.css']
+  selector: 'app-commercial-category-activity',
+  templateUrl: './commercial-category-activity.component.html',
+  styleUrls: ['./commercial-category-activity.component.css']
 })
 export class CommercialCategoryActivityComponent implements OnInit {
 
-    @Input() settingsData: SettingsData;
-    @Input() commercialActivity: CommercialActivity;
-    @Output() removeRowEvent = new EventEmitter<number>();
+  @Input() index: number;
+  @Input() settingsData: SettingsData;
+  @Input() commercialActivity: CommercialActivity;
+  @Output() removeRowEvent = new EventEmitter<number>();
+  currencyMask = AppGlobals.currencyMaskWithDecimal;
 
-    constructor() {
+  constructor() {
+  }
+
+  ngOnInit() {
+    console.log('CommercialCategoryActivityComponent - ngOnInit');
+  }
+
+  copyFirstColumnValuesToSecond() {
+
+    if (this.commercialActivity.commercialCategoryCol1) {
+      this.commercialActivity.commercialCategoryCol2 = this.commercialActivity.commercialCategoryCol1;
+    } else {
+      this.commercialActivity.commercialCategoryCol2 = '';
     }
 
-    ngOnInit() {
-        console.log('CommercialCategoryActivityComponent - ngOnInit');
+    if (this.commercialActivity.currencyCol1) {
+      this.commercialActivity.currencyCol2 = this.commercialActivity.currencyCol1;
+    } else {
+      this.commercialActivity.currencyCol2 = '';
     }
 
-    copyFirstColumnValuesToSecond() {
+    if (this.commercialActivity.amountCol1) {
+      this.commercialActivity.amountCol2 = this.commercialActivity.amountCol1;
+    } else {
+      this.commercialActivity.amountCol2 = +'';
+    }
+  }
 
-        if (this.commercialActivity.commercialCategoryCol1) {
-            this.commercialActivity.commercialCategoryCol2 = this.commercialActivity.commercialCategoryCol1;
-        } else {
-            this.commercialActivity.commercialCategoryCol2 = '';
-        }
+  copySecondColumnValuesToThird() {
 
-        if (this.commercialActivity.currencyCol1) {
-            this.commercialActivity.currencyCol2 = this.commercialActivity.currencyCol1;
-        } else {
-            this.commercialActivity.currencyCol2 = '';
-        }
-
-        if (this.commercialActivity.amountCol1) {
-            this.commercialActivity.amountCol2 = this.commercialActivity.amountCol1;
-        } else {
-            this.commercialActivity.amountCol2 =  +'';
-        }
+    if (this.commercialActivity.commercialCategoryCol2) {
+      this.commercialActivity.commercialCategoryCol3 = this.commercialActivity.commercialCategoryCol2;
+    } else {
+      this.commercialActivity.commercialCategoryCol3 = '';
     }
 
-    copySecondColumnValuesToThird() {
-
-        if (this.commercialActivity.commercialCategoryCol2) {
-            this.commercialActivity.commercialCategoryCol3 = this.commercialActivity.commercialCategoryCol2;
-        } else {
-            this.commercialActivity.commercialCategoryCol3 = '';
-        }
-
-        if (this.commercialActivity.currencyCol2) {
-            this.commercialActivity.currencyCol3 = this.commercialActivity.currencyCol2;
-        } else {
-            this.commercialActivity.currencyCol3 = '';
-        }
-
-        if (this.commercialActivity.amountCol2) {
-            this.commercialActivity.amountCol3 = this.commercialActivity.amountCol2;
-        } else {
-            this.commercialActivity.amountCol3 = +'';
-        }
+    if (this.commercialActivity.currencyCol2) {
+      this.commercialActivity.currencyCol3 = this.commercialActivity.currencyCol2;
+    } else {
+      this.commercialActivity.currencyCol3 = '';
     }
 
-    cleanFieldsBtn(acc) {
-        console.log('CommercialCategoryActivityComponent - cleanFieldsBtn');
-
-        this.commercialActivity = new CommercialActivity(this.commercialActivity.idOrder);
-
-        if (acc.isExpanded('toggle-' + this.commercialActivity.idOrder)) {
-            acc.collapse('toggle-' + this.commercialActivity.idOrder);
-        } else {
-            acc.expand('toggle-' + this.commercialActivity.idOrder);
-        }
+    if (this.commercialActivity.amountCol2) {
+      this.commercialActivity.amountCol3 = this.commercialActivity.amountCol2;
+    } else {
+      this.commercialActivity.amountCol3 = +'';
     }
+  }
 
-    removeOfficeBtn() {
-        console.log('CommercialCategoryActivityComponent - removeOfficeBtn');
+  cleanFieldsBtn(acc) {
+    console.log('CommercialCategoryActivityComponent - cleanFieldsBtn');
 
-        this.removeRowEvent.emit(this.commercialActivity.idOrder);
+    this.commercialActivity = new CommercialActivity(this.commercialActivity.idOrder);
+
+    if (acc.isExpanded('toggle-' + this.commercialActivity.idOrder)) {
+      acc.collapse('toggle-' + this.commercialActivity.idOrder);
+    } else {
+      acc.expand('toggle-' + this.commercialActivity.idOrder);
     }
+  }
 
-    collapseBtn(acc) {
-        console.log('CommercialCategoryActivityComponent - collapseBtn');
+  removeOfficeBtn() {
+    console.log('CommercialCategoryActivityComponent - removeOfficeBtn');
 
-        acc.collapse('toggle-' + this.commercialActivity.idOrder);
-    }
+    this.removeRowEvent.emit(this.commercialActivity.idOrder);
+  }
+
+  collapseBtn(acc) {
+    console.log('CommercialCategoryActivityComponent - collapseBtn');
+
+    acc.collapse('toggle-' + this.commercialActivity.idOrder);
+  }
 }

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="59e2be7d-c4bf-4f96-af78-b9778890c359">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="headerTxt" class="java.lang.String"/>
+	<parameter name="footerTxt" class="java.lang.String"/>
+	<parameter name="logo" class="java.net.URL">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<field name="commercialCategoryCol1" class="java.lang.String"/>
+	<field name="commercialCategoryCol2" class="java.lang.String"/>
+	<field name="commercialCategoryCol3" class="java.lang.String"/>
+	<field name="decimalPart1" class="java.lang.Integer"/>
+	<field name="decimalPart2" class="java.lang.Integer"/>
+	<field name="decimalPart3" class="java.lang.Integer"/>
+	<field name="fractionalCurrencyPart1" class="java.lang.String"/>
+	<field name="fractionalCurrencyPart2" class="java.lang.String"/>
+	<field name="fractionalCurrencyPart3" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="100" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="280" height="100" uuid="59f565a0-b3dd-495c-8678-608c135131e5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Sofia Pro Medium" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{headerTxt}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="280" y="0" width="1" height="100" uuid="75d4d599-46df-43d7-8f9b-5c61f62418c8"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="560" y="0" width="1" height="100" uuid="fee0f813-39ba-496a-8c6e-1d2a8497e826"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="280" y="0" width="280" height="100" uuid="e3c610f3-b920-4895-b0b8-8283031c3234"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Sofia Pro Medium" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{headerTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="560" y="0" width="280" height="100" uuid="a85bfb94-7ade-431c-9bc8-ed4133775389"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Sofia Pro Medium" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{headerTxt}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="109" y="45" width="70" height="10" uuid="240835bb-6806-4c84-8ae9-83cfd9f2e1ce"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="389" y="45" width="70" height="10" uuid="1ba5ba0b-c587-4526-a6a2-6305018b979f"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="670" y="45" width="70" height="10" uuid="6060b07f-deeb-43e9-897d-3082a2497e89"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="68" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+			<frame>
+				<reportElement x="0" y="0" width="842" height="68" uuid="cef2938d-f4bf-4a16-88fc-1c0c6defa772">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+				</reportElement>
+				<textField>
+					<reportElement x="0" y="0" width="140" height="68" uuid="9885f530-0116-441e-996f-ed6c572f69fd">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7b79729d-68ae-41ed-9cc9-cde79072fb63"/>
+					</reportElement>
+					<box leftPadding="35">
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Lato" size="15" isStrikeThrough="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{commercialCategoryCol1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="140" y="0" width="140" height="68" uuid="2e08b483-3613-4696-9c59-10c646a31900">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="66ecc1c1-a77d-4aa0-97af-6da1e0aea156"/>
+						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="60">
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Lato" size="23"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{decimalPart1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="280" y="0" width="140" height="68" uuid="fac2c738-b707-493f-a791-0657ba673e02">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e72abbcc-6784-44f2-91b6-1e7c72d57874"/>
+					</reportElement>
+					<box leftPadding="35">
+						<leftPen lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Lato" size="15"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{commercialCategoryCol2}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="420" y="0" width="140" height="68" uuid="2288b52a-bfab-44f9-a595-88482f3fc3f3">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d5b3ee69-5dda-4b01-8f07-db7808f3eb1b"/>
+						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="60">
+						<leftPen lineWidth="0.0" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Lato" size="23"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{decimalPart2}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="560" y="0" width="140" height="68" uuid="397b8715-b015-4dc3-88d2-15d84221bbe9">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5112349b-ebbb-4376-a053-70f12588c96b"/>
+					</reportElement>
+					<box leftPadding="35">
+						<leftPen lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Lato" size="15"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{commercialCategoryCol3}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="700" y="0" width="140" height="68" uuid="bffa9ce6-8e3d-4a56-b82d-4946e71fde5b">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c16348f2-083a-46bf-80b0-2116559d9f0d"/>
+						<printWhenExpression><![CDATA[$F{decimalPart3} != null && $F{decimalPart3}.compareTo(0) != 0]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="60">
+						<pen lineWidth="1.0" lineStyle="Dashed"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Dashed" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Lato" size="23"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{decimalPart3}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="280" y="0" width="1" height="68" uuid="c8cc53e5-197c-4000-ac97-22255941fe0f"/>
+					<graphicElement>
+						<pen lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="560" y="0" width="1" height="68" uuid="88cd3836-838a-4eb9-ae85-0162aa094c12"/>
+					<graphicElement>
+						<pen lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement positionType="Float" x="222" y="24" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
+						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font fontName="Lato" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement positionType="Float" x="502" y="24" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
+						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font fontName="Lato" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart2}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement positionType="Float" x="782" y="24" width="54" height="20" uuid="0779058a-fc2a-43d9-a90f-5defb7c37ac0">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
+						<printWhenExpression><![CDATA[$F{decimalPart3} != null && $F{decimalPart3}.compareTo(0) != 0]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font fontName="Lato" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart3}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="86" splitType="Stretch">
+			<line>
+				<reportElement x="280" y="0" width="1" height="86" uuid="ad836d9d-c493-483d-8c6d-948f8f864c44"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="560" y="0" width="1" height="86" uuid="88362191-e25d-45fe-b7d5-c97f76ec5943"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="0" y="0" width="280" height="86" uuid="75710eda-69e7-4b9c-b07e-7b2aed99673f"/>
+				<box bottomPadding="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Lato" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{footerTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="280" height="86" uuid="978a365b-e569-4563-aa4a-d974d65dc116"/>
+				<box bottomPadding="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Lato" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{footerTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="560" y="0" width="280" height="86" uuid="4dd752f5-8bc4-4b77-b72f-5128ee109681"/>
+				<box bottomPadding="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Lato" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{footerTxt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

@@ -24,7 +24,7 @@
     "CLEAN_CLN_1": "Svuota colonna 1",
     "CLEAN_CLN_2": "Svuota colonna 2",
     "CLEAN_CLN_3": "Svuota colonna 3",
-    "SETTINGS": "Impostazioni",
+    "COL_NO": "Riga",
     "CONFIRM_SETTINGS": "Conferma impostazioni",
     "CARD_FORMAT": "Formato carta",
     "CARD_FORMAT_REQ": "Formato carta e richiesto",
@@ -37,9 +37,9 @@
     "SELECT_CARD_FORMAT": "Seleziona formato carta",
     "SELECT_NUMBER_COLS": "Seleziona numero delle colonne",
     "SELECT_TIPOLOGY_PRICE": "Seleziona tipologia di prezzo",
-    "CLEAN_TITLE": "Facendo clic su questo pulsante hai accettato di ripristinare i dati e pulire i campi!",
-    "YES_CLEAN_IT": "Si, pulisci!",
-    "NO_CANCEL": "No, cancella!",
+    "CLEAN_TITLE": "<strong>Attenzione!</strong> Cliccando su Conferma, saranno rimosse le informazioni inserite fino a questo momento!",
+    "YES_CLEAN_IT": "Conferma",
+    "NO_CANCEL": "Annulla",
     "COLLAPSE": "Collassa"
   }
 }

@@ -19,6 +19,7 @@ public final class ApiConstants {
 	public static final String REPORT = "report";
 	public static final String BRANDS = "brands";
 	public static final String TEMPLATES = "templates";
+	public static final String STANDARD_TEMPLATE = "3";
 	public static final String ELABORATE_REPORT = "elaborate";
 	
 	/* Report location */
