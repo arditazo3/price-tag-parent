@@ -81,7 +81,6 @@
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.2" />
           <element id="library" level="project" name="Maven: commons-digester:commons-digester:2.1" />
           <element id="library" level="project" name="Maven: com.lowagie:itext:2.1.7.js6" />
-          <element id="library" level="project" name="Maven: org.bouncycastle:bcprov-jdk15on:1.52" />
           <element id="library" level="project" name="Maven: org.jfree:jcommon:1.0.23" />
           <element id="library" level="project" name="Maven: org.jfree:jfreechart:1.0.19" />
           <element id="library" level="project" name="Maven: org.eclipse.jdt.core.compiler:ecj:4.4.2" />
@@ -93,6 +92,7 @@
           <element id="library" level="project" name="Maven: stax:stax-api:1.0.1" />
           <element id="library" level="project" name="Maven: javax.xml.stream:stax-api:1.0-2" />
           <element id="library" level="project" name="Maven: com.ibm.icu:icu4j:57.1" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcprov-jdk15on:1.60" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-log4j2:2.0.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-slf4j-impl:2.10.0" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.10.0" />

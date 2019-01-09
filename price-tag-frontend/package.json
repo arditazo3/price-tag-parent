@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "^7.2.0",
     "@angular/router": "^7.2.0",
     "@ng-bootstrap/ng-bootstrap": "^4.0.1",
-    "@ng-select/ng-select": "^2.13.3",
+    "@ng-select/ng-select": "^2.14.0",
     "@ngx-translate/core": "^11.0.0",
     "@ngx-translate/http-loader": "^4.0",
     "@swimlane/ngx-datatable": "^13.1.0",
@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.6.8",
-    "@angular/cli": "^6.2.6",
+    "@angular/cli": "^6.2.9",
     "@angular/compiler-cli": "^7.2.0",
     "@angular/language-service": "^7.2.0",
     "@types/c3": "^0.6.2",
