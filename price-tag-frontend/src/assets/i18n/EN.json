@@ -37,7 +37,7 @@
     "SELECT_CARD_FORMAT": "Select format of paper",
     "SELECT_NUMBER_COLS": "Select number of colomns",
     "SELECT_TIPOLOGY_PRICE": "Select tipology of price",
-    "CLEAN_TITLE": "Clicking this button you agreed to reset the the data and clean the fields!",
+    "CLEAN_TITLE": "<strong> Warning! </ strong> By clicking on Confirm, the information entered up to this point will be removed!",
     "YES_CLEAN_IT": "Yes, clean it!",
     "NO_CANCEL": "No, cancel!",
     "COLLAPSE": "Collapse"
