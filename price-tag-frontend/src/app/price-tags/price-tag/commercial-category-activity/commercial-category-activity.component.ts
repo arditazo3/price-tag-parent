@@ -45,22 +45,22 @@ export class CommercialCategoryActivityComponent implements OnInit {
     }
   }
 
-  copySecondColumnValuesToThird() {
+  copyFirstColumnValuesToThird() {
 
-    if (this.commercialActivity.commercialCategoryCol2) {
-      this.commercialActivity.commercialCategoryCol3 = this.commercialActivity.commercialCategoryCol2;
+    if (this.commercialActivity.commercialCategoryCol1) {
+      this.commercialActivity.commercialCategoryCol3 = this.commercialActivity.commercialCategoryCol1;
     } else {
       this.commercialActivity.commercialCategoryCol3 = '';
     }
 
-    if (this.commercialActivity.currencyCol2) {
-      this.commercialActivity.currencyCol3 = this.commercialActivity.currencyCol2;
+    if (this.commercialActivity.currencyCol1) {
+      this.commercialActivity.currencyCol3 = this.commercialActivity.currencyCol1;
     } else {
       this.commercialActivity.currencyCol3 = '';
     }
 
-    if (this.commercialActivity.amountCol2) {
-      this.commercialActivity.amountCol3 = this.commercialActivity.amountCol2;
+    if (this.commercialActivity.amountCol1) {
+      this.commercialActivity.amountCol3 = this.commercialActivity.amountCol1;
     } else {
       this.commercialActivity.amountCol3 = +'';
     }
