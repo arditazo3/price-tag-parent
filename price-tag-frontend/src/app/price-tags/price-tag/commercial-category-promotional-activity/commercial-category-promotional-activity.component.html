@@ -57,6 +57,7 @@
                 {{ 'GENERAL.INITIAL_PRICE' | translate }}
               </label>
               <input type="text" class="form-control" [textMask]="{mask: currencyMask}"
+                     onchange="this.value = this.value;"
                      (keyup)="roundFinalPrice1()"
                      [(ngModel)]="commercialActivity.initialPrice1"
                      [ngModelOptions]="{standalone: true}">
@@ -75,6 +76,7 @@
                 {{ 'GENERAL.FINAL_PRICE' | translate }}
               </label>
               <input type="text" class="form-control" disabled [textMask]="{mask: currencyMask}"
+                     onchange="this.value = this.value;"
                      [(ngModel)]="commercialActivity.amountCol1"
                      [ngModelOptions]="{standalone: true}">
             </div>
@@ -105,6 +107,7 @@
                 {{ 'GENERAL.INITIAL_PRICE' | translate }}
               </label>
               <input type="text" class="form-control" [textMask]="{mask: currencyMask}"
+                     onchange="this.value = this.value;"
                      (keyup)="roundFinalPrice2()"
                      [(ngModel)]="commercialActivity.initialPrice2"
                      [ngModelOptions]="{standalone: true}">
@@ -123,6 +126,7 @@
                 {{ 'GENERAL.FINAL_PRICE' | translate }}
               </label>
               <input type="text" class="form-control" disabled [textMask]="{mask: currencyMask}"
+                     onchange="this.value = this.value;"
                      [(ngModel)]="commercialActivity.amountCol2"
                      [ngModelOptions]="{standalone: true}">
             </div>

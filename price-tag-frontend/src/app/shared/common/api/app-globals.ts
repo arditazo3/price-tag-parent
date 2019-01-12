@@ -43,15 +43,35 @@ export class AppGlobals {
   public static currencyMaskWithDecimal = createNumberMask({
     prefix: '',
     suffix: '',
-    includeThousandsSeparator: false,
+    includeThousandsSeparator: true,
     allowDecimal: true,
-    decimalSymbol: '.',
+    decimalSymbol: ',',
     decimalLimit: 2,
     integerLimit: null,
     requireDecimal: false,
     allowNegative: false,
     allowLeadingZeroes: false
   });
+
+  public static currencyMaskWithDecimalTest = function(rawValue: string) {
+    console.log('test');
+    let numberMask = createNumberMask({
+      prefix: '',
+      suffix: '',
+      includeThousandsSeparator: true,
+      thousandsSeparatorSymbol: '.',
+      allowDecimal: true,
+      decimalLimit: 2,
+      integerLimit: null,
+      requireDecimal: false,
+      decimalSymbol: ',',
+      allowNegative: false,
+      allowLeadingZeroes: false
+    });
+    rawValue = rawValue.replace(".", ",, ");
+    let mask = numberMask(rawValue);
+    return mask;
+  }
 
   public static currencyMaskWithoutDecimal = createNumberMask({
     prefix: '',

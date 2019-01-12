@@ -16,7 +16,7 @@ export class CommercialCategoryPromotionalActivityComponent implements OnInit {
   @Input() settingsData: SettingsData;
   @Input() commercialActivity: CommercialActivity;
   @Output() removeRowEvent = new EventEmitter<number>();
-  currencyMask = AppGlobals.currencyMaskWithDecimal;
+  currencyMask = AppGlobals.currencyMaskWithDecimalTest;
   currencyMaskWithoutDecimal = AppGlobals.currencyMaskWithoutDecimal;
 
   constructor() {
