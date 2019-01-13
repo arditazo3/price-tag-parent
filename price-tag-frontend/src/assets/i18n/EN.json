@@ -3,6 +3,7 @@
     "PRICE_TAG": "Price Tag",
     "DESCRIPTION_HEADER": "If you want, specify a message to be inserted at the beginning and / or at the end of each page. N.B. it is not possible to wrap it otherwise it would risk to overwrite the price table Select the brand to insert in the PDF below each column Enter the item, currency and price in each box. Use the 'Add line' button to insert a new one. ATTENTION: a maximum of 6 lines can be inserted in a sheet! Example: if the total of the rows is 7, the system will produce a 2-page PDF",
     "CC": "Comm. Category",
+    "SETTINGS": "Settings",
     "CURRENCY": "Currency",
     "INITIAL_PRICE": "Initial price",
     "DISCOUNT": "Discount %",
@@ -40,6 +41,8 @@
     "CLEAN_TITLE": "<strong> Warning! </ strong> By clicking on Confirm, the information entered up to this point will be removed!",
     "YES_CLEAN_IT": "Yes, clean it!",
     "NO_CANCEL": "No, cancel!",
-    "COLLAPSE": "Collapse"
+    "COLLAPSE": "Collapse",
+    "EXPAND": "Expand",
+    "INSERT_LEAST_ONE_ROW": "Enter at least one line to process the report!"
   }
 }

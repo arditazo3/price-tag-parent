@@ -1,208 +1,213 @@
 <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion nav-accordion">
-  <ngb-panel id="toggle-{{ commercialActivity.idOrder }}">
-    <ng-template ngbPanelTitle>
-      <div id="{{ isMobile ? 'container-fluid-mobile' : 'container-fluid' }}">
-        <div class="row" style="width: 100% !important;">
-          <div class="col-2">
-            <span class="float-left">{{ 'GENERAL.COL_NO' | translate }} {{ index }}</span>
-          </div>
-          <div class="col-6 text-center">
-          </div>
+    <ngb-panel id="toggle-{{ commercialActivity.idOrder }}">
+        <ng-template ngbPanelTitle>
+            <div id="{{ isMobile ? 'container-fluid-mobile' : 'container-fluid' }}">
+                <div class="row" style="width: 100% !important;">
+                    <div class="col-2">
+                        <span class="float-left mt-3">{{ 'GENERAL.COL_NO' | translate }} {{ index }}</span>
+                    </div>
+                    <div class="col-6 text-center">
+                    </div>
 
-          <div class="btn-inline col-4 text-right pr-0">
-            <button class="{{ isMobile ? 'btn btn-small btn-primary' : 'btn btn-primary' }}"
-                    type="button"
-                    (click)="collapseBtn(acc)">
-              <div *ngIf="!isMobile">{{ 'GENERAL.COLLAPSE' | translate }}</div>
-              <i *ngIf="isMobile" class="far fa-trash-alt fa-xs"></i>
-            </button>
+                    <div class="btn-inline col-4 text-right pr-0">
+                        <button class="{{ isMobile ? 'btn btn-small btn-primary' : 'btn btn-primary' }}"
+                                type="button"
+                                (click)="collapseExpandBtn(acc)">
+                            <div *ngIf="!isMobile">{{ collapse ? ('GENERAL.COLLAPSE' | translate) : ('GENERAL.EXPAND' | translate) }}</div>
+                            <i *ngIf="isMobile" class="far fa-trash-alt fa-xs"></i>
+                        </button>
 
-            <button class="{{ isMobile ? 'btn btn-small btn-warning' : 'btn btn-warning' }}"
-                    type="button"
-                    (click)="cleanFieldsBtn(acc)">
-              <div *ngIf="!isMobile">{{ 'GENERAL.CLEAN_FIELDS' | translate }}</div>
-              <i *ngIf="isMobile" class="far fa-trash-alt fa-xs"></i>
-            </button>
-          </div>
+                        <button class="{{ isMobile ? 'btn btn-small btn-warning' : 'btn btn-warning' }}"
+                                type="button"
+                                (click)="cleanFieldsBtn(acc)">
+                            <div *ngIf="!isMobile">{{ 'GENERAL.CLEAN_FIELDS' | translate }}</div>
+                            <i *ngIf="isMobile" class="far fa-trash-alt fa-xs"></i>
+                        </button>
+                    </div>
 
-        </div>
-      </div>
-    </ng-template>
-    <ng-template ngbPanelContent>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template ngbPanelContent>
 
-      <div class="card border-primary">
-        <div class="card-body text-dark">
-          <div class="input-group">
-            <div class="col-sm-1 pr-1 pl-0 mt-5">
-              <b>{{ 'GENERAL.CLN_1' | translate }}</b>
-            </div>
-            <div class="col-sm-3 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.CC' | translate }}
-              </label>
-              <input type="text" class="form-control"
-                     [(ngModel)]="commercialActivity.commercialCategoryCol1"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="col-sm-1 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.CURRENCY' | translate }}
-              </label>
-              <input type="text" class="form-control"
-                     [(ngModel)]="commercialActivity.currencyCol1"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="col-sm-2 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.INITIAL_PRICE' | translate }}
-              </label>
-              <input type="text" class="form-control" [textMask]="{mask: currencyMask}"
-                     onchange="this.value = this.value;"
-                     (keyup)="roundFinalPrice1()"
-                     [(ngModel)]="commercialActivity.initialPrice1"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="col-sm-1 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.DISCOUNT' | translate }}
-              </label>
-              <input type="text" class="form-control" [textMask]="{mask: currencyMaskWithoutDecimal}"
-                     (keyup)="roundFinalPrice1()"
-                     [(ngModel)]="commercialActivity.discount1"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="col-sm-2 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.FINAL_PRICE' | translate }}
-              </label>
-              <input type="text" class="form-control" disabled [textMask]="{mask: currencyMask}"
-                     onchange="this.value = this.value;"
-                     [(ngModel)]="commercialActivity.amountCol1"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-          </div>
+            <div class="text-dark">
+                <div class="input-group">
+                    <div class="col-sm-1 pr-1 pl-0 mt-5">
+                        <b>{{ 'GENERAL.CLN_1' | translate }}</b>
+                    </div>
+                    <div class="col-sm-3 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.CC' | translate }}
+                        </label>
+                        <input type="text" class="form-control"
+                               [(ngModel)]="commercialActivity.commercialCategoryCol1"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-sm-1 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.CURRENCY' | translate }}
+                        </label>
+                        <input type="text" class="form-control"
+                               [(ngModel)]="commercialActivity.currencyCol1"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-sm-2 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.INITIAL_PRICE' | translate }}
+                        </label>
+                        <input type="text" class="form-control" [textMask]="{mask: currencyMask}"
+                               (keyup)="roundFinalPrice1()" (change)="roundFinalPrice1()" #initialPrice1El
+                               [(ngModel)]="commercialActivity.initialPrice1"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-sm-1 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.DISCOUNT' | translate }}
+                        </label>
+                        <input type="number" class="form-control"
+                               (change)="roundFinalPrice1()"
+                               (keyup)="roundFinalPrice1()"
+                               min="0" max="100" step="1"
+                               onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               [(ngModel)]="commercialActivity.discount1"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-sm-2 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.FINAL_PRICE' | translate }}
+                        </label>
+                        <input type="text" class="form-control" disabled [textMask]="{mask: currencyMask}"
+                               onchange="this.value = this.value;"
+                               [(ngModel)]="commercialActivity.amountCol1"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
 
-          <div class="input-group">
-            <div class="col-sm-1 pr-1 pl-0 mt-5">
-              <b>{{ 'GENERAL.CLN_2' | translate }}</b>
-            </div>
-            <div class="col-sm-3 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.CC' | translate }}
-              </label>
-              <input type="text" class="form-control"
-                     [(ngModel)]="commercialActivity.commercialCategoryCol2"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="col-sm-1 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.CURRENCY' | translate }}
-              </label>
-              <input type="text" class="form-control"
-                     [(ngModel)]="commercialActivity.currencyCol2"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="col-sm-2 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.INITIAL_PRICE' | translate }}
-              </label>
-              <input type="text" class="form-control" [textMask]="{mask: currencyMask}"
-                     onchange="this.value = this.value;"
-                     (keyup)="roundFinalPrice2()"
-                     [(ngModel)]="commercialActivity.initialPrice2"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="col-sm-1 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.DISCOUNT' | translate }}
-              </label>
-              <input type="text" class="form-control" [textMask]="{mask: currencyMaskWithoutDecimal}"
-                     (keyup)="roundFinalPrice2()"
-                     [(ngModel)]="commercialActivity.discount2"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="col-sm-2 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.FINAL_PRICE' | translate }}
-              </label>
-              <input type="text" class="form-control" disabled [textMask]="{mask: currencyMask}"
-                     onchange="this.value = this.value;"
-                     [(ngModel)]="commercialActivity.amountCol2"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="col-sm-2 pr-0 pl-0 mt-2_2">
-              <button type="button" (click)="copyFirstColumnValuesToSecond()"
-                      class="btn btn-primary">
-                <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_1' | translate }}</div>
-              </button>
-            </div>
-          </div>
+                <div class="input-group">
+                    <div class="col-sm-1 pr-1 pl-0 mt-5">
+                        <b>{{ 'GENERAL.CLN_2' | translate }}</b>
+                    </div>
+                    <div class="col-sm-3 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.CC' | translate }}
+                        </label>
+                        <input type="text" class="form-control"
+                               [(ngModel)]="commercialActivity.commercialCategoryCol2"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-sm-1 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.CURRENCY' | translate }}
+                        </label>
+                        <input type="text" class="form-control"
+                               [(ngModel)]="commercialActivity.currencyCol2"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-sm-2 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.INITIAL_PRICE' | translate }}
+                        </label>
+                        <input type="text" class="form-control" [textMask]="{mask: currencyMask}"
+                               (keyup)="roundFinalPrice2()" (change)="roundFinalPrice2()" #initialPrice2El
+                               [(ngModel)]="commercialActivity.initialPrice2"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-sm-1 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.DISCOUNT' | translate }}
+                        </label>
+                        <input type="number" class="form-control"
+                               (change)="roundFinalPrice2()"
+                               (keyup)="roundFinalPrice2()"
+                               min="0" max="100" step="1"
+                               onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               [(ngModel)]="commercialActivity.discount2"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-sm-2 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.FINAL_PRICE' | translate }}
+                        </label>
+                        <input type="text" class="form-control" disabled [textMask]="{mask: currencyMask}"
+                               onchange="this.value = this.value;"
+                               [(ngModel)]="commercialActivity.amountCol2"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-sm-2 pr-0 pl-0 mt-2_2">
+                        <button type="button" (click)="copyFirstColumnValuesToSecond()"
+                                class="btn btn-primary">
+                            <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_1' | translate }}</div>
+                        </button>
+                    </div>
+                </div>
 
-          <div class="input-group"
-               *ngIf="settingsData && settingsData.selectedNumberCols && settingsData.selectedNumberCols.value == 3">
-            <div class="col-sm-1 pr-1 pl-0 mt-5">
-              <b>{{ 'GENERAL.CLN_3' | translate }}</b>
+                <div class="input-group"
+                     *ngIf="settingsData && settingsData.selectedNumberCols && settingsData.selectedNumberCols.value == 3">
+                    <div class="col-sm-1 pr-1 pl-0 mt-5">
+                        <b>{{ 'GENERAL.CLN_3' | translate }}</b>
+                    </div>
+                    <div class="col-sm-3 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.CC' | translate }}
+                        </label>
+                        <input type="text" class="form-control"
+                               [(ngModel)]="commercialActivity.commercialCategoryCol3"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-sm-1 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.CURRENCY' | translate }}
+                        </label>
+                        <input type="text" class="form-control"
+                               [(ngModel)]="commercialActivity.currencyCol3"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-sm-2 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.INITIAL_PRICE' | translate }}
+                        </label>
+                        <input type="text" class="form-control" [textMask]="{mask: currencyMask}"
+                               (keyup)="roundFinalPrice3()" (change)="roundFinalPrice3()" #initialPrice3El
+                               [(ngModel)]="commercialActivity.initialPrice3"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-sm-1 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.DISCOUNT' | translate }}
+                        </label>
+                        <input type="number" class="form-control"
+                               (change)="roundFinalPrice3()"
+                               (keyup)="roundFinalPrice3()"
+                               min="0" max="100" step="1"
+                               onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               [(ngModel)]="commercialActivity.discount3"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-sm-2 pr-2 pl-0">
+                        <label class="control-label col-form-label">
+                            {{ 'GENERAL.FINAL_PRICE' | translate }}
+                        </label>
+                        <input type="text" class="form-control" disabled [textMask]="{mask: currencyMask}"
+                               [(ngModel)]="commercialActivity.amountCol3"
+                               [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-sm-2 pr-0 pl-0">
+                        <div class="btn-inline p-0 mt-2_2">
+                            <button type="button"
+                                    (click)="copyFirstColumnValuesToThird()"
+                                    class="btn btn-primary mr-1 ">
+                                <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_1' | translate }}</div>
+                            </button>
+                            <!--<button type="button"-->
+                            <!--(click)="removeOfficeBtn()"-->
+                            <!--class="btn btn-danger mr-0 text-right">-->
+                            <!--<div style="white-space: pre-wrap">{{ 'GENERAL.DELETE_ROW' | translate }}</div>-->
+                            <!--</button>-->
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-3 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.CC' | translate }}
-              </label>
-              <input type="text" class="form-control"
-                     [(ngModel)]="commercialActivity.commercialCategoryCol3"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="col-sm-1 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.CURRENCY' | translate }}
-              </label>
-              <input type="text" class="form-control"
-                     [(ngModel)]="commercialActivity.currencyCol3"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="col-sm-2 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.INITIAL_PRICE' | translate }}
-              </label>
-              <input type="text" class="form-control" [textMask]="{mask: currencyMask}"
-                     (keyup)="roundFinalPrice3()"
-                     [(ngModel)]="commercialActivity.initialPrice3"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="col-sm-1 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.DISCOUNT' | translate }}
-              </label>
-              <input type="text" class="form-control" [textMask]="{mask: currencyMaskWithoutDecimal}"
-                     (keyup)="roundFinalPrice3()"
-                     [(ngModel)]="commercialActivity.discount3"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="col-sm-2 pr-2 pl-0">
-              <label class="control-label col-form-label">
-                {{ 'GENERAL.FINAL_PRICE' | translate }}
-              </label>
-              <input type="text" class="form-control" disabled [textMask]="{mask: currencyMask}"
-                     [(ngModel)]="commercialActivity.amountCol3"
-                     [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="col-sm-2 pr-0 pl-0">
-              <div class="btn-inline p-0 mt-2_2">
-                <button type="button"
-                        (click)="copyFirstColumnValuesToThird()"
-                        class="btn btn-primary mr-1 ">
-                  <div style="white-space: pre-wrap">{{ 'GENERAL.COPY_CLN_1' | translate }}</div>
-                </button>
-                <!--<button type="button"-->
-                <!--(click)="removeOfficeBtn()"-->
-                <!--class="btn btn-danger mr-0 text-right">-->
-                <!--<div style="white-space: pre-wrap">{{ 'GENERAL.DELETE_ROW' | translate }}</div>-->
-                <!--</button>-->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-    </ng-template>
-  </ngb-panel>
+        </ng-template>
+    </ngb-panel>
 </ngb-accordion>

@@ -51,8 +51,6 @@ public class ReportResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getBrands() { 
 
-		logger.info("getBrands - Path: " + BRANDS);
-
 		List<Brand> brands = fileService.readBrandsFromJsonFile();
 
 		return Response.ok(brands).build();

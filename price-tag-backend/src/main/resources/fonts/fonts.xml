@@ -31,8 +31,8 @@
         <pdfEmbedded>true</pdfEmbedded>
     </fontFamily>
 
-    <fontFamily name="Lat">
-        <normal>fonts/arlon/Lato.ttf</normal>
+    <fontFamily name="Lato">
+        <normal>fonts/lato/Lato.ttf</normal>
         <pdfEncoding>Identity-H</pdfEncoding>
         <pdfEmbedded>true</pdfEmbedded>
     </fontFamily>

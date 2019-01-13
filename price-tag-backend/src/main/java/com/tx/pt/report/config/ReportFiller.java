@@ -136,7 +136,10 @@ public class ReportFiller {
 					activitiesCollection.size() % 6 != 0) {
 
             	List<CommercialActivity> commercialActivityList = new ArrayList<>();
-				for (int index = 0; index < activitiesCollection.size() % 6; index++) {
+            	
+            	int itemsRemains = 4 - activitiesCollection.size() % 6;
+            	
+				for (int index = 0; index < itemsRemains; index++) {
 					CommercialActivity commercialActivity = new CommercialActivity();
 					elaborateColumn1(commercialActivity);
 					elaborateColumn2(commercialActivity);
@@ -148,7 +151,10 @@ public class ReportFiller {
 					activitiesCollection.size() % 4 != 0) {
 
 				List<CommercialActivity> commercialActivityList = new ArrayList<>();
-            	for (int index = 0; index < activitiesCollection.size() % 4; index++) {
+				
+				int itemsRemains = 4 - activitiesCollection.size() % 4;
+				
+            	for (int index = 0; index < itemsRemains; index++) {
 					CommercialActivity commercialActivity = new CommercialActivity();
 					elaborateColumn1(commercialActivity);
 					elaborateColumn2(commercialActivity);
