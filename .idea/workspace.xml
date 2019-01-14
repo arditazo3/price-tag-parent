@@ -6,30 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdc05167-5fd7-44f7-aaef-479ee08c5701" name="Default Changelist" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/img1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/img2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/img3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-light-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-light-text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/target/price-tag-frontend-0.0.1-SNAPSHOT.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-16x16.png" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-16x16.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-32x32.png" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-32x32.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-96x96.png" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-96x96.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.ico" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.png" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon-login.png" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon-login.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon.png" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/price_tag_backend_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/price_tag_backend_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/price_tag_backend_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/price_tag_backend_war_exploded.xml" />
+    <list default="true" id="fdc05167-5fd7-44f7-aaef-479ee08c5701" name="Default Changelist" comment="Default Changelist">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Calliope_A4_3_Promotion.jrxml" afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Calliope_A4_3_Promotion.jrxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_3_Promotion.jrxml" afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_3_Promotion.jrxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.ts" afterPath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts" afterPath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/price-tag-backend/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,74 +34,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="commercial-category-activity.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="favicon.ico" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.ico">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logo-icon-login.png" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon-login.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logo-icon.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="favicon-96x96.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-96x96.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="favicon-32x32.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-32x32.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="favicon-16x16.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-16x16.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="favicon.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom-select.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/custom-select.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -183,6 +94,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -249,6 +165,7 @@
     </treeState>
   </component>
   <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/price-tag-frontend/node/node_modules" />
     <handled-path value="$PROJECT_DIR$/price-tag-frontend/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -274,8 +191,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -314,7 +232,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -579,7 +496,8 @@
       <workItem from="1547107874677" duration="4200000" />
       <workItem from="1547199696880" duration="4722000" />
       <workItem from="1547451226024" duration="4908000" />
-      <workItem from="1547469804261" duration="2000" />
+      <workItem from="1547469804261" duration="15000" />
+      <workItem from="1547469885785" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="Settings report">
       <created>1545236176363</created>
@@ -679,15 +597,21 @@
       <option name="project" value="LOCAL" />
       <updated>1547136133631</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Default Changelist">
+      <created>1547469813258</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1547469813258</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149655000" />
+    <option name="totallyTimeSpent" value="149670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -697,20 +621,20 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6772429" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32502708" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20948827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21162046" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3391685" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -747,7 +671,8 @@
     <MESSAGE value="Never surrender, 2K19" />
     <MESSAGE value="Adding fonts to JVM" />
     <MESSAGE value="Minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes" />
+    <MESSAGE value="Default Changelist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Default Changelist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -986,16 +911,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/img2.jpg" />
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/custom-select.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/big/auth-bg.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1006,6 +925,26 @@
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-light-icon.png" />
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/img3.jpg" />
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/img1.jpg" />
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon-login.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-96x96.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-32x32.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1021,22 +960,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-96x96.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon-login.png">
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/custom-select.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
