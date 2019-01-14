@@ -16,291 +16,316 @@ import {AppGlobals} from '../../shared/common/api/app-globals';
 import {ngxLoadingAnimationTypes, NgxLoadingComponent} from 'ngx-loading';
 
 @Component({
-    templateUrl: './price-tag.component.html',
-    styleUrls: ['./price-tag.component.css'],
-    encapsulation: ViewEncapsulation.None
+  templateUrl: './price-tag.component.html',
+  styleUrls: ['./price-tag.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PriceTagComponent implements OnInit {
 
-    isMobile = false;
+  isMobile = false;
 
-    indexOrder = 0;
-    noOfRowsDefault = 6;
-    commercialActivities: CommercialActivity[];
+  indexOrder = 0;
+  noOfRowsDefault = 6;
+  commercialActivities: CommercialActivity[];
 
-    errorDetails: ApiErrorDetails = new ApiErrorDetails();
+  errorDetails: ApiErrorDetails = new ApiErrorDetails();
 
-    brandsObservable: Observable<any[]>;
-    selectedBrand: Brand;
+  brandsObservable: Observable<any[]>;
+  selectedBrand: Brand;
 
-    selectedFormatPaper: ItemValue;
-    selectedNumberCols: ItemValue;
-    selectedTipologyPrice: ItemValue;
-    selectedTemplateType: ItemValue;
+  selectedFormatPaper: ItemValue;
+  selectedNumberCols: ItemValue;
+  selectedTipologyPrice: ItemValue;
+  selectedTemplateType: ItemValue;
 
-    settingsData: SettingsData;
+  settingsData: SettingsData;
 
-    hasFormatPaper = false;
-    hasNumberCols = false;
-    hasTipologyPrice = false;
-    hasBrand = false;
-    hasTemplate = false;
-    lang = 'IT';
+  hasFormatPaper = false;
+  hasNumberCols = false;
+  hasTipologyPrice = false;
+  hasBrand = false;
+  hasTemplate = false;
+  lang = 'IT';
 
-    formatPaperAvailable: ItemValue[] = SettingsReportData.FORMAT_PAPER;
-    numberColsAvailable: ItemValue[] = SettingsReportData.NUMBER_COLS;
-    tipologyPriceAvailable: ItemValue[] = SettingsReportData.TIPOLOGY_PRICE;
-    templateTypeAvailable: ItemValue[] = SettingsReportData.TEMPLATE_TYPE;
+  formatPaperAvailable: ItemValue[] = SettingsReportData.FORMAT_PAPER;
+  numberColsAvailable: ItemValue[] = SettingsReportData.NUMBER_COLS;
+  tipologyPriceAvailable: ItemValue[] = SettingsReportData.TIPOLOGY_PRICE;
+  templateTypeAvailable: ItemValue[] = SettingsReportData.TEMPLATE_TYPE;
 
-    @ViewChild('resetSettingsSwal') private resetSettingsSwal: SwalComponent;
-    @ViewChild('insertAtLeastOneRow') private insertAtLeastOneRow: SwalComponent;
+  @ViewChild('resetSettingsSwal') private resetSettingsSwal: SwalComponent;
+  @ViewChild('insertAtLeastOneRow') private insertAtLeastOneRow: SwalComponent;
 
-    @ViewChild('ngxLoading') ngxLoadingComponent: NgxLoadingComponent;
-    public primaryColour = AppGlobals.PrimaryWhite;
-    public secondaryColour = AppGlobals.SecondaryGrey;
-    public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
-    public config = {
-        animationType: ngxLoadingAnimationTypes.none,
-        primaryColour: this.primaryColour,
-        secondaryColour: this.secondaryColour,
-        tertiaryColour: this.primaryColour,
-        backdropBorderRadius: '3px'
-    };
+  @ViewChild('ngxLoading') ngxLoadingComponent: NgxLoadingComponent;
+  public primaryColour = AppGlobals.PrimaryWhite;
+  public secondaryColour = AppGlobals.SecondaryGrey;
+  public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
+  public config = {
+    animationType: ngxLoadingAnimationTypes.none,
+    primaryColour: this.primaryColour,
+    secondaryColour: this.secondaryColour,
+    tertiaryColour: this.primaryColour,
+    backdropBorderRadius: '3px'
+  };
 
-    constructor(private commCategoryService: CommCategoryService,
-                private userInfoService: UserInfoService,
-                private deviceService: DeviceDetectorService) {
+  constructor(private commCategoryService: CommCategoryService,
+              private userInfoService: UserInfoService,
+              private deviceService: DeviceDetectorService) {
 
-        this.isMobile = this.deviceService.isMobile();
+    this.isMobile = this.deviceService.isMobile();
 
-        this.lang = this.userInfoService.getUserLang().toUpperCase();
+    this.lang = this.userInfoService.getUserLang().toUpperCase();
+  }
+
+  ngOnInit(): void {
+    console.log('PriceTagComponent - ngOnInit');
+
+    this.brandsObservable = this.commCategoryService.getBrands();
+
+    this.tipologyPriceAvailable = this.tipologyPriceAvailable.filter(item => item.lang === this.lang);
+    this.tipologyPriceAvailable = [...this.tipologyPriceAvailable];
+
+    this.templateTypeAvailable = this.templateTypeAvailable.filter(item => item.lang === this.lang);
+    this.templateTypeAvailable = [...this.templateTypeAvailable];
+  }
+
+  constructActivities() {
+    console.log('PriceTagComponent - constructActivities');
+
+    this.commercialActivities = [];
+
+    for (let i = 0; i < this.noOfRowsDefault; i++) {
+      this.commercialActivities.push(new CommercialActivity(this.indexOrder));
+      this.indexOrder++;
     }
+  }
 
-    ngOnInit(): void {
-        console.log('PriceTagComponent - ngOnInit');
+  checkSettings() {
+    console.log('PriceTagComponent - checkSettings');
 
-        this.brandsObservable = this.commCategoryService.getBrands();
+    this.hasFormatPaper = false;
+    this.hasNumberCols = false;
+    this.hasTipologyPrice = false;
 
-        this.tipologyPriceAvailable = this.tipologyPriceAvailable.filter(item => item.lang === this.lang);
-        this.tipologyPriceAvailable = [...this.tipologyPriceAvailable];
-
-        this.templateTypeAvailable = this.templateTypeAvailable.filter(item => item.lang === this.lang);
-        this.templateTypeAvailable = [...this.templateTypeAvailable];
+    if (!this.selectedFormatPaper) {
+      this.hasFormatPaper = true;
     }
-
-    constructActivities() {
-        console.log('PriceTagComponent - constructActivities');
-
-        this.commercialActivities = [];
-
-        for (let i = 0; i < this.noOfRowsDefault; i++) {
-            this.commercialActivities.push(new CommercialActivity(this.indexOrder));
-            this.indexOrder++;
-        }
+    if (!this.selectedNumberCols) {
+      this.hasNumberCols = true;
     }
-
-    checkSettings() {
-        console.log('PriceTagComponent - checkSettings');
-
-        this.hasFormatPaper = false;
-        this.hasNumberCols = false;
-        this.hasTipologyPrice = false;
-
-        if (!this.selectedFormatPaper) {
-            this.hasFormatPaper = true;
-        }
-        if (!this.selectedNumberCols) {
-            this.hasNumberCols = true;
-        }
-        if (!this.selectedTipologyPrice) {
-            this.hasTipologyPrice = true;
-        }
+    if (!this.selectedTipologyPrice) {
+      this.hasTipologyPrice = true;
     }
+  }
 
-    confirmSettings() {
-        console.log('PriceTagComponent - confirmSettings');
+  confirmSettings() {
+    console.log('PriceTagComponent - confirmSettings');
 
-        const me = this;
-        me.checkSettings();
+    const me = this;
+    me.checkSettings();
 
-        if (!this.hasFormatPaper && !this.hasNumberCols && !this.hasTipologyPrice) {
+    if (!this.hasFormatPaper && !this.hasNumberCols && !this.hasTipologyPrice) {
 
-            if (me.commercialActivities && me.commercialActivities.length > 0 && me.hasStoredData(me.commercialActivities)) {
-                me.resetSettingsSwal.show()
-                    .then(function (result) {
-                        if (result.value === true) {
+      if (me.commercialActivities && me.commercialActivities.length > 0 && me.hasStoredData(me.commercialActivities)) {
+        me.resetSettingsSwal.show()
+          .then(function (result) {
+            if (result.value === true) {
 
-                            me.settingsUp();
-                        }
-                    }, function (dismiss) {
-                        // dismiss can be "cancel" | "close" | "outside"
-                    });
-            } else {
-                me.settingsUp();
+              me.settingsUp();
             }
-        } else {
-            me.constructActivities();
-        }
+          }, function (dismiss) {
+            // dismiss can be "cancel" | "close" | "outside"
+          });
+      } else {
+        me.settingsUp();
+      }
+    } else {
+      me.constructActivities();
+    }
+  }
+
+  settingsUp() {
+
+    const me = this;
+
+    if (!me.settingsData) {
+      me.settingsData = new SettingsData();
+    }
+    me.settingsData.selectedFormatPaper = Object.assign({}, me.selectedFormatPaper);
+    me.settingsData.selectedNumberCols = Object.assign({}, me.selectedNumberCols);
+    me.settingsData.selectedTipologyPrice = Object.assign({}, me.selectedTipologyPrice);
+
+    me.constructActivities();
+  }
+
+  elaborateReport() {
+    console.log('PriceTagComponent - elaborateReport');
+
+    const me = this;
+
+    this.checkSettings();
+
+    me.hasBrand = false;
+    me.hasTemplate = false;
+    if (!this.selectedBrand) {
+      me.hasBrand = true;
+    }
+    if (!this.selectedTemplateType) {
+      me.hasTemplate = true;
     }
 
-    settingsUp() {
+    if (!me.hasBrand && !me.hasTemplate) {
 
-        const me = this;
+      const reportData: ReportData = new ReportData();
+      reportData.formatSettings.brand = this.selectedBrand;
+      reportData.formatSettings.formatPaper = this.settingsData.selectedFormatPaper.value;
+      reportData.formatSettings.numberCols = +this.settingsData.selectedNumberCols.value;
+      reportData.formatSettings.tipologyPrice = +this.settingsData.selectedTipologyPrice.value;
+      reportData.formatSettings.templateType = +this.selectedTemplateType.value;
 
-        if (!me.settingsData) {
-            me.settingsData = new SettingsData();
-        }
-        me.settingsData.selectedFormatPaper = Object.assign({}, me.selectedFormatPaper);
-        me.settingsData.selectedNumberCols = Object.assign({}, me.selectedNumberCols);
-        me.settingsData.selectedTipologyPrice = Object.assign({}, me.selectedTipologyPrice);
+      reportData.commercialActivities = this.commercialActivities;
 
-        me.constructActivities();
+      me.ngxLoadingComponent.show = true;
+
+      this.cleanEmptyRow(reportData);
+
+      if (reportData.commercialActivities && reportData.commercialActivities.length > 0) {
+        this.commCategoryService.elaborateReport(reportData).subscribe(
+          (data) => {
+            importedSaveAs(data, 'Elaborated Report.pdf');
+            console.log('ExpirationActivityControlledComponent - downloadFileExp - next');
+            me.ngxLoadingComponent.show = false;
+          },
+          error => {
+            me.errorDetails = error.error;
+            console.error('ExpirationActivityControlledComponent - downloadFileExp - error \n', error);
+            me.ngxLoadingComponent.show = false;
+          });
+      } else {
+        this.insertAtLeastOneRow.show();
+        me.ngxLoadingComponent.show = false;
+      }
     }
+  }
 
-    elaborateReport() {
-        console.log('PriceTagComponent - elaborateReport');
+  addNewRow() {
 
-        const me = this;
+    this.commercialActivities.push(new CommercialActivity(this.indexOrder));
+    //   this.commercialActivities.push(new CommercialActivity(this.indexOrder, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined));this.commercialActivities.push(new CommercialActivity(this.indexOrder, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined));
+    this.indexOrder++;
+  }
 
-        this.checkSettings();
+  removeRowListener(idOrderToRemove) {
 
-        me.hasBrand = false;
-        me.hasTemplate = false;
-        if (!this.selectedBrand) {
-            me.hasBrand = true;
-        }
-        if (!this.selectedTemplateType) {
-            me.hasTemplate = true;
-        }
-
-        if (!me.hasBrand && !me.hasTemplate) {
-
-            const reportData: ReportData = new ReportData();
-            reportData.formatSettings.brand = this.selectedBrand;
-            reportData.formatSettings.formatPaper = this.settingsData.selectedFormatPaper.value;
-            reportData.formatSettings.numberCols = +this.settingsData.selectedNumberCols.value;
-            reportData.formatSettings.tipologyPrice = +this.settingsData.selectedTipologyPrice.value;
-            reportData.formatSettings.templateType = +this.selectedTemplateType.value;
-
-            reportData.commercialActivities = this.commercialActivities;
-
-            me.ngxLoadingComponent.show = true;
-
-            this.cleanEmptyRow(reportData);
-
-            if (reportData.commercialActivities && reportData.commercialActivities.length > 0) {
-                this.commCategoryService.elaborateReport(reportData).subscribe(
-                    (data) => {
-                        importedSaveAs(data, 'Elaborated Report.pdf');
-                        console.log('ExpirationActivityControlledComponent - downloadFileExp - next');
-                        me.ngxLoadingComponent.show = false;
-                    },
-                    error => {
-                        me.errorDetails = error.error;
-                        console.error('ExpirationActivityControlledComponent - downloadFileExp - error \n', error);
-                        me.ngxLoadingComponent.show = false;
-                    });
-            } else {
-                this.insertAtLeastOneRow.show();
-                me.ngxLoadingComponent.show = false;
-            }
-        }
+    const index = this.commercialActivities.findIndex(commercialActy => commercialActy.idOrder === idOrderToRemove);
+    if (index > -1) {
+      this.commercialActivities.splice(index, 1);
     }
+  }
 
-    addNewRow() {
+  cleanFirstColumnValues() {
 
-        this.commercialActivities.push(new CommercialActivity(this.indexOrder));
-        //   this.commercialActivities.push(new CommercialActivity(this.indexOrder, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined));this.commercialActivities.push(new CommercialActivity(this.indexOrder, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined));
-        this.indexOrder++;
-    }
+    if (this.commercialActivities && this.commercialActivities.length > 0) {
+      this.commercialActivities.forEach(
+        commercialActivity => {
 
-    removeRowListener(idOrderToRemove) {
-
-        const index = this.commercialActivities.findIndex(commercialActy => commercialActy.idOrder === idOrderToRemove);
-        if (index > -1) {
-            this.commercialActivities.splice(index, 1);
+          commercialActivity.commercialCategoryCol1 = '';
+          commercialActivity.currencyCol1 = '';
+          commercialActivity.amountCol1 = +'';
         }
+      );
     }
+  }
 
-    cleanFirstColumnValues() {
+  formatPaperChange($event) {
 
-        if (this.commercialActivities && this.commercialActivities.length > 0) {
-            this.commercialActivities.forEach(
-                commercialActivity => {
+    if ($event && $event.value === 'A5') {
+      this.numberColsAvailable = this.numberColsAvailable.filter(item => item.value === '2');
+      this.numberColsAvailable = [...this.numberColsAvailable];
 
-                    commercialActivity.commercialCategoryCol1 = '';
-                    commercialActivity.currencyCol1 = '';
-                    commercialActivity.amountCol1 = +'';
-                }
-            );
-        }
+      if (this.selectedNumberCols) {
+        this.selectedNumberCols = SettingsReportData.NUMBER_COLS[0];
+      }
+    } else {
+      this.numberColsAvailable = SettingsReportData.NUMBER_COLS;
     }
+  }
 
-    formatPaperChange($event) {
+  hasStoredData(commercialActivities): boolean {
 
-        if ($event && $event.value === 'A5') {
-            this.numberColsAvailable = this.numberColsAvailable.filter(item => item.value === '2');
-            this.numberColsAvailable = [...this.numberColsAvailable];
+    const me = this;
+    let hasStoredData = false;
 
-            if (this.selectedNumberCols) {
-                this.selectedNumberCols = SettingsReportData.NUMBER_COLS[0];
-            }
-        } else {
-            this.numberColsAvailable = SettingsReportData.NUMBER_COLS;
-        }
-    }
+    commercialActivities.forEach(commercialActivity => {
 
-    hasStoredData(commercialActivities): boolean {
+      if (commercialActivity && commercialActivity.commercialCategoryCol1 || commercialActivity.amountCol1) {
+        hasStoredData = true;
+      }
+    });
+    return hasStoredData;
+  }
 
-        const me = this;
-        let hasStoredData = false;
+  cleanEmptyRow(reportData) {
 
-        commercialActivities.forEach(commercialActivity => {
+    if (reportData.commercialActivities) {
 
-            if (commercialActivity && commercialActivity.commercialCategoryCol1 || commercialActivity.amountCol1) {
-                hasStoredData = true;
-            }
+      let filtredCommercialActivities = [];
+
+      if (reportData.formatSettings.tipologyPrice === 2) {
+
+        filtredCommercialActivities = reportData.commercialActivities.filter(item =>
+          (item.commercialCategoryCol1 && item.currencyCol1 && item.initialPrice1 && item.discount1 && item.amountCol1) ||
+          (item.commercialCategoryCol2 && item.currencyCol2 && item.initialPrice2 && item.discount2 && item.amountCol2) ||
+          (item.commercialCategoryCol3 && item.currencyCol3 && item.initialPrice3 && item.discount3 && item.amountCol3));
+
+        let collectIdOrdersFiltredCommActs = [];
+        filtredCommercialActivities.forEach(item => {
+          collectIdOrdersFiltredCommActs.push(item.idOrder);
         });
-        return hasStoredData;
+        const maxIdOrder = Math.max.apply(Math, collectIdOrdersFiltredCommActs);
+
+        filtredCommercialActivities = reportData.commercialActivities.filter(item =>
+          (item.commercialCategoryCol1 && item.currencyCol1 && item.initialPrice1 && item.discount1 && item.amountCol1) ||
+          (item.commercialCategoryCol2 && item.currencyCol2 && item.initialPrice2 && item.discount2 && item.amountCol2) ||
+          (item.commercialCategoryCol3 && item.currencyCol3 && item.initialPrice3 && item.discount3 && item.amountCol3) ||
+          (item.idOrder < maxIdOrder));
+
+        this.replaceCommaWithDotOnRow(filtredCommercialActivities);
+      } else {
+        filtredCommercialActivities = reportData.commercialActivities.filter(item =>
+          (item.commercialCategoryCol1 && item.currencyCol1 && item.amountCol1) ||
+          (item.commercialCategoryCol2 && item.currencyCol2 && item.amountCol2) ||
+          (item.commercialCategoryCol3 && item.currencyCol3 && item.amountCol3));
+
+        let collectIdOrdersFiltredCommActivities = [];
+        filtredCommercialActivities.forEach(item => {
+          collectIdOrdersFiltredCommActivities.push(item.idOrder);
+        });
+        const maxIdOrder = Math.max.apply(Math, collectIdOrdersFiltredCommActivities);
+
+        filtredCommercialActivities = reportData.commercialActivities.filter(item =>
+          (item.commercialCategoryCol1 && item.currencyCol1 && item.amountCol1) ||
+          (item.commercialCategoryCol2 && item.currencyCol2 && item.amountCol2) ||
+          (item.commercialCategoryCol3 && item.currencyCol3 && item.amountCol3) ||
+          (item.idOrder < maxIdOrder));
+      }
+      reportData.commercialActivities = filtredCommercialActivities;
     }
+  }
 
-    cleanEmptyRow(reportData) {
+  replaceCommaWithDotOnRow(filtredCommercialActivities) {
 
-        if (reportData.commercialActivities) {
-
-            let filtredCommercialActivities = [];
-
-            if (reportData.formatSettings.tipologyPrice === 2) {
-                filtredCommercialActivities = reportData.commercialActivities.filter(item =>
-                    (item.commercialCategoryCol1 && item.currencyCol1 && item.initialPrice1 && item.discount1 && item.amountCol1) ||
-                    (item.commercialCategoryCol2 && item.currencyCol2 && item.initialPrice2 && item.discount2 && item.amountCol2) ||
-                    (item.commercialCategoryCol3 && item.currencyCol3 && item.initialPrice3 && item.discount3 && item.amountCol3));
-
-                this.replaceCommaWithDotOnRow(filtredCommercialActivities);
-            } else {
-                filtredCommercialActivities = reportData.commercialActivities.filter(item =>
-                    (item.commercialCategoryCol1 && item.currencyCol1 && item.amountCol1) ||
-                    (item.commercialCategoryCol2 && item.currencyCol2 && item.amountCol2) ||
-                    (item.commercialCategoryCol3 && item.currencyCol3 && item.amountCol3));
-            }
-            reportData.commercialActivities = filtredCommercialActivities;
+    if (filtredCommercialActivities) {
+      filtredCommercialActivities.forEach(item => {
+        if (item.initialPrice1) {
+          item.initialPrice1 = item.initialPrice1.replace(/,/g, '.');
         }
-    }
-
-    replaceCommaWithDotOnRow(filtredCommercialActivities) {
-
-        if (filtredCommercialActivities) {
-            filtredCommercialActivities.forEach(item => {
-                if (item.initialPrice1) {
-                    item.initialPrice1 = item.initialPrice1.replace(/,/g, '.');
-                }
-                if (item.initialPrice2) {
-                    item.initialPrice2 = item.initialPrice2.replace(/,/g, '.');
-                }
-                if (item.initialPrice3) {
-                    item.initialPrice3 = item.initialPrice3.replace(/,/g, '.');
-                }
-            });
+        if (item.initialPrice2) {
+          item.initialPrice2 = item.initialPrice2.replace(/,/g, '.');
         }
+        if (item.initialPrice3) {
+          item.initialPrice3 = item.initialPrice3.replace(/,/g, '.');
+        }
+      });
     }
+  }
 }

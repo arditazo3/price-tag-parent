@@ -137,7 +137,7 @@ public class ReportFiller {
 
             	List<CommercialActivity> commercialActivityList = new ArrayList<>();
             	
-            	int itemsRemains = 4 - activitiesCollection.size() % 6;
+            	int itemsRemains = 6 - activitiesCollection.size() % 6;
             	
 				for (int index = 0; index < itemsRemains; index++) {
 					CommercialActivity commercialActivity = new CommercialActivity();

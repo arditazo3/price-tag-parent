@@ -86,10 +86,10 @@
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="102" splitType="Stretch">
+		<band height="100" splitType="Stretch">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
 			<frame>
-				<reportElement x="0" y="0" width="842" height="102" uuid="cef2938d-f4bf-4a16-88fc-1c0c6defa772">
+				<reportElement x="0" y="0" width="842" height="100" uuid="cef2938d-f4bf-4a16-88fc-1c0c6defa772">
 					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 				</reportElement>
 				<textField>
@@ -289,19 +289,19 @@
 					<textFieldExpression><![CDATA[$F{decimalInitialPart3}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="58" y="43" width="54" height="20" uuid="745390e1-9c55-42ae-810f-daaa1d5d8f2a">
+					<reportElement x="47" y="43" width="54" height="20" uuid="745390e1-9c55-42ae-810f-daaa1d5d8f2a">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5763050e-26c1-4eb5-9bd8-1bd4acbadad1"/>
 					</reportElement>
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyInitialPart1}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="338" y="43" width="54" height="20" uuid="b8579a32-5dc2-4474-bf31-0c8fe5395426">
+					<reportElement x="327" y="43" width="54" height="20" uuid="b8579a32-5dc2-4474-bf31-0c8fe5395426">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="298b099e-bca7-4c8e-9f4e-c5e1e7f71627"/>
 					</reportElement>
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyInitialPart2}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="618" y="43" width="54" height="20" uuid="71160084-0135-42ab-aec8-238cb63955bb">
+					<reportElement x="606" y="43" width="54" height="20" uuid="71160084-0135-42ab-aec8-238cb63955bb">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8960d8ae-f6e9-4ce9-ac4b-4d36819101ef"/>
 					</reportElement>
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyInitialPart3}]]></textFieldExpression>
