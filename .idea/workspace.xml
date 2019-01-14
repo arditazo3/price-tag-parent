@@ -7,19 +7,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdc05167-5fd7-44f7-aaef-479ee08c5701" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Calliope_A4_3_Promotion.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Calliope_A4_3_Promotion.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_3_Promotion.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_3_Promotion.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price-tag-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price-tag-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price-tag-frontend/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price-tag-frontend/target/price-tag-frontend-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/price-tag-frontend/target/price-tag-frontend-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-light-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-light-text.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-text.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/target/maven-archiver/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/price-tag-frontend/target/price-tag-frontend-0.0.1-SNAPSHOT.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-16x16.png" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-16x16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-32x32.png" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-32x32.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-96x96.png" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-96x96.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.ico" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.png" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon-login.png" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon-login.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon.png" afterPath="$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/price_tag_backend_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/price_tag_backend_war.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/price_tag_backend_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/price_tag_backend_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Calliope_A4_3_Promotion.jrxml" afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Calliope_A4_3_Promotion.jrxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_3_Promotion.jrxml" afterPath="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_3_Promotion.jrxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.ts" afterPath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts" afterPath="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/price-tag-backend/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/price-tag-frontend/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,103 +56,70 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-promotional-activity/commercial-category-promotional-activity.component.ts">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="commercial-category-activity.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+            <state relative-caret-position="357">
+              <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="302" column="24" selection-start-line="302" selection-start-column="14" selection-end-line="302" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#93#0" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="favicon.ico" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.ico">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/service/comm-category.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-            </state>
+      <file leaf-file-name="logo-icon-login.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon-login.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/service/api-request.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
-            </state>
+      <file leaf-file-name="logo-icon.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/resource/ReportResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="84" column="19" lean-forward="true" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="favicon-96x96.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-96x96.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/service/ReportService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="88" column="35" lean-forward="true" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="favicon-32x32.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-32x32.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/config/ReportFiller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="139" column="36" selection-start-line="139" selection-start-column="36" selection-end-line="139" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="favicon-16x16.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-16x16.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/api/app-globals.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
-              <caret line="42" column="65" lean-forward="true" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="favicon.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-promotional-activity/commercial-category-promotional-activity.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2688">
-              <caret line="128" column="29" selection-start-line="128" selection-start-column="29" selection-end-line="128" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#ng-template#0;n#ngb-panel#0;n#ngb-accordion#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="custom-select.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/custom-select.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -151,7 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>SETTINGS</find>
       <find>GENERAL.SETTINGS</find>
       <find>COLS_NO</find>
       <find>number</find>
@@ -181,6 +163,7 @@
       <find>currencyMask</find>
       <find>onfocus</find>
       <find>elaborateColumn2</find>
+      <find>amount2El</find>
     </findStrings>
     <replaceStrings>
       <replace>3</replace>
@@ -225,17 +208,25 @@
         <option value="$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/fonts.xml" />
         <option value="$PROJECT_DIR$/price-tag-backend/pom.xml" />
         <option value="$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/EN.json" />
-        <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.ts" />
         <option value="$PROJECT_DIR$/price-tag-frontend/src/assets/scss/custom.scss" />
         <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.html" />
         <option value="$PROJECT_DIR$/price-tag-frontend/angular.json" />
         <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-promotional-activity/commercial-category-promotional-activity.component.ts" />
         <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-promotional-activity/commercial-category-promotional-activity.component.html" />
         <option value="$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/api/app-globals.ts" />
-        <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts" />
         <option value="$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/config/ReportFiller.java" />
+        <option value="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Calliope_A4_3_Promotion.jrxml" />
+        <option value="$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_3_Promotion.jrxml" />
+        <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts" />
+        <option value="$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.ts" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -253,32 +244,77 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="price-tag-backend" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/price-tag-frontend/node_modules" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2391" />
-    <option name="y" value="-9" />
-    <option name="width" value="2418" />
-    <option name="height" value="1318" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="price-tag-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="price-tag-parent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="price-tag-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="price-tag-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="price-tag-frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="price-tag-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="price-tag-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="price-tag-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="price-tag-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="price-tag-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="price-tag-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="price-tag-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="price-tag-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="price-tag-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,7 +328,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547465077917" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547319878385" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="C:/Dev2019" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -300,19 +336,21 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
-    <property name="ts.external.directory.path" value="C:\Users\U185502\git\price-tag-parent-V2\price-tag-frontend\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\U185502\git\price-tag-parent\price-tag-frontend\node_modules\typescript\lib" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="SearchEverywhereHistoryKey" value="priceta&#9;FILE&#9;file://C:/Users/user/git/price-tag-parent/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts&#10;commer&#9;FILE&#9;file://C:/Users/user/git/price-tag-parent/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-promotional-activity/commercial-category-promotional-activity.component.ts&#10;ac&#9;FILE&#9;file://C:/Users/user/git/price-tag-parent/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.ts" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\fonts\sofiapro" />
-      <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\fonts\lato" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\git\price-tag-parent\price-tag-frontend\src\assets\images" />
       <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\report\logo_images" />
       <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\fonts\arlon" />
       <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\fonts\sofiapro" />
       <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\fonts" />
-      <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\fonts\sofiapro" />
+      <recent name="C:\Users\U185502\git\price-tag-parent\price-tag-backend\src\main\resources\fonts\lato" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -327,15 +365,34 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Spring">
-    <configuration name="PriceTagBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="price-tag-backend" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tx.pt.PriceTagBackendApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="npm.Angular">
+    <configuration name="Angular" type="js.build_tools.npm" factoryName="npm">
+      <package-json value="$PROJECT_DIR$/price-tag-frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="ng" />
+      </scripts>
+      <arguments value="serve" />
+      <node-interpreter value="project" />
+      <envs />
     </configuration>
-    <configuration name="Spring" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.13" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="C:\Program Files\Java\jdk1.8.0_152\jre">
+    <configuration name="AngularBuildProd" type="js.build_tools.npm" factoryName="npm">
+      <package-json value="$PROJECT_DIR$/price-tag-frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="ng" />
+      </scripts>
+      <arguments value="build" />
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
+    <configuration name="PriceTagBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tx.pt.PriceTagBackendApplication" />
+      <module name="price-tag-backend" />
+      <envs />
+    </configuration>
+    <configuration name="Spring" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.30" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="C:\Program Files\Java\jdk1.8.0_152\jre">
       <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -351,11 +408,12 @@
         <option name="HTTP_PORT" value="8200" />
         <option name="JNDI_PORT" value="1291" />
       </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="55101" />
       </RunnerSettings>
@@ -404,8 +462,7 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
+      <method>
         <option name="BuildArtifacts" enabled="true">
           <artifact name="price-tag-backend:war exploded" />
         </option>
@@ -420,11 +477,12 @@
         <option name="BASE_DIRECTORY_NAME" value="_price-tag-parent" />
         <option name="HTTP_PORT" value="8200" />
       </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="55101" />
       </RunnerSettings>
@@ -473,38 +531,19 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Angular" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/price-tag-frontend/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="ng" />
-      </scripts>
-      <arguments value="serve" />
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="AngularBuildProd" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/price-tag-frontend/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="ng" />
-      </scripts>
-      <arguments value="build" />
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="npm.Angular" />
-      <item itemvalue="npm.AngularBuildProd" />
-      <item itemvalue="Spring Boot.PriceTagBackendApplication" />
-      <item itemvalue="Tomcat Server.Spring" />
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Spring Boot.PriceTagBackendApplication" />
+      <item index="1" class="java.lang.String" itemvalue="npm.AngularBuildProd" />
+      <item index="2" class="java.lang.String" itemvalue="Tomcat Server.Spring" />
+      <item index="3" class="java.lang.String" itemvalue="npm.Angular" />
     </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -540,6 +579,7 @@
       <workItem from="1547107874677" duration="4200000" />
       <workItem from="1547199696880" duration="4722000" />
       <workItem from="1547451226024" duration="4908000" />
+      <workItem from="1547469804261" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="Settings report">
       <created>1545236176363</created>
@@ -643,47 +683,45 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146834000" />
+    <option name="totallyTimeSpent" value="149655000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18615879" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32879817" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4967811" weight="0.4045139" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="5" />
-      <window_info anchor="bottom" id="Application Servers" order="6" weight="0.328125" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.3298611" />
-      <window_info active="true" anchor="bottom" id="Debug" order="8" sideWeight="0.49701366" visible="true" weight="0.0430839" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32798165" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5032189" side_tool="true" weight="0.34013605" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32879817" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.2505669" />
-      <window_info anchor="bottom" id="TypeScript" order="16" weight="0.32993197" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.50511944" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.32977816" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3299356" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6772429" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32502708" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20948827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3391685" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -698,6 +736,9 @@
         <option value="1" />
       </list>
     </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -719,93 +760,13 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.26/jersey-server-2.26.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.class" />
-    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/report/logo-images/logo_calliope.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/report/logo-images/logo_terranova.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="2222" column="28" selection-start-line="2222" selection-start-column="28" selection-end-line="2222" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="1306" column="15" selection-start-line="1306" selection-start-column="15" selection-end-line="1306" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag.routing.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/api/model/brand.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/security/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/api/model/settings-data.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="285" column="12" lean-forward="true" selection-start-line="285" selection-start-column="12" selection-end-line="285" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/directive/two-digit-decima-number.directive.ts" />
-    <entry file="file://$PROJECT_DIR$/node_modules/angular2-text-mask/dist/angular2TextMask.d.ts" />
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/api/model/commercial-activity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/angular2-text-mask/src/angular2TextMask.ts" />
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/api/const-array/settings-report-data.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
-          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
+          <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -820,62 +781,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/common/constants/ApiConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="48" />
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/common/domain/FormatSettings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="536">
-          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-          <folding>
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-          </folding>
+          <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/fonts/fonts.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/common/domain/CommercialActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="18" />
-          <folding>
-            <element signature="e#3266#3267#0" expanded="true" />
-            <element signature="e#3289#3290#0" expanded="true" />
-            <element signature="e#5213#5214#0" expanded="true" />
-            <element signature="e#5266#5267#0" expanded="true" />
-            <element signature="e#6487#6488#0" expanded="true" />
-            <element signature="e#6516#6517#0" expanded="true" />
-            <element signature="e#6575#6576#0" expanded="true" />
-            <element signature="e#6620#6621#0" expanded="true" />
-            <element signature="e#6659#6660#0" expanded="true" />
-            <element signature="e#6688#6689#0" expanded="true" />
-            <element signature="e#6747#6748#0" expanded="true" />
-            <element signature="e#6792#6793#0" expanded="true" />
-            <element signature="e#6831#6832#0" expanded="true" />
-            <element signature="e#6860#6861#0" expanded="true" />
-            <element signature="e#6919#6920#0" expanded="true" />
-            <element signature="e#6964#6965#0" expanded="true" />
-          </folding>
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -904,19 +837,16 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="13" column="22" selection-start-line="13" selection-end-line="14" />
+          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/IT.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
-          <caret line="39" column="134" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="134" />
+          <caret line="39" column="134" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="134" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-promotional-activity/commercial-category-promotional-activity.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/package.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -928,73 +858,47 @@
     <entry file="file://$PROJECT_DIR$/price-tag-backend/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2793">
-          <caret line="133" column="51" selection-start-line="133" selection-start-column="51" selection-end-line="133" selection-end-column="51" />
+          <caret line="133" column="51" lean-forward="false" selection-start-line="133" selection-start-column="51" selection-end-line="133" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2667">
-          <caret line="127" column="41" selection-start-line="127" selection-start-column="41" selection-end-line="127" selection-end-column="41" />
+          <caret line="127" column="41" lean-forward="false" selection-start-line="127" selection-start-column="41" selection-end-line="127" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/i18n/EN.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
-          <caret line="19" column="10" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="10" />
+          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-backend/price-tag-backend.iml" />
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/angular.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="31" column="74" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="134" column="75" selection-start-line="134" selection-start-column="75" selection-end-line="134" selection-end-column="75" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#ng-template#0;n#ngb-panel#0;n#ngb-accordion#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="31" column="74" lean-forward="false" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/scss/custom.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="623">
-          <caret line="162" column="1" selection-start-line="162" selection-start-column="1" selection-end-line="162" selection-end-column="6" />
+          <caret line="162" column="1" lean-forward="false" selection-start-line="162" selection-start-column="1" selection-end-line="162" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/node_modules/text-mask-addons/dist/createNumberMask.d.ts" />
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/node_modules/angular2-text-mask/src/angular2TextMask.ts" />
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/node/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/ajv/node_modules/json-stable-stringify/node_modules/jsonify/lib/parse.js" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/core-scripting.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="209" column="18" selection-start-line="209" selection-start-column="18" selection-end-line="209" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/core-scripting.rnc" />
     <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-promotional-activity/commercial-category-promotional-activity.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2688">
-          <caret line="128" column="29" selection-start-line="128" selection-start-column="29" selection-end-line="128" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#ng-template#0;n#ngb-panel#0;n#ngb-accordion#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="128" column="29" lean-forward="false" selection-start-line="128" selection-start-column="29" selection-end-line="128" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1002,40 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
           <caret line="42" column="65" lean-forward="true" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-promotional-activity/commercial-category-promotional-activity.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/service/comm-category.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/service/api-request.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="302" column="24" selection-start-line="302" selection-start-column="14" selection-end-line="302" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#93#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1043,9 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="84" column="19" lean-forward="true" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1053,20 +920,125 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="590">
           <caret line="88" column="35" lean-forward="true" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/config/ReportFiller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="137" column="18" lean-forward="false" selection-start-line="137" selection-start-column="18" selection-end-line="137" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/java/com/tx/pt/report/config/ReportFiller.java">
+    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Calliope_A4_3_Promotion.jrxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="139" column="36" selection-start-line="139" selection-start-column="36" selection-end-line="139" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="527">
+          <caret line="379" column="0" lean-forward="false" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-backend/src/main/resources/report/Terranova_A4_3_Promotion.jrxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="352" column="16" lean-forward="true" selection-start-line="352" selection-start-column="16" selection-end-line="352" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-promotional-activity/commercial-category-promotional-activity.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="131" column="8" lean-forward="false" selection-start-line="131" selection-start-column="8" selection-end-line="133" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/service/comm-category.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/shared/common/service/api-request.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/price-tag.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1795">
+          <caret line="335" column="43" lean-forward="false" selection-start-line="335" selection-start-column="43" selection-end-line="335" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1111">
+          <caret line="134" column="75" lean-forward="false" selection-start-line="134" selection-start-column="75" selection-end-line="134" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/app/price-tags/price-tag/commercial-category-activity/commercial-category-activity.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/img2.jpg" />
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/custom-select.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/big/auth-bg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-text.png" />
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-light-text.png" />
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-light-icon.png" />
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/img3.jpg" />
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/img1.jpg" />
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-32x32.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-16x16.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/favicon-96x96.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/price-tag-frontend/src/assets/images/logo-icon-login.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>

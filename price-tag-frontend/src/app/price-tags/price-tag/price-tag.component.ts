@@ -210,7 +210,6 @@ export class PriceTagComponent implements OnInit {
   addNewRow() {
 
     this.commercialActivities.push(new CommercialActivity(this.indexOrder));
-    //   this.commercialActivities.push(new CommercialActivity(this.indexOrder, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined));this.commercialActivities.push(new CommercialActivity(this.indexOrder, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined));
     this.indexOrder++;
   }
 
@@ -307,6 +306,8 @@ export class PriceTagComponent implements OnInit {
           (item.commercialCategoryCol2 && item.currencyCol2 && item.amountCol2) ||
           (item.commercialCategoryCol3 && item.currencyCol3 && item.amountCol3) ||
           (item.idOrder < maxIdOrder));
+
+        this.replaceCommaWithDotOnRow(filtredCommercialActivities);
       }
       reportData.commercialActivities = filtredCommercialActivities;
     }
@@ -324,6 +325,15 @@ export class PriceTagComponent implements OnInit {
         }
         if (item.initialPrice3) {
           item.initialPrice3 = item.initialPrice3.replace(/,/g, '.');
+        }
+        if (item.amountCol1) {
+          item.amountCol1 = item.amountCol1.replace(/,/g, '.');
+        }
+        if (item.amountCol2) {
+          item.amountCol2 = item.amountCol2.replace(/,/g, '.');
+        }
+        if (item.amountCol3) {
+          item.amountCol3 = item.amountCol3.replace(/,/g, '.');
         }
       });
     }

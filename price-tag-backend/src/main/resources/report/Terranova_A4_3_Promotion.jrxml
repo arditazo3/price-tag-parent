@@ -10,11 +10,11 @@
 	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
-	<parameter name="headerTxt" class="java.lang.String"/>
-	<parameter name="footerTxt" class="java.lang.String"/>
 	<parameter name="logo" class="java.net.URL">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
+	<parameter name="headerTxt" class="java.lang.String"/>
+	<parameter name="footerTxt" class="java.lang.String"/>
 	<field name="commercialCategoryCol1" class="java.lang.String"/>
 	<field name="commercialCategoryCol2" class="java.lang.String"/>
 	<field name="commercialCategoryCol3" class="java.lang.String"/>
@@ -41,7 +41,7 @@
 			<textField>
 				<reportElement x="0" y="0" width="280" height="100" uuid="59f565a0-b3dd-495c-8678-608c135131e5"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Arlon Medium" size="13"/>
+					<font fontName="Sofia Pro Medium" size="13"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{headerTxt}]]></textFieldExpression>
 			</textField>
@@ -60,36 +60,36 @@
 			<textField>
 				<reportElement x="280" y="0" width="280" height="100" uuid="e3c610f3-b920-4895-b0b8-8283031c3234"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Arlon Medium" size="13"/>
+					<font fontName="Sofia Pro Medium" size="13"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{headerTxt}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="560" y="0" width="280" height="100" uuid="a85bfb94-7ade-431c-9bc8-ed4133775389"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Arlon Medium" size="13"/>
+					<font fontName="Sofia Pro Medium" size="13"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{headerTxt}]]></textFieldExpression>
 			</textField>
 			<image>
-				<reportElement x="110" y="40" width="70" height="10" uuid="914ef34e-2a69-4945-8092-fc7335af51c6"/>
+				<reportElement x="109" y="45" width="70" height="10" uuid="b478bdd7-025f-4eda-8b98-08d7d0c47a10"/>
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 			<image>
-				<reportElement x="389" y="40" width="70" height="10" uuid="36c96df3-e6eb-4f74-ade1-672e35b8c127"/>
+				<reportElement x="393" y="45" width="70" height="10" uuid="81377abd-22a7-48e3-9137-284f50243037"/>
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 			<image>
-				<reportElement x="662" y="40" width="70" height="10" uuid="6a3d1f3b-c52b-4e52-ac66-74aec6858131"/>
+				<reportElement x="674" y="45" width="70" height="10" uuid="073859b5-ee09-437c-9f3d-e6c34d4f6096"/>
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="100" splitType="Stretch">
+		<band height="101" splitType="Stretch">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
 			<frame>
-				<reportElement x="0" y="0" width="842" height="100" uuid="cef2938d-f4bf-4a16-88fc-1c0c6defa772">
+				<reportElement x="0" y="0" width="842" height="101" uuid="cef2938d-f4bf-4a16-88fc-1c0c6defa772">
 					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 				</reportElement>
 				<textField>
@@ -100,7 +100,7 @@
 						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font fontName="Sofia Pro Medium" size="14" isStrikeThrough="false"/>
+						<font fontName="Lato" size="14" isStrikeThrough="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{commercialCategoryCol1}]]></textFieldExpression>
 				</textField>
@@ -113,7 +113,7 @@
 						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
-						<font fontName="Sofia Pro SemiBold" size="23"/>
+						<font fontName="Lato" size="23"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{decimalPart1}]]></textFieldExpression>
 				</textField>
@@ -126,7 +126,7 @@
 						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font fontName="Sofia Pro Medium" size="14"/>
+						<font fontName="Lato" size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{commercialCategoryCol2}]]></textFieldExpression>
 				</textField>
@@ -140,7 +140,7 @@
 						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
-						<font fontName="Sofia Pro SemiBold" size="23"/>
+						<font fontName="Lato" size="23"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{decimalPart2}]]></textFieldExpression>
 				</textField>
@@ -153,7 +153,7 @@
 						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font fontName="Sofia Pro Medium" size="14"/>
+						<font fontName="Lato" size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{commercialCategoryCol3}]]></textFieldExpression>
 				</textField>
@@ -170,7 +170,7 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
-						<font fontName="Sofia Pro SemiBold" size="23"/>
+						<font fontName="Lato" size="23"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{decimalPart3}]]></textFieldExpression>
 				</textField>
@@ -187,29 +187,32 @@
 					</graphicElement>
 				</line>
 				<textField>
-					<reportElement positionType="Float" x="222" y="41" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
+					<reportElement positionType="Float" x="222" y="40" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
+						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>
 					<textElement>
-						<font fontName="Sofia Pro SemiBold" size="12"/>
+						<font fontName="Lato" size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart1}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement positionType="Float" x="501" y="41" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
+					<reportElement positionType="Float" x="501" y="40" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
+						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>
 					<textElement>
-						<font fontName="Sofia Pro SemiBold" size="12"/>
+						<font fontName="Lato" size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart2}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement positionType="Float" x="781" y="41" width="54" height="20" uuid="0779058a-fc2a-43d9-a90f-5defb7c37ac0">
+					<reportElement positionType="Float" x="781" y="40" width="54" height="20" uuid="0779058a-fc2a-43d9-a90f-5defb7c37ac0">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
+						<printWhenExpression><![CDATA[$F{decimalPart3} != null && $F{decimalPart3}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>
 					<textElement>
-						<font fontName="Sofia Pro SemiBold" size="12"/>
+						<font fontName="Lato" size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyPart3}]]></textFieldExpression>
 				</textField>
@@ -218,7 +221,7 @@
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="be14d0fb-c495-488c-8670-d4407abb6d17"/>
 					</reportElement>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Sofia Pro Medium" size="18"/>
+						<font fontName="Lato" size="18"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{discountReport1}]]></textFieldExpression>
 				</textField>
@@ -227,7 +230,7 @@
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="09232182-9e7b-43c2-9cad-f261f3a6b43b"/>
 					</reportElement>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Sofia Pro Medium" size="18"/>
+						<font fontName="Lato" size="18"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{discountReport2}]]></textFieldExpression>
 				</textField>
@@ -236,7 +239,7 @@
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5c5447c8-c92e-4e39-9f6a-056749f0b4c8"/>
 					</reportElement>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Sofia Pro Medium" size="18"/>
+						<font fontName="Lato" size="18"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{discountReport3}]]></textFieldExpression>
 				</textField>
@@ -262,7 +265,7 @@
 					</reportElement>
 					<box leftPadding="35"/>
 					<textElement verticalAlignment="Middle">
-						<font fontName="Sofia Pro Condensed Regular" size="18"/>
+						<font fontName="Lato" size="18"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{decimalInitialPart1}]]></textFieldExpression>
 				</textField>
@@ -273,7 +276,7 @@
 					</reportElement>
 					<box leftPadding="35"/>
 					<textElement verticalAlignment="Middle">
-						<font fontName="Sofia Pro Condensed Regular" size="18"/>
+						<font fontName="Lato" size="18"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{decimalInitialPart2}]]></textFieldExpression>
 				</textField>
@@ -284,26 +287,35 @@
 					</reportElement>
 					<box leftPadding="35"/>
 					<textElement verticalAlignment="Middle">
-						<font fontName="Sofia Pro Condensed Regular" size="18"/>
+						<font fontName="Lato" size="18"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{decimalInitialPart3}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="47" y="43" width="54" height="20" uuid="745390e1-9c55-42ae-810f-daaa1d5d8f2a">
+					<reportElement x="58" y="42" width="54" height="20" uuid="745390e1-9c55-42ae-810f-daaa1d5d8f2a">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5763050e-26c1-4eb5-9bd8-1bd4acbadad1"/>
 					</reportElement>
+					<textElement>
+						<font fontName="Lato"/>
+					</textElement>
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyInitialPart1}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="327" y="43" width="54" height="20" uuid="b8579a32-5dc2-4474-bf31-0c8fe5395426">
+					<reportElement x="338" y="42" width="54" height="20" uuid="b8579a32-5dc2-4474-bf31-0c8fe5395426">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="298b099e-bca7-4c8e-9f4e-c5e1e7f71627"/>
 					</reportElement>
+					<textElement>
+						<font fontName="Lato"/>
+					</textElement>
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyInitialPart2}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="606" y="43" width="54" height="20" uuid="71160084-0135-42ab-aec8-238cb63955bb">
+					<reportElement x="618" y="42" width="54" height="20" uuid="71160084-0135-42ab-aec8-238cb63955bb">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8960d8ae-f6e9-4ce9-ac4b-4d36819101ef"/>
 					</reportElement>
+					<textElement>
+						<font fontName="Lato"/>
+					</textElement>
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyInitialPart3}]]></textFieldExpression>
 				</textField>
 				<line>
@@ -342,7 +354,7 @@
 				<reportElement x="0" y="0" width="280" height="86" uuid="75710eda-69e7-4b9c-b07e-7b2aed99673f"/>
 				<box bottomPadding="15"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Sofia Pro Medium" size="11"/>
+					<font fontName="Lato" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{footerTxt}]]></textFieldExpression>
 			</textField>
@@ -350,7 +362,7 @@
 				<reportElement x="280" y="0" width="280" height="86" uuid="978a365b-e569-4563-aa4a-d974d65dc116"/>
 				<box bottomPadding="15"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Sofia Pro Medium" size="11"/>
+					<font fontName="Lato" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{footerTxt}]]></textFieldExpression>
 			</textField>
@@ -358,7 +370,7 @@
 				<reportElement x="560" y="0" width="280" height="86" uuid="4dd752f5-8bc4-4b77-b72f-5128ee109681"/>
 				<box bottomPadding="15"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Sofia Pro Medium" size="11"/>
+					<font fontName="Lato" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{footerTxt}]]></textFieldExpression>
 			</textField>
