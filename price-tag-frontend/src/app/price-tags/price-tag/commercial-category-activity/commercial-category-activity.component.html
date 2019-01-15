@@ -1,4 +1,4 @@
-<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion nav-accordion">
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion nav-accordion" (panelChange)="beforeChange($event)">
     <ngb-panel id="toggle-{{ commercialActivity.idOrder }}">
         <ng-template ngbPanelTitle>
             <div id="{{ isMobile ? 'container-fluid-mobile' : 'container-fluid' }}">

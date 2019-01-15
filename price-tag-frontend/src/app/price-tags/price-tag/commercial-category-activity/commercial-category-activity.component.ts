@@ -2,6 +2,7 @@ import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} f
 import {CommercialActivity} from '../../../shared/common/api/model/commercial-activity';
 import {SettingsData} from '../../../shared/common/api/model/settings-data';
 import {AppGlobals} from '../../../shared/common/api/app-globals';
+import {NgbPanelChangeEvent} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-commercial-category-activity',
@@ -74,13 +75,36 @@ export class CommercialCategoryActivityComponent implements OnInit {
   cleanFieldsBtn(acc) {
     console.log('CommercialCategoryActivityComponent - cleanFieldsBtn');
 
-    this.commercialActivity = new CommercialActivity(this.commercialActivity.idOrder);
+    this.cleanObjectCommAct(this.commercialActivity);
 
     if (acc.isExpanded('toggle-' + this.commercialActivity.idOrder)) {
       acc.collapse('toggle-' + this.commercialActivity.idOrder);
     } else {
       acc.expand('toggle-' + this.commercialActivity.idOrder);
     }
+  }
+
+  cleanObjectCommAct(commercialActivity) {
+
+    commercialActivity.commercialCategoryCol1 = '';
+    commercialActivity.commercialCategoryCol2 = '';
+    commercialActivity.commercialCategoryCol3 = '';
+
+    commercialActivity.currencyCol1 = '';
+    commercialActivity.currencyCol2 = '';
+    commercialActivity.currencyCol3 = '';
+
+    commercialActivity.initialPrice1 = +'';
+    commercialActivity.initialPrice2 = +'';
+    commercialActivity.initialPrice3 = +'';
+
+    commercialActivity.discount1 = +'';
+    commercialActivity.discount2 = +'';
+    commercialActivity.discount3 = +'';
+
+    commercialActivity.amountCol1 = +'';
+    commercialActivity.amountCol2 = +'';
+    commercialActivity.amountCol3 = +'';
   }
 
   removeOfficeBtn() {
@@ -96,6 +120,15 @@ export class CommercialCategoryActivityComponent implements OnInit {
       this.collapse = false;
     } else {
       acc.expand('toggle-' + this.commercialActivity.idOrder);
+      this.collapse = true;
+    }
+  }
+
+  beforeChange($event: NgbPanelChangeEvent) {
+
+    if ($event.nextState) {
+      this.collapse = false;
+    } else {
       this.collapse = true;
     }
   }
