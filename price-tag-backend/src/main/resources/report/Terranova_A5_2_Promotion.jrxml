@@ -206,7 +206,7 @@
 					<textFieldExpression><![CDATA[$F{fractionalCurrencyInitialPart1}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="350" y="30" width="54" height="20" uuid="b8579a32-5dc2-4474-bf31-0c8fe5395426">
+					<reportElement x="355" y="30" width="54" height="20" uuid="b8579a32-5dc2-4474-bf31-0c8fe5395426">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="298b099e-bca7-4c8e-9f4e-c5e1e7f71627"/>
 						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
 					</reportElement>

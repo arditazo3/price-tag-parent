@@ -191,7 +191,12 @@ export class PriceTagComponent implements OnInit {
       if (reportData.commercialActivities && reportData.commercialActivities.length > 0) {
         this.commCategoryService.elaborateReport(reportData).subscribe(
           (data) => {
-            importedSaveAs(data, 'Elaborated Report.pdf');
+            importedSaveAs(data,
+              me.selectedBrand.description.toUpperCase() + '_' +
+              me.settingsData.selectedFormatPaper.value + '_' +
+              me.settingsData.selectedNumberCols.value + '_' +
+              me.settingsData.selectedTipologyPrice.description.toUpperCase() + '.pdf');
+
             console.log('ExpirationActivityControlledComponent - downloadFileExp - next');
             me.ngxLoadingComponent.show = false;
           },
@@ -326,13 +331,13 @@ export class PriceTagComponent implements OnInit {
         if (item.initialPrice3) {
           item.initialPrice3 = item.initialPrice3.replace(/,/g, '.');
         }
-        if (item.amountCol1) {
+        if (item.amountCol1 && typeof item.amountCol1 == 'string') {
           item.amountCol1 = item.amountCol1.replace(/,/g, '.');
         }
-        if (item.amountCol2) {
+        if (item.amountCol2 && typeof item.amountCol2 == 'string') {
           item.amountCol2 = item.amountCol2.replace(/,/g, '.');
         }
-        if (item.amountCol3) {
+        if (item.amountCol3 && typeof item.amountCol3 == 'string') {
           item.amountCol3 = item.amountCol3.replace(/,/g, '.');
         }
       });
