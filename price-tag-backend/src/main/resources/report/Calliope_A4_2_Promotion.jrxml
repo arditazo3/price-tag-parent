@@ -78,7 +78,7 @@
 				<textField>
 					<reportElement x="0" y="0" width="140" height="68" uuid="c24d18b8-c8fa-4713-9037-fc3c62d69c0a">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="166c7c5f-1c0c-4938-8652-ed5bf8dbb03e"/>
-						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{decimalPart1} != null && ($F{decimalPart1}.compareTo(0) != 0 || ($F{decimalPart1}.compareTo(0) == 0 && !$F{fractionalCurrencyPart1}.equals("")))]]></printWhenExpression>
 					</reportElement>
 					<box topPadding="10" leftPadding="35"/>
 					<textElement verticalAlignment="Middle">
@@ -89,7 +89,7 @@
 				<textField>
 					<reportElement x="420" y="0" width="140" height="68" uuid="8cb4bc25-2c84-4529-83ee-c5e6b0e87255">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6c98e44f-0dcf-4668-a200-e3a70bb6d47e"/>
-						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{decimalPart2} != null && ($F{decimalPart2}.compareTo(0) != 0 || ($F{decimalPart2}.compareTo(0) == 0 && !$F{fractionalCurrencyPart2}.equals("")))]]></printWhenExpression>
 					</reportElement>
 					<box topPadding="10" leftPadding="35"/>
 					<textElement verticalAlignment="Middle">
@@ -130,7 +130,7 @@
 				<textField>
 					<reportElement x="280" y="0" width="140" height="68" uuid="2e08b483-3613-4696-9c59-10c646a31900">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="66ecc1c1-a77d-4aa0-97af-6da1e0aea156"/>
-						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{decimalPart1} != null && ($F{decimalPart1}.compareTo(0) != 0 || ($F{decimalPart1}.compareTo(0) == 0 && !$F{fractionalCurrencyPart1}.equals("")))]]></printWhenExpression>
 					</reportElement>
 					<box topPadding="10" rightPadding="65">
 						<rightPen lineWidth="0.0"/>
@@ -156,7 +156,7 @@
 				<textField>
 					<reportElement x="700" y="0" width="140" height="68" uuid="2288b52a-bfab-44f9-a595-88482f3fc3f3">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d5b3ee69-5dda-4b01-8f07-db7808f3eb1b"/>
-						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{decimalPart2} != null && ($F{decimalPart2}.compareTo(0) != 0 || ($F{decimalPart2}.compareTo(0) == 0 && !$F{fractionalCurrencyPart2}.equals("")))]]></printWhenExpression>
 					</reportElement>
 					<box topPadding="10" rightPadding="65">
 						<leftPen lineWidth="0.0" lineStyle="Dashed"/>
@@ -176,7 +176,7 @@
 				<textField>
 					<reportElement positionType="Float" x="356" y="29" width="54" height="20" uuid="bfc69365-0a0d-411d-8f24-057a36d24623">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
-						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{decimalPart1} != null && ($F{decimalPart1}.compareTo(0) != 0 || ($F{decimalPart1}.compareTo(0) == 0 && !$F{fractionalCurrencyPart1}.equals("")))]]></printWhenExpression>
 					</reportElement>
 					<textElement>
 						<font fontName="Lato" size="12"/>
@@ -186,7 +186,7 @@
 				<textField>
 					<reportElement positionType="Float" x="777" y="29" width="54" height="20" uuid="ef501228-9b0a-4305-8ea3-0933fd73bcfb">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a449ab0-6103-4209-acbd-5760e5380a36"/>
-						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{decimalPart2} != null && ($F{decimalPart2}.compareTo(0) != 0 || ($F{decimalPart2}.compareTo(0) == 0 && !$F{fractionalCurrencyPart2}.equals("")))]]></printWhenExpression>
 					</reportElement>
 					<textElement>
 						<font fontName="Lato" size="12"/>
@@ -215,22 +215,22 @@
 				</textField>
 				<line>
 					<reportElement x="25" y="55" width="370" height="1" uuid="4f42666e-4fee-43b8-b9dc-7d410e2585e3">
-						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{decimalPart1} != null && ($F{decimalPart1}.compareTo(0) != 0 || ($F{decimalPart1}.compareTo(0) == 0 && !$F{fractionalCurrencyPart1}.equals("")))]]></printWhenExpression>
 					</reportElement>
 				</line>
 				<line>
 					<reportElement x="445" y="55" width="370" height="1" uuid="0717403c-564d-46c4-832e-bc7133b29419">
-						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{decimalPart2} != null && ($F{decimalPart2}.compareTo(0) != 0 || ($F{decimalPart2}.compareTo(0) == 0 && !$F{fractionalCurrencyPart2}.equals("")))]]></printWhenExpression>
 					</reportElement>
 				</line>
 				<line>
 					<reportElement x="30" y="40" width="65" height="1" uuid="c2fcb315-4f6a-4882-8317-8763f4112083">
-						<printWhenExpression><![CDATA[$F{decimalPart1} != null && $F{decimalPart1}.compareTo(0) != 0]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{decimalPart1} != null && ($F{decimalPart1}.compareTo(0) != 0 || ($F{decimalPart1}.compareTo(0) == 0 && !$F{fractionalCurrencyPart1}.equals("")))]]></printWhenExpression>
 					</reportElement>
 				</line>
 				<line>
 					<reportElement x="450" y="40" width="65" height="1" uuid="ab4ea046-9a9f-4d9f-838c-f48e735119f3">
-						<printWhenExpression><![CDATA[$F{decimalPart2} != null && $F{decimalPart2}.compareTo(0) != 0]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{decimalPart2} != null && ($F{decimalPart2}.compareTo(0) != 0 || ($F{decimalPart2}.compareTo(0) == 0 && !$F{fractionalCurrencyPart2}.equals("")))]]></printWhenExpression>
 					</reportElement>
 				</line>
 			</frame>

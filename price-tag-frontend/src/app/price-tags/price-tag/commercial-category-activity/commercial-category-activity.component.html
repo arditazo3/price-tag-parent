@@ -13,7 +13,7 @@
                         <button class="{{ isMobile ? 'btn btn-small btn-primary' : 'btn btn-primary' }}"
                                 type="button"
                                 (click)="collapseExpandBtn(acc)">
-                            <div *ngIf="!isMobile">{{ collapse ? ('GENERAL.COLLAPSE' | translate) : ('GENERAL.EXPAND' | translate) }}</div>
+                            <div *ngIf="!isMobile">{{ collapse ? ('GENERAL.EXPAND' | translate) : ('GENERAL.COLLAPSE' | translate) }}</div>
                             <i *ngIf="isMobile" class="far fa-trash-alt fa-xs"></i>
                         </button>
 

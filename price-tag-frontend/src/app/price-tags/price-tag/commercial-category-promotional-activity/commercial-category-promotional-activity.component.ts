@@ -5,6 +5,7 @@ import {SettingsData} from '../../../shared/common/api/model/settings-data';
 import {AppConfig} from '../../../shared/common/api/app-config';
 import {AppGlobals} from '../../../shared/common/api/app-globals';
 import {NgbPanelChangeEvent} from "@ng-bootstrap/ng-bootstrap";
+import {DeviceDetectorService} from "ngx-device-detector";
 
 @Component({
   selector: 'app-commercial-category-promotional-activity',
@@ -12,6 +13,8 @@ import {NgbPanelChangeEvent} from "@ng-bootstrap/ng-bootstrap";
   styleUrls: ['./commercial-category-promotional-activity.component.css']
 })
 export class CommercialCategoryPromotionalActivityComponent implements OnInit {
+
+  isMobile = false;
 
   @Input() index: number;
   @Input() settingsData: SettingsData;
@@ -26,7 +29,9 @@ export class CommercialCategoryPromotionalActivityComponent implements OnInit {
 
   collapse = true;
 
-  constructor() {
+  constructor(private deviceService: DeviceDetectorService) {
+
+    this.isMobile = this.deviceService.isMobile();
   }
 
   ngOnInit() {

@@ -3,6 +3,7 @@ import {CommercialActivity} from '../../../shared/common/api/model/commercial-ac
 import {SettingsData} from '../../../shared/common/api/model/settings-data';
 import {AppGlobals} from '../../../shared/common/api/app-globals';
 import {NgbPanelChangeEvent} from "@ng-bootstrap/ng-bootstrap";
+import {DeviceDetectorService} from "ngx-device-detector";
 
 @Component({
   selector: 'app-commercial-category-activity',
@@ -10,6 +11,8 @@ import {NgbPanelChangeEvent} from "@ng-bootstrap/ng-bootstrap";
   styleUrls: ['./commercial-category-activity.component.css']
 })
 export class CommercialCategoryActivityComponent implements OnInit {
+
+  isMobile = false;
 
   @Input() index: number;
   @Input() settingsData: SettingsData;
@@ -23,7 +26,9 @@ export class CommercialCategoryActivityComponent implements OnInit {
 
   collapse = true;
 
-  constructor() {
+  constructor(private deviceService: DeviceDetectorService) {
+
+    this.isMobile = this.deviceService.isMobile();
   }
 
   ngOnInit() {
